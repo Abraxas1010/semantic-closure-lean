@@ -279,7 +279,7 @@ What it produces/checks (relevant to “authors can verify”):
 - CAB verification: `./RESEARCHER_BUNDLE/reports/CAB_VERIFY.txt` plus CAB artifacts under
   `./RESEARCHER_BUNDLE/artifacts/cab/`
 - Compiler outputs (evidence that Lean compiled the modules):
-  - `.olean/.ilean/.trace` copies: `./RESEARCHER_BUNDLE/artifacts/compiler/oRESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/**`
+  - `.olean/.ilean/.trace` copies: `./RESEARCHER_BUNDLE/artifacts/compiler/olean/HeytingLean/ClosingTheLoop/**`
   - Lean compiler IR (`.ir`): `./RESEARCHER_BUNDLE/artifacts/compiler/ir/HeytingLean/ClosingTheLoop/**`
   - emitted demo artifacts:
     - LambdaIR (human-readable): `./RESEARCHER_BUNDLE/artifacts/compiler/ir/add1.lambdair.txt`
