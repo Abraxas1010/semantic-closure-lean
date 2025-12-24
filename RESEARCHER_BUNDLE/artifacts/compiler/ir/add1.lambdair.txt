@@ -1,0 +1,1 @@
+(lam (app (app (primAddNat) (var 0)) (nat 1)))

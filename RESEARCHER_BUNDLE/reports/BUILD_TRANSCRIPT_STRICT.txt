@@ -1,0 +1,252 @@
+[verify_closing_the_loop] root=/home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE
+
+[git] configure URL policy
+[git] no vendor mirrors found; using network URLs
+GIT_CONFIG_GLOBAL=/home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/GITCONFIG_EFFECTIVE.txt
+GIT_CONFIG_NOSYSTEM=1
+
+[gitconfig]
+# no URL rewrites
+
+
+[versions] lean
+Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)
+
+[versions] lake
+Lake version 5.0.0-src+797c613 (Lean version 4.24.0)
+
+[env] disable mathlib cache on update (for portability)
+MATHLIB_NO_CACHE_ON_UPDATE=1
+
+[lake] update
+info: toolchain not updated; already up-to-date
+info: mathlib: running post-update hooks
+
+[lake] build HeytingLean.ClosingTheLoop (strict)
+Build completed successfully (903 jobs).
+
+[axioms] audit key theorems for sorryAx (should be absent)
+'HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_injective' does not depend on any axioms
+'HeytingLean.ClosingTheLoop.MR.InverseEvaluation.of_evalAt_surjective' depends on axioms: [Classical.choice]
+'HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_leftInverse_of_injective' does not depend on any axioms
+'HeytingLean.ClosingTheLoop.MR.closeSelector.idem' does not depend on any axioms
+'HeytingLean.ClosingTheLoop.MR.IsClosed.exists_eq_beta_iff' depends on axioms: [propext]
+'HeytingLean.ClosingTheLoop.Cat.InverseEvaluationAt.of_isIso_evalAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeytingLean.ClosingTheLoop.Cat.PreservesSelectorEval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeytingLean.ClosingTheLoop.Cat.idem_of_yoneda_map_idem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.MeetRetraction.retractionNucleus' depends on axioms: [propext]
+'HeytingLean.ClosingTheLoop.Semantics.futureKernel.idem' depends on axioms: [propext, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.futureKernel.idem' depends on axioms: [propext, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge.eval_beta' does not depend on any axioms
+'HeytingLean.ClosingTheLoop.Semantics.ProcessBridge.wellTyped_fixedPoint' depends on axioms: [propext, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.MRBridge.closeMachine_step_idem' depends on axioms: [propext, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.Realizability.realizable_invariant_of_simulation' does not depend on any axioms
+
+[lake] build closing_the_loop_bundle_demo (strict; exercises C backend)
+Build completed successfully (1808 jobs).
+
+[run] closing_the_loop_bundle_demo (emits LambdaIR + C artifacts)
+[closing_the_loop_bundle_demo] generating LambdaIR + C artifacts
+[demo] evalClosed add1(41) = 42
+[demo] runNatFunFrag add1(41) = some 42
+[closing_the_loop_bundle_demo] done
+
+[robustness] hostile IO/env/PATH (no crashes)
+exe=/home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/.lake/build/bin/closing_the_loop_bundle_demo
+
+== IO: artifacts/compiler unwritable ==
+[closing_the_loop_bundle_demo] write failed: artifacts/compiler/ir/add1.lambdair.txt: permission denied (error code: 13)
+  file: artifacts/compiler/ir/add1.lambdair.txt
+[closing_the_loop_bundle_demo] write failed: artifacts/compiler/ir/add1.minic.txt: permission denied (error code: 13)
+  file: artifacts/compiler/ir/add1.minic.txt
+[closing_the_loop_bundle_demo] write failed: artifacts/compiler/c/add1.c: permission denied (error code: 13)
+  file: artifacts/compiler/c/add1.c
+[closing_the_loop_bundle_demo] generating LambdaIR + C artifacts
+[demo] evalClosed add1(41) = 42
+[demo] runNatFunFrag add1(41) = some 42
+[closing_the_loop_bundle_demo] done
+
+== ENV: empty env (PATH minimal) ==
+[closing_the_loop_bundle_demo] generating LambdaIR + C artifacts
+[demo] evalClosed add1(41) = 42
+[demo] runNatFunFrag add1(41) = some 42
+[closing_the_loop_bundle_demo] done
+
+== PATH: empty PATH ==
+[closing_the_loop_bundle_demo] generating LambdaIR + C artifacts
+[demo] evalClosed add1(41) = 42
+[demo] runNatFunFrag add1(41) = some 42
+[closing_the_loop_bundle_demo] done
+
+[modules] ClosingTheLoop sources
+HeytingLean/ClosingTheLoop/BundleDemoMain.lean
+HeytingLean/ClosingTheLoop/Cat/Admissible.lean
+HeytingLean/ClosingTheLoop/Cat/ClosureOperator.lean
+HeytingLean/ClosingTheLoop/Cat/Concreteness.lean
+HeytingLean/ClosingTheLoop/Cat/EvalImage.lean
+HeytingLean/ClosingTheLoop/Cat/InverseEvaluation.lean
+HeytingLean/ClosingTheLoop/Cat/Selector.lean
+HeytingLean/ClosingTheLoop/Cat/YonedaView.lean
+HeytingLean/ClosingTheLoop/Cat/YonedaViewNat.lean
+HeytingLean/ClosingTheLoop/FA/Diagram.lean
+HeytingLean/ClosingTheLoop/FA/Temporal.lean
+HeytingLean/ClosingTheLoop/Main.lean
+HeytingLean/ClosingTheLoop/MR/Basic.lean
+HeytingLean/ClosingTheLoop/MR/ClosureOperator.lean
+HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean
+HeytingLean/ClosingTheLoop/MR/PaperMapping.lean
+HeytingLean/ClosingTheLoop/Semantics/FunctorialTime.lean
+HeytingLean/ClosingTheLoop/Semantics/KernelLaws.lean
+HeytingLean/ClosingTheLoop/Semantics/LambdaIRBridge.lean
+HeytingLean/ClosingTheLoop/Semantics/Mealy.lean
+HeytingLean/ClosingTheLoop/Semantics/NucleusBridge.lean
+HeytingLean/ClosingTheLoop/Semantics/NucleusFixedPoints.lean
+HeytingLean/ClosingTheLoop/Semantics/PreorderTime.lean
+HeytingLean/ClosingTheLoop/Semantics/ProcessBridge.lean
+HeytingLean/ClosingTheLoop/Semantics/RelationalRealizability.lean
+HeytingLean/ClosingTheLoop/Tests/ClosureIdempotent.lean
+HeytingLean/ClosingTheLoop/Tests/Test_AssumptionMismatch.lean
+
+[reports] proof index
+# Proof index (what is proved, and where)
+
+This file is the minimal set of “results you can cite” from the mechanization shipped in this
+bundle.
+
+## Tier 1: loop closure on selectors
+
+1. **Inverse evaluation implies injectivity of the inverse map**
+   - Lean: `HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_injective`
+   - File: `HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean`
+   - Informal: if `β x = β y` then applying `evalAt b` and using the right-inverse law gives `x = y`.
+
+1b. **Derive inverse evaluation from surjectivity (existence-only → chosen β, noncomputable)**
+   - Lean: `HeytingLean.ClosingTheLoop.MR.InverseEvaluation.of_evalAt_surjective`
+   - File: `HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean`
+   - Informal: from `∀ g, ∃ Φ, Φ(b)=g` we can pick `β g := choose Φ` (uses choice) and get `evalAt b (β g)=g`.
+
+1c. **Injectivity upgrades a right inverse to a genuine inverse on selectors**
+   - Lean: `HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_leftInverse_of_injective`
+   - File: `HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean`
+   - Informal: if `evalAt b` is injective and `β` is a right inverse, then `β (Φ(b)) = Φ` for all selectors `Φ`.
+
+2. **Loop-closing operator is idempotent**
+   - Lean: `HeytingLean.ClosingTheLoop.MR.closeSelector.idem`
+   - File: `HeytingLean/ClosingTheLoop/MR/ClosureOperator.lean`
+   - Informal: `close(close Φ) = close Φ` since `close Φ` is definitionally `β (Φ b)` and evaluation at `b` of `β`
+     returns the original map.
+
+3. **Closed selectors (fixed points)**
+   - Lean: `HeytingLean.ClosingTheLoop.MR.IsClosed`
+   - File: `HeytingLean/ClosingTheLoop/MR/ClosureOperator.lean`
+   - Informal: `IsClosed Φ : Prop` is the fixed-point predicate `closeSelector Φ = Φ`.
+
+4. **Closing always yields a closed selector**
+   - Lean: `HeytingLean.ClosingTheLoop.MR.IsClosed.close_isClosed`
+   - File: `HeytingLean/ClosingTheLoop/MR/ClosureOperator.lean`
+   - Informal: immediate from idempotence.
+
+5. **Closed selectors are exactly the image of β (semantic closure = fixed point = reconstructible)**
+   - Lean: `HeytingLean.ClosingTheLoop.MR.IsClosed.exists_eq_beta_iff`
+   - File: `HeytingLean/ClosingTheLoop/MR/ClosureOperator.lean`
+   - Informal: `IsClosed Φ` iff `∃ g, β g = Φ`.
+
+## Tier 3: bridge to nuclei
+
+6. **Meet-preserving section–retraction induces a nucleus**
+   - Lean: `HeytingLean.ClosingTheLoop.Semantics.MeetRetraction.retractionNucleus`
+   - File: `HeytingLean/ClosingTheLoop/Semantics/NucleusBridge.lean`
+   - Informal: define `R(x) := dec(enc(x))`; meet preservation gives `R(x ⊓ y) = R(x) ⊓ R(y)`; section law yields
+     idempotence; `x ≤ R(x)` is assumed explicitly.
+
+## Tier 3b: preorder-time semantics kernel
+
+7. **Future-kernel operator is idempotent (closure law)**
+   - Lean: `HeytingLean.ClosingTheLoop.Semantics.futureKernel.idem`
+   - File: `HeytingLean/ClosingTheLoop/Semantics/PreorderTime.lean`
+   - Informal: a state is future-kernel-safe iff its transport to all future times is safe; applying the same
+     operator again is redundant.
+
+8. **Reachability nucleus on time-indexed predicates (inflationary, meet-preserving)**
+   - Lean: `HeytingLean.ClosingTheLoop.Semantics.reachabilityNucleus`
+   - File: `HeytingLean/ClosingTheLoop/Semantics/PreorderTime.lean`
+   - Informal: to align with the repo’s nucleus convention, we close any predicate by unioning in states that are
+     unreachable from a chosen base time `t₀` (assumed `t₀ ≤ t` for all `t`); this yields a bona fide `Nucleus`
+     on time-indexed predicates.
+
+8b. **General time category kernel/nucleus (beyond preorders)**
+   - Lean: `HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.futureKernel`,
+     `HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.reachabilityNucleus`
+   - File: `HeytingLean/ClosingTheLoop/Semantics/FunctorialTime.lean`
+   - Informal: replace `t ≤ t'` with quantification over morphisms `t ⟶ t'` in a general time category `T`.
+
+## Tier 3c: computation/dynamics hooks (λ-calculus + processes + Mealy)
+
+9. **λ-calculus β-law (functional computation seed)**
+   - Lean: `HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge.eval_beta`
+   - File: `HeytingLean/ClosingTheLoop/Semantics/LambdaIRBridge.lean`
+   - Informal: evaluating `(λx. body) arg` extends the environment with the value of `arg`.
+
+10. **Process calculus kernel is exact on well-typed processes (concurrent computation seed)**
+   - Lean: `HeytingLean.ClosingTheLoop.Semantics.ProcessBridge.wellTyped_fixedPoint`
+   - File: `HeytingLean/ClosingTheLoop/Semantics/ProcessBridge.lean`
+   - Informal: the safety kernel `Kproc` returns exactly the well-typed processes in a fixed context.
+
+11. **(M,R) closure loop as a one-step stabilizing dynamics (Mealy/coalgebra hook)**
+   - Lean: `HeytingLean.ClosingTheLoop.Semantics.MRBridge.closeMachine_step_idem`
+   - File: `HeytingLean/ClosingTheLoop/Semantics/Mealy.lean`
+   - Informal: viewing `closeSelector` as a state update, idempotence implies stabilization after one step.
+
+12. **Relational realizability (invariants transport along simulations)**
+   - Lean: `HeytingLean.ClosingTheLoop.Semantics.Realizability.realizable_invariant_of_simulation`
+   - File: `HeytingLean/ClosingTheLoop/Semantics/RelationalRealizability.lean`
+   - Informal: if a relation simulates reachability, then any future-closed predicate on the target yields a
+     future-closed predicate on the source via existence-based realizability.
+
+## Tier 2b: Yoneda/naturality view
+
+- File: `HeytingLean/ClosingTheLoop/Cat/YonedaViewNat.lean`
+- Result: `HeytingLean.ClosingTheLoop.Cat.curryNatIso`
+- Informal: currying is natural in `X`, so `H^B` represents the functor `X ↦ Hom(B ⊗ X, H)`.
+
+## Tier 2c: categorical guardrails (image-only inverse; concreteness vs Yoneda)
+
+1. **Inverse evaluation on the image (no overclaim from mono)**
+   - Lean: `HeytingLean.ClosingTheLoop.Cat.EvalImage.betaOnImage_evalAt`
+   - File: `HeytingLean/ClosingTheLoop/Cat/EvalImage.lean`
+   - Informal: if `evalAt b` is mono, there is a canonical map `image(evalAt b) ⟶ (B ⟹ H)` agreeing with
+     evaluation on the image (but not a total inverse `H ⟶ (B ⟹ H)`).
+
+2. **No “concreteness assumption” needed for reflection (Yoneda route)**
+   - Lean: `HeytingLean.ClosingTheLoop.Cat.idem_of_yoneda_map_idem`
+   - File: `HeytingLean/ClosingTheLoop/Cat/Concreteness.lean`
+   - Informal: the canonical Yoneda embedding is faithful, so equalities/idempotence can be reflected from
+     presheaves.
+
+3. **Scoped “structure preservation” computation of `U.map close` (faithful-embedding viewpoint, made explicit)**
+   - Lean: `HeytingLean.ClosingTheLoop.Cat.map_close_eq`
+   - File: `HeytingLean/ClosingTheLoop/Cat/Concreteness.lean`
+   - Informal: assuming explicit comparison data identifying `U(H^B)` with `U(B) → U(H)` and sending `U(evalAt b)`
+     to evaluation at the induced point, the mapped closure operator has the expected form “sample at `b` then apply
+     `β`”.
+
+4. **Explicit “U preserves exponential/eval” interface**
+   - Lean: `HeytingLean.ClosingTheLoop.Cat.PreservesSelectorEval`
+   - File: `HeytingLean/ClosingTheLoop/Cat/Concreteness.lean`
+
+## Toy model / smoke checks
+
+- File: `HeytingLean/ClosingTheLoop/Tests/ClosureIdempotent.lean`
+- Purpose: exercises the definitional behavior of `closeSelector` on a tiny MR system and checks idempotence reduces
+  by simp.
+
+[cab] verify cab.json + kernel.json (hashes + Merkle root)
+[c] compile emitted C program (artifacts/compiler/c/add1.c)
+[c] run emitted binary (expected stdout: 42)
+[c] stdout=42
+[portability] dynamic dependencies
+[artifacts] collect compiler outputs (olean + C IR)
+[hashes] sha256 over bundle (excluding .lake/, build/, vendor/)
+[verify_closing_the_loop] PASSED

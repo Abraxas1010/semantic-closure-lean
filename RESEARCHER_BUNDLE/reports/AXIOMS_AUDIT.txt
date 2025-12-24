@@ -1,0 +1,19 @@
+import HeytingLean.ClosingTheLoop
+
+#print axioms HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_injective
+#print axioms HeytingLean.ClosingTheLoop.MR.InverseEvaluation.of_evalAt_surjective
+#print axioms HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_leftInverse_of_injective
+#print axioms HeytingLean.ClosingTheLoop.MR.closeSelector.idem
+#print axioms HeytingLean.ClosingTheLoop.MR.IsClosed.exists_eq_beta_iff
+
+#print axioms HeytingLean.ClosingTheLoop.Cat.InverseEvaluationAt.of_isIso_evalAt
+#print axioms HeytingLean.ClosingTheLoop.Cat.PreservesSelectorEval
+#print axioms HeytingLean.ClosingTheLoop.Cat.idem_of_yoneda_map_idem
+
+#print axioms HeytingLean.ClosingTheLoop.Semantics.MeetRetraction.retractionNucleus
+#print axioms HeytingLean.ClosingTheLoop.Semantics.futureKernel.idem
+#print axioms HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.futureKernel.idem
+#print axioms HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge.eval_beta
+#print axioms HeytingLean.ClosingTheLoop.Semantics.ProcessBridge.wellTyped_fixedPoint
+#print axioms HeytingLean.ClosingTheLoop.Semantics.MRBridge.closeMachine_step_idem
+#print axioms HeytingLean.ClosingTheLoop.Semantics.Realizability.realizable_invariant_of_simulation

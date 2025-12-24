@@ -1,0 +1,169 @@
+// Lean compiler output
+// Module: HeytingLean.ClosingTheLoop.Tests.Test_AssumptionMismatch
+// Imports: Init Mathlib.Data.Set.Insert HeytingLean.ClosingTheLoop.MR.PaperMapping
+#include <lean/lean.h>
+#if defined(__clang__)
+#pragma clang diagnostic ignored "-Wunused-parameter"
+#pragma clang diagnostic ignored "-Wunused-label"
+#elif defined(__GNUC__) && !defined(__CLANG__)
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+#pragma GCC diagnostic ignored "-Wunused-label"
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
+#endif
+#ifdef __cplusplus
+extern "C" {
+#endif
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapTrue;
+LEAN_EXPORT uint8_t l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___lam__0(lean_object*);
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___lam__0___boxed(lean_object*);
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse___lam__0___boxed(lean_object*);
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___boxed(lean_object*);
+LEAN_EXPORT uint8_t l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse___lam__0(lean_object*);
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue(uint8_t);
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj;
+static lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__1;
+static lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__2;
+static lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__0;
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse;
+LEAN_EXPORT uint8_t l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___lam__0(lean_object* x_1) {
+_start:
+{
+uint8_t x_2; 
+x_2 = 1;
+return x_2;
+}
+}
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue(uint8_t x_1) {
+_start:
+{
+lean_object* x_2; 
+x_2 = lean_alloc_closure((void*)(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___lam__0___boxed), 1, 0);
+return x_2;
+}
+}
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___lam__0___boxed(lean_object* x_1) {
+_start:
+{
+uint8_t x_2; lean_object* x_3; 
+x_2 = l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___lam__0(x_1);
+x_3 = lean_box(x_2);
+return x_3;
+}
+}
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___boxed(lean_object* x_1) {
+_start:
+{
+uint8_t x_2; lean_object* x_3; 
+x_2 = lean_unbox(x_1);
+x_3 = l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue(x_2);
+return x_3;
+}
+}
+static lean_object* _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__0() {
+_start:
+{
+lean_object* x_1; 
+x_1 = lean_alloc_closure((void*)(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___lam__0___boxed), 1, 0);
+return x_1;
+}
+}
+static lean_object* _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__1() {
+_start:
+{
+lean_object* x_1; 
+x_1 = lean_alloc_closure((void*)(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_selConstTrue___boxed), 1, 0);
+return x_1;
+}
+}
+static lean_object* _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__2() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; lean_object* x_3; 
+x_1 = l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__1;
+x_2 = l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__0;
+x_3 = lean_alloc_ctor(0, 2, 0);
+lean_ctor_set(x_3, 0, x_2);
+lean_ctor_set(x_3, 1, x_1);
+return x_3;
+}
+}
+static lean_object* _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj() {
+_start:
+{
+lean_object* x_1; 
+x_1 = l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__2;
+return x_1;
+}
+}
+static lean_object* _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapTrue() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; uint8_t x_3; lean_object* x_4; lean_object* x_5; 
+x_1 = l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj;
+x_2 = lean_ctor_get(x_1, 1);
+lean_inc(x_2);
+x_3 = 1;
+x_4 = lean_box(x_3);
+x_5 = lean_apply_1(x_2, x_4);
+return x_5;
+}
+}
+LEAN_EXPORT uint8_t l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse___lam__0(lean_object* x_1) {
+_start:
+{
+uint8_t x_2; 
+x_2 = 0;
+return x_2;
+}
+}
+static lean_object* _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse() {
+_start:
+{
+lean_object* x_1; 
+x_1 = lean_alloc_closure((void*)(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse___lam__0___boxed), 1, 0);
+return x_1;
+}
+}
+LEAN_EXPORT lean_object* l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse___lam__0___boxed(lean_object* x_1) {
+_start:
+{
+uint8_t x_2; lean_object* x_3; 
+x_2 = l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse___lam__0(x_1);
+x_3 = lean_box(x_2);
+return x_3;
+}
+}
+lean_object* initialize_Init(uint8_t builtin, lean_object*);
+lean_object* initialize_Mathlib_Data_Set_Insert(uint8_t builtin, lean_object*);
+lean_object* initialize_HeytingLean_ClosingTheLoop_MR_PaperMapping(uint8_t builtin, lean_object*);
+static bool _G_initialized = false;
+LEAN_EXPORT lean_object* initialize_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch(uint8_t builtin, lean_object* w) {
+lean_object * res;
+if (_G_initialized) return lean_io_result_mk_ok(lean_box(0));
+_G_initialized = true;
+res = initialize_Init(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_Mathlib_Data_Set_Insert(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_HeytingLean_ClosingTheLoop_MR_PaperMapping(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__0 = _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__0();
+lean_mark_persistent(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__0);
+l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__1 = _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__1();
+lean_mark_persistent(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__1);
+l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__2 = _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__2();
+lean_mark_persistent(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj___closed__2);
+l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj = _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj();
+lean_mark_persistent(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_sysInjNotSurj);
+l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapTrue = _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapTrue();
+lean_mark_persistent(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapTrue);
+l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse = _init_l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse();
+lean_mark_persistent(l___private_HeytingLean_ClosingTheLoop_Tests_Test__AssumptionMismatch_0__HeytingLean_ClosingTheLoop_Tests_mapFalse);
+return lean_io_result_mk_ok(lean_box(0));
+}
+#ifdef __cplusplus
+}
+#endif

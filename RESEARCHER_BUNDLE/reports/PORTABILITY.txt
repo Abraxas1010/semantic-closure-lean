@@ -1,0 +1,13 @@
+== closing_the_loop_bundle_demo ==
+	linux-vdso.so.1 (0x00007ffda773d000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000074fd82e00000)
+	/lib64/ld-linux-x86-64.so.2 (0x000074fd8d59b000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000074fd8d585000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000074fd8d580000)
+	librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x000074fd8d57b000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000074fd83119000)
+
+== emitted C binary (add1) ==
+	linux-vdso.so.1 (0x00007ffeba3fa000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007040d1a00000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007040d1cbb000)

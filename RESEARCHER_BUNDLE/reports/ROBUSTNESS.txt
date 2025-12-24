@@ -1,0 +1,19 @@
+exe=/home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/.lake/build/bin/closing_the_loop_bundle_demo
+
+== IO: artifacts/compiler unwritable ==
+[closing_the_loop_bundle_demo] generating LambdaIR + C artifacts
+[demo] evalClosed add1(41) = 42
+[demo] runNatFunFrag add1(41) = some 42
+[closing_the_loop_bundle_demo] done
+
+== ENV: empty env (PATH minimal) ==
+[closing_the_loop_bundle_demo] generating LambdaIR + C artifacts
+[demo] evalClosed add1(41) = 42
+[demo] runNatFunFrag add1(41) = some 42
+[closing_the_loop_bundle_demo] done
+
+== PATH: empty PATH ==
+[closing_the_loop_bundle_demo] generating LambdaIR + C artifacts
+[demo] evalClosed add1(41) = 42
+[demo] runNatFunFrag add1(41) = some 42
+[closing_the_loop_bundle_demo] done

@@ -1,0 +1,17 @@
+'HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_injective' does not depend on any axioms
+'HeytingLean.ClosingTheLoop.MR.InverseEvaluation.of_evalAt_surjective' depends on axioms: [Classical.choice]
+'HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_leftInverse_of_injective' does not depend on any axioms
+'HeytingLean.ClosingTheLoop.MR.closeSelector.idem' does not depend on any axioms
+'HeytingLean.ClosingTheLoop.MR.IsClosed.exists_eq_beta_iff' depends on axioms: [propext]
+'HeytingLean.ClosingTheLoop.Cat.InverseEvaluationAt.of_isIso_evalAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeytingLean.ClosingTheLoop.Cat.PreservesSelectorEval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeytingLean.ClosingTheLoop.Cat.idem_of_yoneda_map_idem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.MeetRetraction.retractionNucleus' depends on axioms: [propext]
+'HeytingLean.ClosingTheLoop.Semantics.futureKernel.idem' depends on axioms: [propext, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.futureKernel.idem' depends on axioms: [propext, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge.eval_beta' does not depend on any axioms
+'HeytingLean.ClosingTheLoop.Semantics.ProcessBridge.wellTyped_fixedPoint' depends on axioms: [propext, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.MRBridge.closeMachine_step_idem' depends on axioms: [propext, Quot.sound]
+'HeytingLean.ClosingTheLoop.Semantics.Realizability.realizable_invariant_of_simulation' does not depend on any axioms

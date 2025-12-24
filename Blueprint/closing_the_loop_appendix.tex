@@ -1,0 +1,208 @@
+% Closing the Loop (Semantic Closure) — appendix snippet
+%
+% Lean source: lean/HeytingLean/ClosingTheLoop/**
+% Research pack: WIP/ClosingTheLoop_PaperPack/**
+%
+% This file is a *paper-facing* summary of the mechanized definitions and theorems.
+
+\section{Semantic closure as an idempotent loop-closing operator}
+
+We formalize a minimal semantic-closure core inspired by Rosen-style (M,R) systems.
+All definitions and proofs below are mechanized in Lean (no \texttt{sorry}).
+
+\subsection{Rosen-style scaffold in \textbf{Set}}
+
+\paragraph{Admissible maps.}
+Fix types $A,B$ and a set of admissible maps $H \subseteq (A \to B)$.
+We also fix a distinguished admissible map $f \in H$ (metabolism).
+In Lean this is packaged as:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.MRSystem}
+\end{quote}
+
+\paragraph{Selector space and evaluation.}
+Define the selector space $\mathrm{Sel} := B \to H$ (where we treat $H$ as a subtype).
+For any configuration $b \in B$, evaluation at $b$ is:
+\[
+\mathrm{ev}_b : \mathrm{Sel} \to H,\qquad \Phi \mapsto \Phi(b).
+\]
+Lean names:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.Selector},\quad
+\texttt{HeytingLean.ClosingTheLoop.MR.evalAt}
+\end{quote}
+
+\subsection{Inverse evaluation and loop closure}
+
+\paragraph{Inverse evaluation at $b$.}
+We assume an \emph{inverse evaluation} map $\beta_b : H \to \mathrm{Sel}$ such that
+$\mathrm{ev}_b(\beta_b(g)) = g$ for all $g \in H$.
+This is packaged as:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.InverseEvaluation}
+\end{quote}
+\paragraph{Remark (existence vs chosen data).}
+If we only assume surjectivity of $\mathrm{ev}_b$ (i.e.\ $\forall g\in H,\exists \Phi,\Phi(b)=g$),
+Lean can derive an inverse evaluation function $\beta_b$ \emph{noncomputably} using choice:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.InverseEvaluation.of\_evalAt\_surjective}.
+\end{quote}
+Moreover, combining the paper’s injectivity-at-$b$ hypothesis with a right-inverse upgrades it to a left-inverse on selectors:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta\_leftInverse\_of\_injective}.
+\end{quote}
+
+\paragraph{Lemma (injectivity of $\beta_b$).}
+If $\beta_b$ is a right inverse of $\mathrm{ev}_b$ then $\beta_b$ is injective.
+
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta\_injective}
+\end{quote}
+
+\paragraph{Definition (loop-closing operator).}
+Define the loop closure operator on selectors:
+\[
+R(\Phi) := \beta_b(\Phi(b)).
+\]
+Lean name:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.closeSelector}
+\end{quote}
+
+\paragraph{Theorem (idempotence).}
+The loop closure operator is idempotent:
+\[
+R(R(\Phi)) = R(\Phi).
+\]
+Lean proof:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.closeSelector.idem}
+\end{quote}
+
+\paragraph{Definition (closed selector).}
+A selector is \emph{closed at $b$} if it is a fixed point of $R$:
+\[
+\mathrm{Closed}(\Phi) :\iff R(\Phi) = \Phi.
+\]
+Lean name:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.IsClosed}
+\end{quote}
+
+\paragraph{Lemma (closed selectors are exactly the image of $\beta_b$).}
+A selector is closed iff it is reconstructed by $\beta_b$:
+\[
+\mathrm{Closed}(\Phi) \;\Longleftrightarrow\; \exists g \in H(A,B),\; \beta_b(g)=\Phi.
+\]
+Lean name:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.MR.IsClosed.exists\_eq\_beta\_iff}
+\end{quote}
+
+\subsection{Bridge to nuclei}
+
+To connect semantic closure to the nucleus/Heyting-core machinery in the repo, we
+isolate the following generic construction.
+
+\paragraph{Meet-preserving section--retraction pairs.}
+Let $(\alpha,\wedge)$ and $(\beta,\wedge)$ be meet-semilattices and suppose:
+\begin{itemize}
+  \item $\mathrm{enc} : \alpha \to \beta$ and $\mathrm{dec} : \beta \to \alpha$,
+  \item section law: $\mathrm{enc}(\mathrm{dec}(y)) = y$,
+  \item inflationary law: $x \le \mathrm{dec}(\mathrm{enc}(x))$,
+  \item both $\mathrm{enc}$ and $\mathrm{dec}$ preserve $\wedge$.
+\end{itemize}
+Then $R(x) := \mathrm{dec}(\mathrm{enc}(x))$ defines a nucleus on $\alpha$.
+
+Lean name:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.Semantics.MeetRetraction.retractionNucleus}
+\end{quote}
+
+\paragraph{Remark (scope/limitation).}
+The selector closure operator $R(\Phi)=\beta_b(\Phi(b))$ is an idempotent operator on
+selectors, but producing a \emph{nontrivial meet-preserving nucleus} on a lattice of
+organizational propositions directly from this operator requires extra structure (beyond
+powersets) to satisfy meet preservation. The current development therefore:
+(i) formalizes the idempotent loop closure on mechanisms (selectors), and
+(ii) provides the nucleus bridge as a separate algebraic layer with explicit hypotheses.
+
+\subsection{Yoneda/representability view (functoriality)}
+
+For the categorical reconstruction programme, we also expose currying as a \emph{natural}
+isomorphism in the varying object $X$, expressing representability of the functor
+$X \mapsto \mathrm{Hom}(B \times X, H)$ by $H^B$. Lean name:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.Cat.curryNatIso}
+\end{quote}
+
+\subsection{Functorial time and preorder-time semantics (seed)}
+
+We also provide a time-indexed (F,A) container by treating time as a small category
+$T$ and time-indexed variables as functors $T \to \mathbf{Type}$:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.FA.TemporalDiagram}
+\end{quote}
+
+Specializing time to a preorder (thin category) yields a minimal, objective future-invariant
+operator (a kernel/interior modality) on time-indexed predicates, with an idempotence/closure law:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.Semantics.futureKernel},\quad
+\texttt{HeytingLean.ClosingTheLoop.Semantics.futureKernel.idem}
+\end{quote}
+\paragraph{General time categories.}
+For an arbitrary time category $T$ (not necessarily a preorder), we also provide the corresponding
+functorial-time kernel and inflationary reachability nucleus obtained by quantifying over all
+morphisms $t \to t'$:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.futureKernel},\quad
+\texttt{HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.reachabilityNucleus}.
+\end{quote}
+\paragraph{Remark.}
+To align with the repo’s default inflationary nucleus convention, we also provide an explicit
+time-indexed nucleus (relative to a chosen base time $t_0$ with the assumption $t_0 \le t$ for all $t$)
+that closes any predicate by unioning in states unreachable from that base time:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.Semantics.reachabilityNucleus}.
+\end{quote}
+
+\subsection{Computation model hooks (functional, concurrent, Mealy)}
+
+To ground the development in concrete models of computation (agenda items 5--6), we also expose:
+\begin{itemize}
+  \item a simply-typed $\lambda$-calculus semantic $\beta$-law (functional model):
+    \begin{quote}
+    \texttt{HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge.eval\_beta}
+    \end{quote}
+  \item an invariant fixed-point theorem for the concurrent process-calculus safety kernel:
+    \begin{quote}
+    \texttt{HeytingLean.ClosingTheLoop.Semantics.ProcessBridge.wellTyped\_fixedPoint}
+    \end{quote}
+  \item a Mealy/coalgebra hook viewing the loop closure operator as a one-step stabilizing dynamics:
+    \begin{quote}
+    \texttt{HeytingLean.ClosingTheLoop.Semantics.MRBridge.closeMachine\_step\_idem}
+    \end{quote}
+\end{itemize}
+
+\subsection{Scoped “concreteness” bridge}
+
+Finally, to make the faithful-embedding (\emph{concreteness}) viewpoint precise (rather than assumed), we provide
+a scoped lemma computing the mapped categorical closure operator under explicit preservation/comparison data:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.Cat.map\_close\_eq}.
+\end{quote}
+\paragraph{Interface.}
+The explicit interface recording what it means (for this project) that a functor $U:C\to\mathbf{Type}$
+preserves the exponential/evaluation structure used is:
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.Cat.PreservesSelectorEval}.
+\end{quote}
+
+\subsection{Relational realizability (invariant transport)}
+
+Finally, we provide a single reachability-based “relational realizability” theorem:
+if a relation $R$ simulates reachability between computation models, then invariants transport along $R$
+via existence-based realizability.
+\begin{quote}
+\texttt{HeytingLean.ClosingTheLoop.Semantics.Realizability.realizable\_invariant\_of\_simulation}.
+\end{quote}

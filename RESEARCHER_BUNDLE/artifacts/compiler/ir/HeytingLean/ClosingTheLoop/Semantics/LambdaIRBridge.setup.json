@@ -1,0 +1,14 @@
+{"plugins": [],
+ "options": {},
+ "name": "HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge",
+ "isModule": false,
+ "importArts":
+ {"HeytingLean.LambdaIR.Syntax":
+  ["/home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/.lake/build/lib/lean/HeytingLean/LambdaIR/Syntax.olean"],
+  "HeytingLean.LambdaIR.Semantics":
+  ["/home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/.lake/build/lib/lean/HeytingLean/LambdaIR/Semantics.olean"],
+  "HeytingLean.Core.Types":
+  ["/home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/.lake/build/lib/lean/HeytingLean/Core/Types.olean"],
+  "HeytingLean.Core.SemanticsBase":
+  ["/home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/.lake/build/lib/lean/HeytingLean/Core/SemanticsBase.olean"]},
+ "dynlibs": []}

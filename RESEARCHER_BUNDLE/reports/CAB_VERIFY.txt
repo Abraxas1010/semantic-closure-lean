@@ -1,0 +1,9 @@
+CAB path: /home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/artifacts/cab/cab.json
+  rulesRoot expected: 0x1b392e7b71c2590e3c8a59ab7f4d1ecf18c6971a76d1979e8fc5656d9011e8b6
+  rulesRoot got:      0x1b392e7b71c2590e3c8a59ab7f4d1ecf18c6971a76d1979e8fc5656d9011e8b6
+  foundation expected:0xaf27361d7b3406cfb4c9151430c21c4bccb17d2e4df6078b9e82bd3e9d288e31
+  foundation got:     0xaf27361d7b3406cfb4c9151430c21c4bccb17d2e4df6078b9e82bd3e9d288e31
+KERNEL path: /home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/artifacts/cab/kernel.json
+  kernelCommitment expected: 0x6f1223b811a10c5deb4214f80cb9b9a1bf895b5ca9fd97ff9245aa2654400b79
+  kernelCommitment got:      0x6f1223b811a10c5deb4214f80cb9b9a1bf895b5ca9fd97ff9245aa2654400b79
+CAB/KERNEL: OK

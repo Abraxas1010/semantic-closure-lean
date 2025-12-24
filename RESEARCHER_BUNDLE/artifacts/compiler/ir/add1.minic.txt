@@ -1,0 +1,4 @@
+{ name := "add1",
+  params := ["x"],
+  body := HeytingLean.MiniC.Stmt.return
+            (HeytingLean.MiniC.Expr.add (HeytingLean.MiniC.Expr.var "x") (HeytingLean.MiniC.Expr.intLit 1)) }

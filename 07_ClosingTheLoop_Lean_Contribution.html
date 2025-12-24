@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HeytingLean × ClosingTheLoop — Formalization & Researcher Bundle</title>
+    <style>
+      body { font-family: "Liberation Serif", "Times New Roman", serif; line-height: 1.35; margin: 2.2em; }
+      h1, h2, h3 { font-family: "Liberation Sans", "Arial", sans-serif; }
+      code, pre { font-family: "Liberation Mono", "Courier New", monospace; font-size: 0.92em; }
+      pre { background: #f4f6f8; border: 1px solid #d5dde5; padding: 10px 12px; overflow-x: auto; }
+      .muted { color: #4b5563; }
+      .box { border: 1px solid #d5dde5; padding: 10px 12px; background: #fbfcfd; }
+      ul { margin-top: 0.4em; }
+      .k { font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <h1>HeytingLean × “Closing the Loop” — Lean mechanization, reproducibility bundle, and visuals</h1>
+    <p class="muted">Date: 2025-12-24</p>
+
+    <h2>1. Purpose</h2>
+    <p>
+      This document explains what was mechanized in Lean to support the mathematics in
+      <code>WIP/Closing the loop_ how semantic closure.pdf</code>, and how an external researcher can
+      independently verify the results and inspect concrete compilation/runtime artifacts.
+    </p>
+
+    <h2>2. Executive summary (what is now “real”)</h2>
+    <ul>
+      <li>
+        <span class="k">Semantic closure as a fixed-point condition</span>:
+        we formalize closure operators and fixed points both set-theoretically and categorically.
+      </li>
+      <li>
+        <span class="k">No overclaims about β (inverse evaluation)</span>:
+        we separate (i) injective evaluation-at-<em>b</em> from (ii) a chosen right-inverse β, and we provide
+        an “inverse on the image” construction when global β is not justified.
+      </li>
+      <li>
+        <span class="k">Minimum categorical conditions made explicit</span>:
+        we isolate exactly what structure is needed (exponentiable object + evaluation) and provide
+        both a “faithful U : C ⥤ Type” route and a “pure Yoneda into presheaves” route.
+      </li>
+      <li>
+        <span class="k">Time semantics generalized</span>:
+        from preorder-time to a general “functorial time” category (quantifying over morphisms t ⟶ t′).
+      </li>
+      <li>
+        <span class="k">Computation unification hooks are executable</span>:
+        λ-calculus (β-law), process calculus (safety kernel), Mealy/coalgebra hook, and a relational
+        realizability invariant-transport theorem.
+      </li>
+      <li>
+        <span class="k">Researcher bundle</span>:
+        a self-contained directory with pinned dependencies, strict build/run, hostile-environment checks,
+        emitted LambdaIR + C artifacts, and standalone 2D/3D visuals.
+      </li>
+    </ul>
+
+    <h2>3. Mapping to the paper’s core mathematics (minimal)</h2>
+    <p>
+      The paper’s core diagram (A → B → H(A,B) → H(B,H(A,B))) is mechanized with an explicit ladder of assumptions:
+    </p>
+    <ul>
+      <li><code>InjectiveEvalAt</code>: evaluation-at-<em>b</em> is injective (uniqueness at <em>b</em>).</li>
+      <li><code>InverseEvaluation</code> (alias <code>RightInverseAt</code>): a chosen β right-inverse at <em>b</em> (stronger data).</li>
+      <li><code>EvalImage</code>: β defined only on the image/range (choice-free, always honest).</li>
+    </ul>
+    <p>
+      A concise outline and Lean-name map is in:
+      <code>WIP/ClosingTheLoop_PaperPack/06_Paper_Math_Outline.md</code>.
+    </p>
+
+    <h2>4. Concreteness vs Yoneda (researcher question 1–4)</h2>
+    <p>
+      The development treats “C is concrete” as an explicit assumption (faithful U : C ⥤ Type) rather than a default.
+      When possible, we also supply the canonical alternative: the Yoneda embedding into presheaves
+      <code>C ⥤ (Cᵒᵖ ⥤ Type)</code>, which is fully faithful, so properties like idempotence can be reflected without
+      assuming concreteness.
+    </p>
+
+    <h2>5. Computation vs dynamics: a shared interface (Ω<sub>R</sub>)</h2>
+    <div class="box">
+      <pre>COMPUTATION TRACK:                                        DYNAMICS TRACK:
+
+Lean (ClosingTheLoop proofs)                               (M,R)/(F,A) diagrams in C
+    ↓  (proofs erase; executable remains)                      ↓  (time-indexing / reachability)
+LambdaIR semantics (β-law)                                  ReachSystem / Kernel / Nucleus
+    ↓  (certified compilation fragments)                         ↓  (simulation relations)
+MiniC AST  →  tiny-C AST  →  emitted C  →  cc binary          Process / Mealy / functorial-time semantics
+    ↓                                                          ↓
+Curry–Howard (proofs-as-programs)                         Relational realizability (invariants transport)
+
+══════════════════════ HEYTING NUCLEUS  Ω_R  ══════════════════════
+                         ↓
+         Fixed points = semantically closed selectors / invariants
+                   (dynamics: halting states / periodic orbits)</pre>
+    </div>
+
+    <h2>6. Independent verification bundle (Lean + LambdaIR + C + runtime)</h2>
+    <p>
+      The external “researcher bundle” lives at:
+      <code>WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/</code>.
+    </p>
+    <p>
+      Verification entry point:
+      <code>./scripts/verify_closing_the_loop.sh</code>.
+    </p>
+    <ul>
+      <li>Strict Lean build (no <code>sorry</code> markers in the slice; greps included).</li>
+      <li>Axiom audit: checks key theorems do not depend on <code>sorryAx</code> (<code>reports/AXIOMS_AUDIT_OUTPUT.txt</code>).</li>
+      <li>Builds and runs <code>closing_the_loop_bundle_demo</code> (Lean native toolchain + runtime).</li>
+      <li>Emits artifacts:
+        <code>artifacts/compiler/ir/add1.lambdair.txt</code>,
+        <code>artifacts/compiler/ir/add1.minic.txt</code>,
+        <code>artifacts/compiler/c/add1.c</code>.
+      </li>
+      <li>Compiles emitted C with <code>cc</code> and runs it.</li>
+      <li>Hostile-environment checks: unwritable artifacts dir, empty env/PATH (<code>reports/ROBUSTNESS.txt</code>).</li>
+      <li>Portability check: dynamic deps via <code>ldd</code>/<code>otool</code> (<code>reports/PORTABILITY.txt</code>).</li>
+    </ul>
+
+    <h2>7. Visual artifacts (2D/3D + dependency graphs)</h2>
+    <p>
+      Open <code>WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/artifacts/visuals/index.html</code> to view:
+    </p>
+    <ul>
+      <li>Standalone 2D embedding (pan/zoom) and interactive 3D embedding (drag/zoom/pan).</li>
+      <li>Module import graphs (SVG) for the ClosingTheLoop slice.</li>
+      <li>Proof DAG snapshots (SVG) for selected key theorems.</li>
+    </ul>
+
+    <h2>8. Notes on axioms and assumptions (honesty contract)</h2>
+    <p>
+      The verifier forbids <code>sorry</code>/<code>admit</code>/<code>axiom</code> markers in the bundle’s Lean sources and checks that
+      key theorems do not depend on <code>sorryAx</code>.
+    </p>
+    <p>
+      Some results (e.g. choosing a right inverse from a surjectivity hypothesis) necessarily use
+      classical choice unless additional constructive data is provided; this is surfaced in the axiom audit output.
+    </p>
+
+    <h2>9. Time spent (objective, observable)</h2>
+    <p>
+      This repository does not log “active hours”. The only objective measure available is the
+      timestamped development history and file modification times. The ClosingTheLoop work is present
+      in commits dated <span class="k">2025-12-23</span> and in additional QA/visualization work dated
+      <span class="k">2025-12-24</span>. Therefore, the effort spans at least <span class="k">2 calendar days</span>.
+    </p>
+
+    <p class="muted">
+      Primary supporting docs: <code>WIP/ClosingTheLoop_PaperPack/README.md</code>,
+      <code>WIP/closure_audit_outstanding.md</code>,
+      <code>WIP/ClosingTheLoop_PaperPack/06_Paper_Math_Outline.md</code>.
+    </p>
+  </body>
+</html>
+

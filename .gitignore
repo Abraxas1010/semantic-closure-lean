@@ -1,0 +1,6 @@
+# Lean/Lake build caches
+.lake/
+**/.lake/
+
+# OS/editor
+.DS_Store

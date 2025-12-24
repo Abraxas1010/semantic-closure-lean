@@ -1,0 +1,17 @@
+{"synthetic": false,
+ "outputs": "11020735365545449485",
+ "log":
+ [{"message":
+   ".> /home/stepanie/.elan/toolchains/leanprover--lean4---v4.24.0/bin/clang -c -o /home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/.lake/build/ir/HeytingLean/ClosingTheLoop/MR/PaperMapping.c.o.export /home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/.lake/build/ir/HeytingLean/ClosingTheLoop/MR/PaperMapping.c -I /home/stepanie/.elan/toolchains/leanprover--lean4---v4.24.0/include -fstack-clash-protection -fwrapv -fPIC -fvisibility=hidden -Wno-unused-command-line-argument --sysroot /home/stepanie/.elan/toolchains/leanprover--lean4---v4.24.0 -nostdinc -isystem /home/stepanie/.elan/toolchains/leanprover--lean4---v4.24.0/include/clang -O3 -DNDEBUG -DLEAN_EXPORTING",
+   "level": "trace"}],
+ "inputs":
+ [["HeytingLean.ClosingTheLoop.MR.PaperMapping:c",
+   [["/home/stepanie/Downloads/heyting-surreal/WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/.lake/build/ir/HeytingLean/ClosingTheLoop/MR/PaperMapping.c",
+     "11580155356776787126"],
+    ["Lean 4.24.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b",
+     "1165570713881806064"]]],
+  ["Lean 4.24.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b",
+   "1165570713881806064"],
+  ["traceArgs: #[-O3, -DNDEBUG, -DLEAN_EXPORTING]", "13974588697068907418"],
+  ["x86_64-unknown-linux-gnu", "6026072021563112488"]],
+ "depHash": "13823123091392299162"}
