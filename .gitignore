@@ -4,3 +4,9 @@
 
 # OS/editor
 .DS_Store
+
+# Editor/office lock files
+*~
+*.swp
+*.swo
+.~lock.*#
