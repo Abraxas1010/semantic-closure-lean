@@ -1,13 +1,8 @@
 # Closing the Loop (2025, López‑Díaz & Gershenson) — math outline + Lean mapping
 
-This note summarizes the **basic mathematical scaffolding** used in:
+This note summarizes the **basic mathematical scaffolding** used in the paper *Closing the loop: how semantic closure enables open-ended evolution* (J. R. Soc. Interface 22: 20250784) and maps it to the Lean mechanization shipped in this repo, including the standalone researcher-verification bundle under:
 
-- `WIP/Closing the loop_ how semantic closure.pdf`
-
-and maps it to the Lean mechanization shipped in this repo, including the standalone
-researcher-verification bundle under:
-
-- `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/`
+- `./RESEARCHER_BUNDLE/`
 
 ---
 
@@ -130,7 +125,7 @@ Lean implements *hooks* for the paper’s “models of computation” theme:
 
 The standalone verifier:
 
-- `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/scripts/verify_closing_the_loop.sh`
+- `./RESEARCHER_BUNDLE/scripts/verify_closing_the_loop.sh`
 
 builds and runs `closing_the_loop_bundle_demo`, which emits:
 

@@ -22,11 +22,11 @@ The complete dependency set is recorded in:
 
 ## Researcher bundle pins
 
-The standalone verifier bundle under `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/` ships its own:
+The standalone verifier bundle under `./RESEARCHER_BUNDLE/` ships its own:
 
-- `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/lean-toolchain`
-- `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/lakefile.lean`
-- `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/lake-manifest.json`
+- `./RESEARCHER_BUNDLE/lean-toolchain`
+- `./RESEARCHER_BUNDLE/lakefile.lean`
+- `./RESEARCHER_BUNDLE/lake-manifest.json`
 
 Notable packages (non-exhaustive):
 - `doc-gen4` (docs generation tooling)
@@ -41,7 +41,7 @@ Notable packages (non-exhaustive):
 
 ## OS/runtime tools used by QA scripts (non-Lean)
 
-The local QA loop (see `WIP/ClosingTheLoop_PaperPack/03_Reproducibility.md`) may call:
+The local QA loop (see `./03_Reproducibility.md`) may call:
 
 - `bash`
 - `python3`

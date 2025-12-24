@@ -3,13 +3,13 @@
 Date: 2025-12-24  
 Repo branch: `quantum_extended`  
 Key commit: `ac70cb8` (“ClosingTheLoop: paper/cat formalization + researcher bundle”)  
-Paper excerpt reviewed: `WIP/Closing the loop_ how semantic closure.pdf`
+Paper: *Closing the loop: how semantic closure enables open-ended evolution* (J. R. Soc. Interface 22: 20250784)
 
 ---
 
 ## 0) What I reviewed in the PDF (what “closing the loop” means there)
 
-The excerpt in `WIP/Closing the loop_ how semantic closure.pdf` sets up the canonical Rosen/Hofmeyr-style
+The paper sets up the canonical Rosen/Hofmeyr-style
 (M,R)/(F,A) story and then isolates the “inverse evaluation / closure” move:
 
 - (2.1) an (M,R)-system core diagram with “admissible maps”:
@@ -42,24 +42,24 @@ There are two “presentations” of the same math:
 
 All core math lives under:
 
-- `lean/HeytingLean/ClosingTheLoop/**`
-- umbrella: `lean/HeytingLean/ClosingTheLoop.lean`
-- “main theorems”: `lean/HeytingLean/ClosingTheLoop/Main.lean`
+- `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/**`
+- umbrella: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop.lean`
+- “main theorems”: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Main.lean`
 
 ### B) Independent verification bundle (external-researcher reproducibility)
 
 Self-contained folder:
 
-- `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/`
+- `./RESEARCHER_BUNDLE/`
 - one-command verify script:
-  - `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/scripts/verify_closing_the_loop.sh`
+  - `./RESEARCHER_BUNDLE/scripts/verify_closing_the_loop.sh`
 - key reports produced/checked:
-  - `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/ClosingTheLoop_DEPENDENCIES.md`
-  - `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/ClosingTheLoop_PROOF_INDEX.md`
-  - `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/BUILD_TRANSCRIPT_STRICT.txt`
-  - `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/GREP_AXIOM_SORRY_ADMIT.txt`
-  - `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/CAB_VERIFY.txt`
-  - `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/SHA256SUMS.txt`
+  - `./RESEARCHER_BUNDLE/reports/ClosingTheLoop_DEPENDENCIES.md`
+  - `./RESEARCHER_BUNDLE/reports/ClosingTheLoop_PROOF_INDEX.md`
+  - `./RESEARCHER_BUNDLE/reports/BUILD_TRANSCRIPT_STRICT.txt`
+  - `./RESEARCHER_BUNDLE/reports/GREP_AXIOM_SORRY_ADMIT.txt`
+  - `./RESEARCHER_BUNDLE/reports/CAB_VERIFY.txt`
+  - `./RESEARCHER_BUNDLE/reports/SHA256SUMS.txt`
 
 ---
 
@@ -69,17 +69,17 @@ Self-contained folder:
 
 Paper-shaped hypothesis = injectivity/uniqueness at `b` (matches (2.3))
 
-- File: `lean/HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean`
+- File: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean`
 - Definition:
   - `HeytingLean.ClosingTheLoop.MR.InjectiveEvalAt (S) (b)`
 - Main lemma (paper’s (2.3) in Lean form):
   - `HeytingLean.ClosingTheLoop.MR.InjectiveEvalAt.eq_of_eval_eq`
-  - used in `lean/HeytingLean/ClosingTheLoop/Main.lean` as:
+  - used in `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Main.lean` as:
     - `HeytingLean.ClosingTheLoop.SetLevel.selector_eq_of_eval_eq`
 
 Stronger hypothesis = an actual chosen inverse evaluation map `β`
 
-- File: `lean/HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean`
+- File: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean`
 - Definition:
   - `HeytingLean.ClosingTheLoop.MR.InverseEvaluation (S) (b)` (paper name)
   - alias: `HeytingLean.ClosingTheLoop.MR.RightInverseAt (S) (b)` (precise “section-at-b” name)
@@ -91,7 +91,7 @@ Stronger hypothesis = an actual chosen inverse evaluation map `β`
 
 Choice-free “inverse on the image”
 
-- File: `lean/HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean`
+- File: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/MR/InverseEvaluation.lean`
 - Structure: `HeytingLean.ClosingTheLoop.MR.EvalImage`
 - Map: `HeytingLean.ClosingTheLoop.MR.EvalImage.betaOnImage`
 - This is the correct “no-choice” way to say “inverse evaluation exists on the image”: the witness selector is
@@ -99,7 +99,7 @@ Choice-free “inverse on the image”
 
 ### 2.2 Closure operator and idempotence (Tier 1): requires the chosen β
 
-- File: `lean/HeytingLean/ClosingTheLoop/MR/ClosureOperator.lean`
+- File: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/MR/ClosureOperator.lean`
 - Definition:
   - `HeytingLean.ClosingTheLoop.MR.closeSelector`
   - `closeSelector Φ := β (Φ b)`
@@ -110,7 +110,7 @@ Choice-free “inverse on the image”
 
 ### 2.3 We also prove the mismatch is real (test)
 
-- File: `lean/HeytingLean/ClosingTheLoop/Tests/Test_AssumptionMismatch.lean`
+- File: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Tests/Test_AssumptionMismatch.lean`
 - It constructs a tiny `Set` example where:
   - `InjectiveEvalAt` holds (selector space is a subsingleton so evaluation is injective),
   - but `RightInverseAt` cannot exist because evaluation is not surjective on the restricted selector space.
@@ -130,7 +130,7 @@ What we did (fits the spirit):
 - We did not assume concreteness to define the categorical closure story. We formalized the closure/idempotence
   argument inside an abstract CCC, directly.
 - We added a minimal, formal “where concreteness enters” lemma:
-  - `lean/HeytingLean/ClosingTheLoop/Cat/Concreteness.lean`
+  - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Cat/Concreteness.lean`
   - `HeytingLean.ClosingTheLoop.Cat.idem_of_map_idem`:
     if `U : C ⥤ Type` is faithful, then equality/idempotence after mapping implies equality/idempotence upstairs.
 
@@ -146,10 +146,10 @@ What’s missing to fully meet the agenda:
 What we did (partial but real):
 
 - We formalized the CCC currying equivalence:
-  - `lean/HeytingLean/ClosingTheLoop/Cat/YonedaView.lean`
+  - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Cat/YonedaView.lean`
   - `HeytingLean.ClosingTheLoop.Cat.curryEquiv : Hom(B × X, H) ≃ Hom(X, H^B)`
 - We also added the functor-level naturality statement:
-  - `lean/HeytingLean/ClosingTheLoop/Cat/YonedaViewNat.lean`
+  - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Cat/YonedaViewNat.lean`
   - `HeytingLean.ClosingTheLoop.Cat.curryNatIso`
 - This is exactly the representability principle that “feels Yoneda/Lawvere modern” and is the standard categorical
   mechanism behind “selectors represent a hom-functor”.
@@ -180,9 +180,9 @@ What we did (a first step):
   - Need a point `b : 𝟙 ⟶ B` to even state “evaluate at `b`”.
   - Need a section `β` of `evalAt b` to define closure and prove idempotence.
 - Files:
-  - `lean/HeytingLean/ClosingTheLoop/Cat/Selector.lean`
-  - `lean/HeytingLean/ClosingTheLoop/Cat/InverseEvaluation.lean`
-  - `lean/HeytingLean/ClosingTheLoop/Cat/ClosureOperator.lean`
+  - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Cat/Selector.lean`
+  - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Cat/InverseEvaluation.lean`
+  - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Cat/ClosureOperator.lean`
 
 What’s missing (big, but now well-scoped):
 
@@ -197,7 +197,7 @@ What’s missing (big, but now well-scoped):
 What we did (minimal hook):
 
 - We added a typed diagram skeleton (no probability/temporal semantics yet):
-  - `lean/HeytingLean/ClosingTheLoop/FA/Diagram.lean`
+  - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/FA/Diagram.lean`
 - We made fixed-point structure explicit (`IsClosed`), which is a natural starting point for “eigenform” discussion.
 
 What’s missing:
@@ -225,8 +225,8 @@ What we did (honest and mathlib-based):
 
 - We did not claim “idempotent ⇒ nucleus” without extra hypotheses.
 - We added:
-  - `lean/HeytingLean/ClosingTheLoop/Semantics/NucleusBridge.lean` (meet-preserving retraction → nucleus)
-  - `lean/HeytingLean/ClosingTheLoop/Semantics/NucleusFixedPoints.lean` (construct a `Nucleus` from explicit axioms;
+  - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Semantics/NucleusBridge.lean` (meet-preserving retraction → nucleus)
+  - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Semantics/NucleusFixedPoints.lean` (construct a `Nucleus` from explicit axioms;
     fixed points via `Order.Sublocale`)
 - This gives a clean checklist for when “semantic closure” becomes a modality/nucleus/Heyting-core story.
 
@@ -264,26 +264,26 @@ Priority C (toward semantic closure enabling open-ended evolution):
 
 ## 5) Reproducibility + “proof artifacts” (what external authors can independently verify)
 
-Independent bundle: `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/`
+Independent bundle: `./RESEARCHER_BUNDLE/`
 
 One command:
 
-- `cd WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE && ./scripts/verify_closing_the_loop.sh`
+- `cd ./RESEARCHER_BUNDLE && ./scripts/verify_closing_the_loop.sh`
 
 What it produces/checks (relevant to “authors can verify”):
 
-- Strict build transcript: `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/BUILD_TRANSCRIPT_STRICT.txt`
-- Repo-wide marker scan inside the bundle: `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/GREP_AXIOM_SORRY_ADMIT.txt`
-- Dependency pin report: `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/ClosingTheLoop_DEPENDENCIES.md`
-- Proof index: `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/ClosingTheLoop_PROOF_INDEX.md`
-- CAB verification: `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/reports/CAB_VERIFY.txt` plus CAB artifacts under
-  `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/artifacts/cab/`
+- Strict build transcript: `./RESEARCHER_BUNDLE/reports/BUILD_TRANSCRIPT_STRICT.txt`
+- Repo-wide marker scan inside the bundle: `./RESEARCHER_BUNDLE/reports/GREP_AXIOM_SORRY_ADMIT.txt`
+- Dependency pin report: `./RESEARCHER_BUNDLE/reports/ClosingTheLoop_DEPENDENCIES.md`
+- Proof index: `./RESEARCHER_BUNDLE/reports/ClosingTheLoop_PROOF_INDEX.md`
+- CAB verification: `./RESEARCHER_BUNDLE/reports/CAB_VERIFY.txt` plus CAB artifacts under
+  `./RESEARCHER_BUNDLE/artifacts/cab/`
 - Compiler outputs (evidence that Lean compiled the modules):
-  - `.olean/.ilean/.trace` copies: `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/artifacts/compiler/olean/HeytingLean/ClosingTheLoop/**`
-  - Lean compiler IR (`.ir`): `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/artifacts/compiler/ir/HeytingLean/ClosingTheLoop/**`
+  - `.olean/.ilean/.trace` copies: `./RESEARCHER_BUNDLE/artifacts/compiler/oRESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/**`
+  - Lean compiler IR (`.ir`): `./RESEARCHER_BUNDLE/artifacts/compiler/ir/HeytingLean/ClosingTheLoop/**`
   - emitted demo artifacts:
-    - LambdaIR (human-readable): `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/artifacts/compiler/ir/add1.lambdair.txt`
-    - C source: `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/artifacts/compiler/c/add1.c`
+    - LambdaIR (human-readable): `./RESEARCHER_BUNDLE/artifacts/compiler/ir/add1.lambdair.txt`
+    - C source: `./RESEARCHER_BUNDLE/artifacts/compiler/c/add1.c`
 
 Scope boundary (important to state in any paper-facing claims):
 
@@ -301,7 +301,7 @@ clean:
   1. Add a short, explicit “Assumptions Ladder” narrative section to the paper pack:
    - injective-at-b vs section-at-b vs inverse-on-image; and their categorical analogues (mono vs split epi).
   2. Add categorical “admissible morphisms” as a fibration/subobject layer:
-   - new folder suggestion: `lean/HeytingLean/ClosingTheLoop/Cat/Admissible/`
+   - new folder suggestion: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Cat/Admissible/`
   3. Add a minimal λ-calculus semantics module that targets the CCC layer (to begin addressing “models of computation”).
   4. Add a minimal coalgebra/LTS/process layer and relate it to closure/fixed points (to begin addressing concurrency/process algebra).
   5. Extend the (F,A) skeleton to time-parametrized (F,A) systems, as the PDF emphasizes temporal parametrization.

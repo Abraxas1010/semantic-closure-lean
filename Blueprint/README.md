@@ -2,7 +2,7 @@
 
 This folder contains a paper-style appendix section that mirrors the Lean development in:
 
-- `lean/HeytingLean/ClosingTheLoop/**`
+- `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/**`
 
 Files:
 

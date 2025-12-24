@@ -2,7 +2,7 @@
 
 This bundle is a standalone Lake project under:
 
-- `WIP/ClosingTheLoop_PaperPack/RESEARCHER_BUNDLE/`
+- `RESEARCHER_BUNDLE/`
 
 ## Lean toolchain
 
