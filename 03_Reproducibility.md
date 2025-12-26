@@ -16,6 +16,18 @@ This performs a strict `no_sorry` build of `HeytingLean.ClosingTheLoop`, builds 
 executable (exercising native compilation), emits LambdaIR + C artifacts, compiles the emitted C
 with `cc`, and records a transcript + hashes under `reports/`.
 
+## Noneism extension (eigencomputable crossings)
+
+The bundle also includes the Noneism layer, which can be checked independently:
+
+```bash
+cd RESEARCHER_BUNDLE
+./scripts/verify_noneism.sh
+```
+
+This performs a strict build of `HeytingLean.Noneism` and runs a small compliance module checking
+the `β` construction and its `@[eigencomputable ...]` tag.
+
 The bundle also ships offline visuals (no build step required):
 
 - `RESEARCHER_BUNDLE/artifacts/visuals/index.html`

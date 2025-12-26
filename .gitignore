@@ -10,3 +10,10 @@
 *.swp
 *.swo
 .~lock.*#
+
+# Generated trace artifacts
+*.trace
+
+# Generated Noneism verifier outputs
+RESEARCHER_BUNDLE/reports/NONEISM_*
+RESEARCHER_BUNDLE/reports/BUILD_TRANSCRIPT_NONEISM_STRICT.txt

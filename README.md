@@ -73,6 +73,20 @@ That's it. One command. It builds everything from scratch, checks for proof hole
 
 **If it passes, the mathematics is verified.**
 
+### Noneism extension (Eigencomputable crossings)
+
+This repository also contains an additional mechanized layer that refines how nonconstructive choices are interpreted by explicitly tying them to stabilizing dynamics (via the `Eigen` packaging and `@[eigencomputable ...]` tags).
+
+```bash
+cd RESEARCHER_BUNDLE
+./scripts/verify_noneism.sh
+```
+
+Docs:
+
+- `RESEARCHER_BUNDLE/docs/11_Eigencomputable_Framework.md`
+- `RESEARCHER_BUNDLE/docs/12_Categorical_Foundations.md`
+
 ---
 
 ## Proof Visualizations
