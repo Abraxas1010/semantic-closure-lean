@@ -301,13 +301,12 @@ def generate_edges(items: list, module_edges: dict) -> list:
     return edges
 
 def generate_static_png(items: list, edges: list, output_path: Path):
-    """Generate a static PNG visualization of the proof graph."""
+    """Generate a static 3D PNG visualization of the proof graph."""
     try:
         import matplotlib
         matplotlib.use('Agg')  # Non-interactive backend
         import matplotlib.pyplot as plt
-        from matplotlib.patches import Circle
-        import matplotlib.lines as mlines
+        from mpl_toolkits.mplot3d import Axes3D
     except ImportError:
         print("  Warning: matplotlib not available, skipping PNG generation")
         return False
@@ -327,48 +326,57 @@ def generate_static_png(items: list, edges: list, output_path: Path):
         'Other': '#90a4ae'
     }
 
-    fig, ax = plt.subplots(figsize=(16, 12), facecolor='#0b0f14')
-    ax.set_facecolor('#0b0f14')
+    fig = plt.figure(figsize=(16, 12), facecolor='#0b0f14')
+    ax = fig.add_subplot(111, projection='3d', facecolor='#0b0f14')
 
     # Draw edges
     for i, j in edges:
         if i < len(items) and j < len(items):
-            p1 = items[i].get('pos', {})
-            p2 = items[j].get('pos', {})
+            p1 = items[i].get('pos3', {})
+            p2 = items[j].get('pos3', {})
             if p1 and p2:
-                ax.plot([p1['x'], p2['x']], [p1['y'], p2['y']],
-                       color='#b0bec5', alpha=0.15, linewidth=0.5, zorder=1)
+                ax.plot([p1['x'], p2['x']], [p1['y'], p2['y']], [p1['z'], p2['z']],
+                       color='#b0bec5', alpha=0.12, linewidth=0.4)
 
     # Draw nodes by family
     for family in color_map:
-        xs = []
-        ys = []
+        xs, ys, zs = [], [], []
         for item in items:
             if item.get('family', 'Other') == family:
-                pos = item.get('pos', {})
+                pos = item.get('pos3', {})
                 if pos:
                     xs.append(pos['x'])
                     ys.append(pos['y'])
+                    zs.append(pos['z'])
         if xs:
-            ax.scatter(xs, ys, c=color_map[family], s=30, alpha=0.9,
-                      label=family, zorder=2, edgecolors='white', linewidths=0.3)
+            ax.scatter(xs, ys, zs, c=color_map[family], s=40, alpha=0.9,
+                      label=family, edgecolors='white', linewidths=0.3, depthshade=True)
 
-    # Title and labels
-    ax.set_title('ClosingTheLoop + Noneism — Proof/Declaration Map',
+    # Title
+    ax.set_title('ClosingTheLoop + Noneism — 3D Proof/Declaration Map',
                 fontsize=16, color='#e6eef7', pad=20)
-    ax.set_xlabel('UMAP Dimension 1', fontsize=10, color='#b8c7d9')
-    ax.set_ylabel('UMAP Dimension 2', fontsize=10, color='#b8c7d9')
+
+    # Set viewing angle for best visual
+    ax.view_init(elev=25, azim=45)
+
+    # Style the 3D axes
+    ax.set_facecolor('#0b0f14')
+    ax.xaxis.pane.fill = False
+    ax.yaxis.pane.fill = False
+    ax.zaxis.pane.fill = False
+    ax.xaxis.pane.set_edgecolor('#1c2a3a')
+    ax.yaxis.pane.set_edgecolor('#1c2a3a')
+    ax.zaxis.pane.set_edgecolor('#1c2a3a')
+    ax.tick_params(colors='#b8c7d9')
+    ax.xaxis.label.set_color('#b8c7d9')
+    ax.yaxis.label.set_color('#b8c7d9')
+    ax.zaxis.label.set_color('#b8c7d9')
 
     # Legend
-    legend = ax.legend(loc='upper right', framealpha=0.9, facecolor='#0f1721',
+    legend = ax.legend(loc='upper left', framealpha=0.9, facecolor='#0f1721',
                        edgecolor='#1c2a3a', fontsize=9)
     for text in legend.get_texts():
         text.set_color('#e6eef7')
-
-    # Remove axes spines
-    for spine in ax.spines.values():
-        spine.set_color('#1c2a3a')
-    ax.tick_params(colors='#b8c7d9')
 
     # Tight layout
     plt.tight_layout()

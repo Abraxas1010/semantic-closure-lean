@@ -95,9 +95,9 @@ Docs:
 
 We provide interactive visualizations showing the structure and dependencies of all proofs:
 
-![Proof Dependency Graph](images/proof_graph_visualization.png)
+![Proof Dependency Graph (3D)](images/proof_graph_visualization.png)
 
-*The proof graph shows how theorems depend on each other. Each node is a declaration (definition, lemma, or theorem). Edges show logical dependencies—which results are used to prove which others. Colors indicate module families: green (MR), blue (Cat), purple (Semantics), orange (FA), and violet shades (Noneism extension). Clusters reveal the modular structure of the formalization.*
+*3D proof graph showing how theorems depend on each other. Each node is a declaration (definition, lemma, or theorem). Edges show logical dependencies. Colors indicate module families: green (MR), blue (Cat), purple (Semantics), orange (FA), and violet shades (Noneism extension). The spatial clustering reveals the modular structure of the formalization. See interactive viewers below for full exploration.*
 
 **Interactive Viewers:**
 - [**2D Viewer**](RESEARCHER_BUNDLE/artifacts/visuals/closing_the_loop_2d.html) — Pan/zoom, hover for names, click for details
