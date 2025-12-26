@@ -199,9 +199,107 @@ preserves the exponential/evaluation structure used is:
 
 \subsection{Relational realizability (invariant transport)}
 
-Finally, we provide a single reachability-based “relational realizability” theorem:
+Finally, we provide a single reachability-based "relational realizability" theorem:
 if a relation $R$ simulates reachability between computation models, then invariants transport along $R$
 via existence-based realizability.
 \begin{quote}
 \texttt{HeytingLean.ClosingTheLoop.Semantics.Realizability.realizable\_invariant\_of\_simulation}.
 \end{quote}
+
+\section{Noneism extension: eigencomputable $\beta$}
+
+The inverse evaluation map $\beta_b$ is constructed using classical choice when derived from
+surjectivity. The Noneism extension refines this by distinguishing \emph{eigencomputable}
+definitions---those determined by a stabilizing dynamics with a unique fixed point---from
+arbitrary noncomputable definitions.
+
+\subsection{The three-level hierarchy}
+
+\begin{center}
+\begin{tabular}{r|l|l}
+\textbf{Level} & \textbf{Lean marker} & \textbf{Meaning} \\
+\hline
+Computable & \texttt{def} & Algorithm exists and runs \\
+Eigencomputable & \texttt{@[eigencomputable D]} + \texttt{noncomputable} & Determined by dynamics $D$ \\
+Arbitrary noncomputable & \texttt{noncomputable def} (no tag) & Raw classical selection
+\end{tabular}
+\end{center}
+
+\subsection{Selector dynamics}
+
+The key insight is that selectors have a natural dynamics that ``forgets everything but evaluation at $b$'':
+\[
+\mathrm{SD}_b(\Phi) := \lambda b'.\; \Phi(b).
+\]
+A selector is stable under this dynamics iff it is constant:
+$\mathrm{SD}_b(\Phi) = \Phi \;\Longleftrightarrow\; \forall b',\; \Phi(b') = \Phi(b)$.
+
+\paragraph{Theorem (unique stable selector per metabolism).}
+For each metabolism $f \in H(A,B)$, there exists a unique selector $\Phi$ such that:
+\begin{enumerate}
+  \item $\mathrm{SD}_b(\Phi) = \Phi$ (stability)
+  \item $\mathrm{ev}_b(\Phi) = f$ (evaluates to $f$)
+\end{enumerate}
+Lean name:
+\begin{quote}
+\texttt{HeytingLean.Noneism.Bridge.selectorDynamics\_unique\_stable}
+\end{quote}
+
+\subsection{$\beta$ as eigencomputable}
+
+The inverse evaluation map $\beta_b(f)$ is defined as the unique stable selector
+evaluating to $f$. This is formalized via the \texttt{Eigen} type:
+\begin{quote}
+\texttt{HeytingLean.Noneism.Eigen} --- packages value + dynamics + uniqueness proof
+\end{quote}
+
+\paragraph{Definition (eigencomputable $\beta$).}
+\begin{quote}
+\texttt{HeytingLean.Noneism.Bridge.betaEigenAt} --- tagged \texttt{@[eigencomputable selectorDynamicsAt]}
+\end{quote}
+
+\paragraph{Theorem ($\beta$ is a right inverse).}
+$\mathrm{ev}_b(\beta_b(f)) = f$.
+\begin{quote}
+\texttt{HeytingLean.Noneism.Bridge.beta\_right\_inverse}
+\end{quote}
+
+\paragraph{Theorem ($\beta$ outputs are stable).}
+$\mathrm{SD}_b(\beta_b(f)) = \beta_b(f)$.
+\begin{quote}
+\texttt{HeytingLean.Noneism.Bridge.beta\_stable}
+\end{quote}
+
+\paragraph{Theorem ($\beta$ equals the constant selector).}
+The unique stable selector evaluating to $f$ is simply $\lambda b'.\; f$:
+\[
+\beta_b(f) = \lambda b'.\; f.
+\]
+\begin{quote}
+\texttt{HeytingLean.Noneism.Bridge.beta\_eq\_const}
+\end{quote}
+
+\subsection{Comparison with raw choice}
+
+For comparison, we also provide a raw choice-based construction:
+\begin{quote}
+\texttt{HeytingLean.Noneism.Bridge.betaRaw} --- uses \texttt{Classical.choose} directly
+\end{quote}
+
+\paragraph{Theorem (equivalence when stable).}
+If the choice-based $\beta_{\mathrm{raw}}$ happens to be stable, it must agree with
+the eigencomputable $\beta$:
+\begin{quote}
+\texttt{HeytingLean.Noneism.Bridge.beta\_eq\_betaRaw\_of\_stable}
+\end{quote}
+
+\subsection{Paper alignment}
+
+The paper's equations (2.1)--(2.5) are now precisely aligned:
+\begin{itemize}
+  \item \textbf{Eq (2.3) injectivity}: characterized by \texttt{selectorDynamics\_stable\_iff}
+  \item \textbf{Eq (2.4) $\beta$ construction}: eigencomputable via \texttt{Bridge.beta}, \texttt{Bridge.betaEigenAt}
+  \item \textbf{Eq (2.5) closure loop}: follows from \texttt{beta\_right\_inverse} + \texttt{beta\_stable}
+\end{itemize}
+
+The nonconstructive choice is not arbitrary: it is \emph{forced by the selector dynamics}.

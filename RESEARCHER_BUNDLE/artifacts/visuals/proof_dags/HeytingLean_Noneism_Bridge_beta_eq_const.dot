@@ -2,5 +2,5 @@ digraph G {
   rankdir=TB;
   graph [bgcolor="transparent"];
   node [shape=box, style="rounded,filled", fillcolor="#0f1721", color="#43a047", fontcolor="#e6eef7"];
-  "map_close_eq" [label="map_close_eq"];
+  "beta_eq_const" [label="beta_eq_const"];
 }

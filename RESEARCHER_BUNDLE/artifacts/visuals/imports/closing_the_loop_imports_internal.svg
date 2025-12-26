@@ -166,13 +166,13 @@
 <text text-anchor="middle" x="155" y="-370.14" font-family="Times,serif" font-size="9.00" fill="#e6eef7">HeytingLean.ClosingTheLoop.Main</text>
 </g>
 <!-- HeytingLean.ClosingTheLoop.Main&#45;&gt;HeytingLean.ClosingTheLoop.Cat.ClosureOperator -->
-<g id="edge12" class="edge">
+<g id="edge11" class="edge">
 <title>HeytingLean.ClosingTheLoop.Main&#45;&gt;HeytingLean.ClosingTheLoop.Cat.ClosureOperator</title>
 <path fill="none" stroke="#90a4ae" d="M244.94,-386.52C283.65,-392.7 329.67,-400.04 371.58,-406.73"/>
 <polygon fill="#90a4ae" stroke="#90a4ae" points="371.15,-410.2 381.57,-408.32 372.25,-403.29 371.15,-410.2"/>
 </g>
 <!-- HeytingLean.ClosingTheLoop.Main&#45;&gt;HeytingLean.ClosingTheLoop.MR.PaperMapping -->
-<g id="edge11" class="edge">
+<g id="edge12" class="edge">
 <title>HeytingLean.ClosingTheLoop.Main&#45;&gt;HeytingLean.ClosingTheLoop.MR.PaperMapping</title>
 <path fill="none" stroke="#90a4ae" d="M244.94,-358.15C283.65,-351.97 329.67,-344.63 371.58,-337.95"/>
 <polygon fill="#90a4ae" stroke="#90a4ae" points="372.25,-341.38 381.57,-336.35 371.15,-334.47 372.25,-341.38"/>
@@ -262,13 +262,13 @@
 <polygon fill="#90a4ae" stroke="#90a4ae" points="706.1,-32.25 716.52,-30.34 707.18,-25.33 706.1,-32.25"/>
 </g>
 <!-- HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability&#45;&gt;HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge -->
-<g id="edge19" class="edge">
+<g id="edge18" class="edge">
 <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability&#45;&gt;HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge</title>
 <path fill="none" stroke="#90a4ae" d="M310.39,-87.65C321.09,-88.51 331.88,-89.37 342.57,-90.22"/>
 <polygon fill="#90a4ae" stroke="#90a4ae" points="342.54,-93.73 352.78,-91.03 343.09,-86.75 342.54,-93.73"/>
 </g>
 <!-- HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability&#45;&gt;HeytingLean.ClosingTheLoop.Semantics.Mealy -->
-<g id="edge18" class="edge">
+<g id="edge19" class="edge">
 <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability&#45;&gt;HeytingLean.ClosingTheLoop.Semantics.Mealy</title>
 <path fill="none" stroke="#90a4ae" d="M181.38,-93.5C216.59,-117.8 283.05,-160.48 346,-183.34 353.27,-185.98 360.85,-188.37 368.55,-190.53"/>
 <polygon fill="#90a4ae" stroke="#90a4ae" points="367.8,-193.96 378.37,-193.15 369.61,-187.19 367.8,-193.96"/>

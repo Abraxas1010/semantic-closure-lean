@@ -1,0 +1,18 @@
+{
+  "id": "HeytingLean.Noneism.Bridge.selectorDynamics_unique_stable",
+  "name": "HeytingLean.Noneism.Bridge.selectorDynamics_unique_stable",
+  "kind": "theorem",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "selectorDynamics_unique_stable",
+      "kind": "root",
+      "depth": 0
+    }
+  ],
+  "edges": [],
+  "meta": {
+    "generated": "2025-12-26T22:46:09.804480+00:00",
+    "note": "Stub DAG - regenerate with Lean tooling for full proof structure"
+  }
+}

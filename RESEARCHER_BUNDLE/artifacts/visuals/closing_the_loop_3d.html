@@ -38,7 +38,12 @@
         const details = document.getElementById('details')
 
         const colorForFamily = (fam) => {
-          const map = { MR:0x43a047, Cat:0x1e88e5, Semantics:0x8e24aa, FA:0xfb8c00, Tests:0x607d8b, BundleDemo:0x3949ab, Main:0x546e7a }
+          const map = {
+            MR:0x43a047, Cat:0x1e88e5, Semantics:0x8e24aa, FA:0xfb8c00,
+            Tests:0x607d8b, BundleDemo:0x3949ab, Main:0x546e7a,
+            // Noneism extension families
+            Eigen:0xce93d8, Bridge:0xab47bc, Noneism:0x9c27b0
+          }
           return map[fam] || 0x90a4ae
         }
 

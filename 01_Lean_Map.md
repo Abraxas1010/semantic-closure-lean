@@ -89,11 +89,125 @@ Tier 3d (relational realizability theorem):
 Tests / toy models:
 
 - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Tests/ClosureIdempotent.lean`
-  - a tiny MR instance + checks of idempotence and “collapse to b”.
+  - a tiny MR instance + checks of idempotence and "collapse to b".
 
 Umbrella import:
 
 - `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop.lean`
+
+---
+
+## Noneism Extension (Eigencomputable Framework)
+
+The Noneism layer provides a refined interpretation of nonconstructive definitions, distinguishing between arbitrary classical choice and dynamics-grounded choice.
+
+### Three-Level Computability Hierarchy
+
+| Level | Lean marker | Meaning |
+|------:|------------:|---------|
+| Computable | `def` | Algorithm exists and runs |
+| Eigencomputable | `@[eigencomputable D]` + `noncomputable` | Determined by dynamics `D` |
+| Arbitrary noncomputable | `noncomputable def` (no tag) | Raw classical selection |
+
+### Eigen Core (unique fixed-point packaging):
+
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Eigen/Basic.lean`
+  - `HeytingLean.Noneism.IsEigenform` — a value is eigenform if it's the unique fixed point
+  - `HeytingLean.Noneism.Eigen` — packages value + dynamics + uniqueness proof
+  - `HeytingLean.Noneism.Eigen.ofExistsUniqueFixedPoint` — construct Eigen from ∃! proof
+  - `HeytingLean.Noneism.Eigen.cross` — alias for the "crossing" constructor
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Eigen/Attribute.lean`
+  - `@[eigencomputable D]` attribute for marking eigencomputable definitions
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Eigen/Dynamics.lean`
+  - `HeytingLean.Noneism.Dynamics` — abstract dynamics structure
+  - `HeytingLean.Noneism.Dynamics.stablePoint` — extract unique stable point
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Eigen/Grounded.lean`
+  - `HeytingLean.Noneism.HasEigenstructure` — typeclass for types with canonical eigenstructure
+
+### Bridge Layer (β as eigencomputable):
+
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/EvaluationMap.lean`
+  - `HeytingLean.Noneism.Bridge.Metabolism` — type alias `A → B`
+  - `HeytingLean.Noneism.Bridge.Selector` — type alias `B → (A → B)`
+  - `HeytingLean.Noneism.Bridge.evalAt` — evaluation at a point
+  - `HeytingLean.Noneism.Bridge.SurjectiveEvalAt` — surjectivity predicate
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/SelectorDynamics.lean`
+  - `HeytingLean.Noneism.Bridge.selectorDynamics` — the "re-close through b" dynamics: `Φ ↦ (fun _ => Φ b)`
+  - `HeytingLean.Noneism.Bridge.selectorDynamics_unique_stable` — uniqueness theorem
+  - `HeytingLean.Noneism.Bridge.selectorDynamicsAt` — dynamics on the fiber over a metabolism
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/BetaEigen.lean`
+  - `HeytingLean.Noneism.Bridge.betaEigenAt` — **eigencomputable β** tagged `@[eigencomputable selectorDynamicsAt]`
+  - `HeytingLean.Noneism.Bridge.beta` — projects the underlying selector
+  - `HeytingLean.Noneism.Bridge.beta_right_inverse` — β is a right inverse of evalAt
+  - `HeytingLean.Noneism.Bridge.beta_stable` — β(f) is stable under selector dynamics
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/BetaConstruction.lean`
+  - `HeytingLean.Noneism.Bridge.betaRaw` — raw choice-based β for comparison
+  - `HeytingLean.Noneism.Bridge.beta_eq_const` — β(f) = (fun _ => f)
+  - `HeytingLean.Noneism.Bridge.beta_eq_betaRaw_of_stable` — equivalence when betaRaw is stable
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/MRClosure.lean`
+  - Bridge to ClosingTheLoop MR structures
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/SemanticClosureLink.lean`
+  - Link between Noneism β and semantic closure concepts
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/NoncomputableAudit.lean`
+  - Tooling to enumerate `@[eigencomputable ...]` declarations
+
+### Category Theory Foundations:
+
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Cat/Basic.lean`
+  - Basic categorical imports
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Cat/Presheaf.lean`
+  - `HeytingLean.Noneism.Cat.Presheaf` — presheaf type alias
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Cat/Yoneda.lean`
+  - `HeytingLean.Noneism.Cat.actualize` — representing object from representable functor
+  - `HeytingLean.Noneism.Cat.actualizeIso` — isomorphism to Yoneda image
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Cat/Lawvere.lean`
+  - Lawvere fixed-point framework
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Cat/FixedPoint.lean`
+  - Categorical fixed-point constructions
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Cat/Monad.lean`
+  - Monad-based closure operators
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Cat/Coalgebra.lean`
+  - Coalgebraic dynamics perspective
+
+### Heyting/Nucleus Core:
+
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Core/Nucleus.lean`
+  - `HeytingLean.Noneism.Core.Nucleus` — nucleus on a Heyting algebra
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Core/FixedPoints.lean`
+  - Fixed-point characterizations
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Core/HeytingCore.lean`
+  - Heyting algebra core operations
+
+### Zeros (minimal/maximal/recursive structures):
+
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Zeros/Minimal.lean`
+  - Minimal element constructions
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Zeros/Maximal.lean`
+  - Maximal element constructions
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Zeros/Recursive.lean`
+  - Recursive zero constructions
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Zeros/Hierarchy.lean`
+  - Zero hierarchy relationships
+
+### Crossing (ontological boundaries):
+
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Crossing/OntologicalBoundary.lean`
+  - `HeytingLean.Noneism.cross` — the boundary-crossing constructor
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Crossing/Adjunction.lean`
+  - Adjunction-based boundary crossings
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Crossing/Persistence.lean`
+  - Persistence across boundaries
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Crossing/Irreversibility.lean`
+  - Irreversibility of certain crossings
+
+### Tests:
+
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism/Tests/Compliance.lean`
+  - Validates β construction properties
+
+### Umbrella import:
+
+- `RESEARCHER_BUNDLE/HeytingLean/Noneism.lean`
 
 ## Quick local navigation commands
 

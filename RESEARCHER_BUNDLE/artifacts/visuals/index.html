@@ -3,55 +3,148 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClosingTheLoop — Proof/Declaration Map</title>
+    <title>ClosingTheLoop + Noneism — Proof/Declaration Map</title>
     <style>
       :root { color-scheme: dark; }
       body { margin: 0; font: 14px/1.4 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#0b0f14; color:#e6eef7; }
       a { color:#8ab4f8; text-decoration:none; }
       a:hover { text-decoration:underline; }
-      .wrap { max-width: 920px; margin: 0 auto; padding: 28px 18px; }
-      .card { background:#0f1721; border:1px solid #1c2a3a; border-radius:12px; padding: 16px 18px; }
+      .wrap { max-width: 960px; margin: 0 auto; padding: 28px 18px; }
+      .card { background:#0f1721; border:1px solid #1c2a3a; border-radius:12px; padding: 16px 18px; margin-bottom: 12px; }
       .grid { display:grid; grid-template-columns: 1fr; gap: 12px; }
       @media (min-width: 760px){ .grid { grid-template-columns: 1fr 1fr; } }
       .muted { color:#b8c7d9; }
       code { background:#0b1320; border:1px solid #1c2a3a; border-radius: 6px; padding:2px 6px; }
+      h3 { margin-top: 0; color: #8ab4f8; }
+      .noneism { border-color:#8e24aa; background:#1a0f21; }
+      .noneism h2, .noneism h3 { color:#ce93d8; }
+      ul { margin: 0; padding-left: 20px; }
+      li { margin: 4px 0; }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <h1>ClosingTheLoop — Proof/Declaration Map</h1>
+      <h1>ClosingTheLoop + Noneism — Proof/Declaration Map</h1>
       <p class="muted">
-        Standalone 2D/3D visualizations of the <code>HeytingLean.ClosingTheLoop</code> slice.
-        Open one of the viewers below.
+        Standalone 2D/3D visualizations of the <code>HeytingLean.ClosingTheLoop</code> and
+        <code>HeytingLean.Noneism</code> slices. Open one of the viewers below.
       </p>
+
+      <!-- Interactive Viewers -->
       <div class="grid">
         <div class="card">
           <h2>2D Viewer</h2>
-          <p class="muted">Pan/zoom, hover for names, click for details.</p>
+          <p class="muted">Pan/zoom, hover for names, click for details. Now includes Noneism declarations.</p>
           <p><a href="./closing_the_loop_2d.html">Open <code>closing_the_loop_2d.html</code></a></p>
         </div>
         <div class="card">
           <h2>3D Viewer</h2>
-          <p class="muted">Drag to rotate, wheel to zoom, hover/click nodes.</p>
+          <p class="muted">Drag to rotate, wheel to zoom, hover/click nodes. Now includes Noneism declarations.</p>
           <p><a href="./closing_the_loop_3d.html">Open <code>closing_the_loop_3d.html</code></a></p>
         </div>
       </div>
-      <div class="card" style="margin-top:12px">
-        <h2>Static Graphs (SVG)</h2>
+
+      <!-- Module Import Graphs -->
+      <div class="card">
+        <h2>Module Import Graphs (SVG)</h2>
+        <div class="grid">
+          <div>
+            <h3>ClosingTheLoop</h3>
+            <ul>
+              <li><a href="./imports/closing_the_loop_imports_internal.svg">Internal imports only</a></li>
+              <li><a href="./imports/closing_the_loop_imports_with_deps.svg">With external deps</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Combined + Noneism</h3>
+            <ul>
+              <li><a href="./imports/closing_the_loop_with_noneism.svg">ClosingTheLoop + Noneism combined</a></li>
+              <li><a href="./imports/noneism_imports.svg">Noneism extension only</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ClosingTheLoop Proof DAGs -->
+      <div class="card">
+        <h2>ClosingTheLoop Proof DAGs (SVG)</h2>
         <ul>
-          <li><a href="./imports/closing_the_loop_imports_internal.svg">Module import graph (internal)</a></li>
-          <li><a href="./imports/closing_the_loop_imports_with_deps.svg">Module import graph (+ direct deps)</a></li>
-          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_MR_closeSelector_idem.svg">Proof DAG: <code>MR.closeSelector.idem</code></a></li>
-          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Cat_curryNatIso.svg">Proof DAG: <code>Cat.curryNatIso</code></a></li>
-          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Cat_idem_of_yoneda_map_idem.svg">Proof DAG: <code>Cat.idem_of_yoneda_map_idem</code></a></li>
-          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Cat_map_close_eq.svg">Proof DAG: <code>Cat.map_close_eq</code></a></li>
-          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Semantics_FunctorialTime_futureKernel_idem.svg">Proof DAG: <code>FunctorialTime.futureKernel.idem</code></a></li>
-          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Semantics_Realizability_realizable_invariant_of_simulation.svg">Proof DAG: <code>Realizability.realizable_invariant_of_simulation</code></a></li>
+          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_MR_closeSelector_idem.svg">
+            <code>MR.closeSelector.idem</code></a> — Loop closure idempotence</li>
+          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Cat_curryNatIso.svg">
+            <code>Cat.curryNatIso</code></a> — Currying natural isomorphism</li>
+          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Cat_idem_of_yoneda_map_idem.svg">
+            <code>Cat.idem_of_yoneda_map_idem</code></a> — Yoneda faithfulness</li>
+          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Cat_map_close_eq.svg">
+            <code>Cat.map_close_eq</code></a> — Concreteness computation</li>
+          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Semantics_FunctorialTime_futureKernel_idem.svg">
+            <code>FunctorialTime.futureKernel.idem</code></a> — Time kernel closure</li>
+          <li><a href="./proof_dags/HeytingLean_ClosingTheLoop_Semantics_Realizability_realizable_invariant_of_simulation.svg">
+            <code>Realizability.realizable_invariant_of_simulation</code></a> — Invariant transport</li>
         </ul>
       </div>
+
+      <!-- Noneism Proof DAGs -->
+      <div class="card noneism">
+        <h2>Noneism Extension Proof DAGs (SVG)</h2>
+        <p class="muted" style="margin-top:0; margin-bottom:12px;">
+          The eigencomputable framework for grounding the inverse evaluation map <code>β</code>.
+          See <a href="../../docs/11_Eigencomputable_Framework.md">Eigencomputable Framework docs</a>.
+        </p>
+        <ul>
+          <li><a href="./proof_dags/HeytingLean_Noneism_Eigen_determined_by_dynamics.svg">
+            <code>Eigen.determined_by_dynamics</code></a> — Unique fixed point determines value</li>
+          <li><a href="./proof_dags/HeytingLean_Noneism_Bridge_selectorDynamics_stable_iff.svg">
+            <code>Bridge.selectorDynamics_stable_iff</code></a> — Stability characterization</li>
+          <li><a href="./proof_dags/HeytingLean_Noneism_Bridge_selectorDynamics_unique_stable.svg">
+            <code>Bridge.selectorDynamics_unique_stable</code></a> — <strong>Key theorem:</strong> unique stable selector per metabolism</li>
+          <li><a href="./proof_dags/HeytingLean_Noneism_Bridge_beta_right_inverse.svg">
+            <code>Bridge.beta_right_inverse</code></a> — Eigencomputable β is a right inverse (eq 2.4)</li>
+          <li><a href="./proof_dags/HeytingLean_Noneism_Bridge_beta_stable.svg">
+            <code>Bridge.beta_stable</code></a> — β outputs are stable under selector dynamics</li>
+          <li><a href="./proof_dags/HeytingLean_Noneism_Bridge_beta_eq_const.svg">
+            <code>Bridge.beta_eq_const</code></a> — β(f) = (fun _ => f), the constant selector</li>
+        </ul>
+      </div>
+
+      <!-- Stats -->
+      <div class="card" style="background:#0a1018;">
+        <h2>Statistics</h2>
+        <table style="width:100%; border-collapse:collapse;">
+          <tr>
+            <td style="padding:4px 0;">ClosingTheLoop modules</td>
+            <td style="text-align:right; color:#43a047;">27</td>
+          </tr>
+          <tr>
+            <td style="padding:4px 0;">Noneism modules</td>
+            <td style="text-align:right; color:#8e24aa;">30</td>
+          </tr>
+          <tr>
+            <td style="padding:4px 0;">Total declarations in UMAP</td>
+            <td style="text-align:right; color:#8ab4f8;">238</td>
+          </tr>
+          <tr>
+            <td style="padding:4px 0;">Proof DAGs generated</td>
+            <td style="text-align:right;">12</td>
+          </tr>
+        </table>
+      </div>
+
       <p class="muted" style="margin-top:14px">
         Data source: <code>closing_the_loop_proofs.json</code> (UMAP over Lean source text features).
+        <br>Generated: <span id="gen-date">Dec 2025</span>
       </p>
     </div>
+    <script>
+      // Show actual generation date from JSON if available
+      fetch('./closing_the_loop_proofs.json')
+        .then(r => r.json())
+        .then(d => {
+          if (d.meta && d.meta.generatedAt) {
+            document.getElementById('gen-date').textContent = new Date(d.meta.generatedAt).toLocaleDateString();
+          }
+        })
+        .catch(() => {});
+    </script>
   </body>
 </html>

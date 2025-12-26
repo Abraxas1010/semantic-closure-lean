@@ -1,18 +1,18 @@
 {
-  "id": "HeytingLean.ClosingTheLoop.Cat.curryNatIso",
-  "name": "HeytingLean.ClosingTheLoop.Cat.curryNatIso",
+  "id": "HeytingLean.Noneism.Bridge.beta_stable",
+  "name": "HeytingLean.Noneism.Bridge.beta_stable",
   "kind": "theorem",
   "nodes": [
     {
       "id": 0,
-      "label": "curryNatIso",
+      "label": "beta_stable",
       "kind": "root",
       "depth": 0
     }
   ],
   "edges": [],
   "meta": {
-    "generated": "2025-12-26T22:46:09.376056+00:00",
+    "generated": "2025-12-26T22:46:09.923410+00:00",
     "note": "Stub DAG - regenerate with Lean tooling for full proof structure"
   }
 }

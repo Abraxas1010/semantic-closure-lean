@@ -53,7 +53,12 @@
         const fitBtn = document.getElementById('fit')
 
         const colorForFamily = (fam) => {
-          const map = { MR:'#43a047', Cat:'#1e88e5', Semantics:'#8e24aa', FA:'#fb8c00', Tests:'#607d8b', BundleDemo:'#3949ab', Main:'#546e7a' }
+          const map = {
+            MR:'#43a047', Cat:'#1e88e5', Semantics:'#8e24aa', FA:'#fb8c00',
+            Tests:'#607d8b', BundleDemo:'#3949ab', Main:'#546e7a',
+            // Noneism extension families
+            Eigen:'#ce93d8', Bridge:'#ab47bc', Noneism:'#9c27b0'
+          }
           return map[fam] || '#90a4ae'
         }
 

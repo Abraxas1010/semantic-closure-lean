@@ -298,10 +298,71 @@ Scope boundary (important to state in any paper-facing claims):
 If the goal is to satisfy the researchers’ agenda “as much as feasible” while keeping the `ClosingTheLoop` namespace
 clean:
 
-  1. Add a short, explicit “Assumptions Ladder” narrative section to the paper pack:
-   - injective-at-b vs section-at-b vs inverse-on-image; and their categorical analogues (mono vs split epi).
-  2. Add categorical “admissible morphisms” as a fibration/subobject layer:
+  1. ~~Add a short, explicit "Assumptions Ladder" narrative section to the paper pack:~~
+   - ~~injective-at-b vs section-at-b vs inverse-on-image; and their categorical analogues (mono vs split epi).~~
+   - **DONE**: See Noneism extension and `11_Eigencomputable_Framework.md`.
+  2. Add categorical "admissible morphisms" as a fibration/subobject layer:
    - new folder suggestion: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Cat/Admissible/`
-  3. Add a minimal λ-calculus semantics module that targets the CCC layer (to begin addressing “models of computation”).
-  4. Add a minimal coalgebra/LTS/process layer and relate it to closure/fixed points (to begin addressing concurrency/process algebra).
+  3. Add a minimal λ-calculus semantics module that targets the CCC layer (to begin addressing "models of computation").
+  4. ~~Add a minimal coalgebra/LTS/process layer and relate it to closure/fixed points (to begin addressing concurrency/process algebra).~~
+   - **DONE**: See `HeytingLean/Noneism/Cat/Coalgebra.lean` for coalgebraic dynamics perspective.
   5. Extend the (F,A) skeleton to time-parametrized (F,A) systems, as the PDF emphasizes temporal parametrization.
+
+---
+
+## 7) Noneism Extension: Addressing the Choice/β Problem (Added Dec 2025)
+
+**Date:** 2025-12-26
+**Commit:** `8740026` ("Add Noneism eigencomputable extension")
+
+### The Problem Addressed
+
+The paper's equations (2.1)-(2.5) require a global inverse evaluation map `β_b`. In Lean, this requires `Classical.choice` when derived from surjectivity. The Noneism extension refines this by distinguishing:
+
+| Level | Meaning | Example |
+|-------|---------|---------|
+| Computable | Algorithm exists | `def f x := x + 1` |
+| **Eigencomputable** | Determined by unique fixed point | `beta` in `BetaEigen.lean` |
+| Arbitrary noncomputable | Raw classical selection | `betaRaw` in `BetaConstruction.lean` |
+
+### Key Insight: β is Eigencomputable
+
+The selector dynamics `selectorDynamics b Φ := fun _ => Φ b` "forgets everything but evaluation at b". For each metabolism `f`:
+
+1. **Unique stable selector**: There exists exactly one `Φ` such that `selectorDynamics b Φ = Φ` and `evalAt b Φ = f`.
+2. **This unique Φ is β(f)**: The nonconstructive choice is grounded in stabilizing dynamics.
+3. **β(f) = (fun _ => f)**: The unique stable selector evaluating to `f` is simply the constant function.
+
+### New Modules
+
+- `HeytingLean/Noneism/Eigen/` — Core eigencomputable framework
+- `HeytingLean/Noneism/Bridge/` — β as eigencomputable, bridges to MR structures
+- `HeytingLean/Noneism/Cat/` — Categorical foundations (Yoneda, coalgebras, monads)
+- `HeytingLean/Noneism/Core/` — Heyting algebra and nucleus structures
+- `HeytingLean/Noneism/Zeros/` — Minimal/maximal/recursive structures
+- `HeytingLean/Noneism/Crossing/` — Ontological boundary crossings
+
+### Verification
+
+```bash
+cd RESEARCHER_BUNDLE
+./scripts/verify_noneism.sh
+```
+
+### Paper Alignment
+
+| Paper Equation | Status | Lean Declaration |
+|----------------|--------|------------------|
+| (2.3) Injectivity | ✓ | `selectorDynamics_stable_iff` |
+| (2.4) β construction | ✓ **Eigencomputable** | `Bridge.beta`, `Bridge.betaEigenAt` |
+| (2.5) Closure loop | ✓ | `beta_right_inverse`, `beta_stable` |
+
+### What This Means for the Paper
+
+The paper's claim that `β_b` exists from injectivity (eq 2.3) is now made precise:
+
+1. **Injectivity alone** gives uniqueness (if two selectors agree at `b`, they're equal).
+2. **Surjectivity + dynamics** gives a global `β` that is **grounded in stabilizing dynamics**, not arbitrary choice.
+3. **The choice is not arbitrary**: `β(f)` is the unique fixed point of `selectorDynamics` in the fiber over `f`.
+
+This resolves the "subtle part" about noncomputable definitions: they use choice, but the choice is **forced by dynamics**.

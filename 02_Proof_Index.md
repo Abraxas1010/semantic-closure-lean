@@ -125,3 +125,78 @@ This is the minimal set of “results you can cite” from this mechanization.
 
 - File: `RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Tests/ClosureIdempotent.lean`
 - Purpose: exercises the definitional behavior of `closeSelector` on a tiny MR system and checks idempotence reduces by simp.
+
+---
+
+## Noneism Extension: Eigencomputable Framework
+
+The Noneism layer refines the interpretation of nonconstructive definitions by distinguishing between:
+- **Arbitrary choice**: `Classical.choose` without grounding dynamics
+- **Eigencomputable**: determined by a stabilizing dynamics with a unique fixed point
+
+### Core Eigencomputable Theorems
+
+13. **Unique fixed point determines value (eigenform uniqueness)**
+   - Lean: `HeytingLean.Noneism.Eigen.determined_by_dynamics`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Eigen/Basic.lean`
+   - Informal: if `e : Eigen α` and `d a = a` for `d = e.dynamics`, then `a = e.val`.
+
+14. **Equal dynamics implies equal values**
+   - Lean: `HeytingLean.Noneism.Eigen.val_unique_of_eq_dynamics`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Eigen/Basic.lean`
+   - Informal: two `Eigen` values with the same dynamics must have the same underlying value.
+
+### Selector Dynamics Theorems
+
+15. **Selector dynamics characterization**
+   - Lean: `HeytingLean.Noneism.Bridge.selectorDynamics_stable_iff`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/SelectorDynamics.lean`
+   - Informal: `selectorDynamics b Φ = Φ` iff `∀ b', Φ b' = Φ b` (stable selectors are constant).
+
+16. **Unique stable selector per metabolism (key uniqueness theorem)**
+   - Lean: `HeytingLean.Noneism.Bridge.selectorDynamics_unique_stable`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/SelectorDynamics.lean`
+   - Informal: for each metabolism `f`, there exists a unique selector `Φ` such that `selectorDynamics b Φ = Φ` and `evalAt b Φ = f`.
+
+17. **Fiber dynamics has unique fixed point**
+   - Lean: `HeytingLean.Noneism.Bridge.selectorDynamicsAt_unique_fixed`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/BetaEigen.lean`
+   - Informal: on the fiber `{Φ // evalAt b Φ = f}`, the induced dynamics has exactly one fixed point.
+
+### Eigencomputable β Construction
+
+18. **β is a right inverse (eigencomputable version)**
+   - Lean: `HeytingLean.Noneism.Bridge.beta_right_inverse`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/BetaEigen.lean`
+   - Informal: `evalAt b (beta b f) = f` — the eigencomputable β satisfies the paper's eq (2.4).
+
+19. **β is stable under selector dynamics**
+   - Lean: `HeytingLean.Noneism.Bridge.beta_stable`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/BetaEigen.lean`
+   - Informal: `selectorDynamics b (beta b f) = beta b f` — β outputs are fixed points of the dynamics.
+
+20. **β equals the constant selector**
+   - Lean: `HeytingLean.Noneism.Bridge.beta_eq_const`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/BetaConstruction.lean`
+   - Informal: `beta b f = (fun _ => f)` — the unique stable selector evaluating to `f` is the constant function.
+
+21. **Eigencomputable β agrees with raw choice when stable**
+   - Lean: `HeytingLean.Noneism.Bridge.beta_eq_betaRaw_of_stable`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/BetaConstruction.lean`
+   - Informal: if `betaRaw` (classical choice) happens to be stable, it must equal the eigencomputable `beta`.
+
+### Raw Choice Comparison
+
+22. **Raw choice β is a right inverse**
+   - Lean: `HeytingLean.Noneism.Bridge.betaRaw_right_inverse`
+   - File: `RESEARCHER_BUNDLE/HeytingLean/Noneism/Bridge/BetaConstruction.lean`
+   - Informal: `evalAt b (betaRaw b hsurj f) = f` — the choice-based construction also satisfies the right-inverse law.
+
+### Paper Alignment Summary
+
+| Paper | Noneism Lean | Status |
+|-------|--------------|--------|
+| Eq (2.3) injectivity | `selectorDynamics_stable_iff` | ✓ Dynamics characterization |
+| Eq (2.4) β construction | `beta`, `betaEigenAt` | ✓ **Eigencomputable** |
+| Eq (2.5) closure loop | `beta_right_inverse` + `beta_stable` | ✓ Loop closes and stabilizes |
+| Choice grounding | `beta_eq_betaRaw_of_stable` | ✓ Raw choice = Eigen when stable |
