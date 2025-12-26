@@ -300,6 +300,86 @@ def generate_edges(items: list, module_edges: dict) -> list:
 
     return edges
 
+def generate_static_png(items: list, edges: list, output_path: Path):
+    """Generate a static PNG visualization of the proof graph."""
+    try:
+        import matplotlib
+        matplotlib.use('Agg')  # Non-interactive backend
+        import matplotlib.pyplot as plt
+        from matplotlib.patches import Circle
+        import matplotlib.lines as mlines
+    except ImportError:
+        print("  Warning: matplotlib not available, skipping PNG generation")
+        return False
+
+    # Color mapping for families
+    color_map = {
+        'MR': '#43a047',
+        'Cat': '#1e88e5',
+        'Semantics': '#8e24aa',
+        'FA': '#fb8c00',
+        'Tests': '#607d8b',
+        'BundleDemo': '#3949ab',
+        'Main': '#546e7a',
+        'Eigen': '#ce93d8',
+        'Bridge': '#ab47bc',
+        'Noneism': '#9c27b0',
+        'Other': '#90a4ae'
+    }
+
+    fig, ax = plt.subplots(figsize=(16, 12), facecolor='#0b0f14')
+    ax.set_facecolor('#0b0f14')
+
+    # Draw edges
+    for i, j in edges:
+        if i < len(items) and j < len(items):
+            p1 = items[i].get('pos', {})
+            p2 = items[j].get('pos', {})
+            if p1 and p2:
+                ax.plot([p1['x'], p2['x']], [p1['y'], p2['y']],
+                       color='#b0bec5', alpha=0.15, linewidth=0.5, zorder=1)
+
+    # Draw nodes by family
+    for family in color_map:
+        xs = []
+        ys = []
+        for item in items:
+            if item.get('family', 'Other') == family:
+                pos = item.get('pos', {})
+                if pos:
+                    xs.append(pos['x'])
+                    ys.append(pos['y'])
+        if xs:
+            ax.scatter(xs, ys, c=color_map[family], s=30, alpha=0.9,
+                      label=family, zorder=2, edgecolors='white', linewidths=0.3)
+
+    # Title and labels
+    ax.set_title('ClosingTheLoop + Noneism — Proof/Declaration Map',
+                fontsize=16, color='#e6eef7', pad=20)
+    ax.set_xlabel('UMAP Dimension 1', fontsize=10, color='#b8c7d9')
+    ax.set_ylabel('UMAP Dimension 2', fontsize=10, color='#b8c7d9')
+
+    # Legend
+    legend = ax.legend(loc='upper right', framealpha=0.9, facecolor='#0f1721',
+                       edgecolor='#1c2a3a', fontsize=9)
+    for text in legend.get_texts():
+        text.set_color('#e6eef7')
+
+    # Remove axes spines
+    for spine in ax.spines.values():
+        spine.set_color('#1c2a3a')
+    ax.tick_params(colors='#b8c7d9')
+
+    # Tight layout
+    plt.tight_layout()
+
+    # Save
+    fig.savefig(output_path, dpi=150, facecolor='#0b0f14', edgecolor='none')
+    plt.close(fig)
+    print(f"  Generated: {output_path.name}")
+    return True
+
+
 def simple_umap_layout(items: list, seed: str = 'closing-the-loop-umap-v1') -> list:
     """Simple deterministic 2D/3D layout based on feature hashing."""
     import random
@@ -360,7 +440,7 @@ def main():
     print("=" * 60)
 
     # --- 1. Crawl modules ---
-    print("\n[1/4] Crawling Lean source files...")
+    print("\n[1/5] Crawling Lean source files...")
 
     # ClosingTheLoop modules
     cl_nodes, cl_edges, cl_decls = crawl_modules(
@@ -380,7 +460,7 @@ def main():
     all_decls = {**cl_decls, **n_decls}
 
     # --- 2. Generate import graphs ---
-    print("\n[2/4] Generating module import graphs...")
+    print("\n[2/5] Generating module import graphs...")
 
     # ClosingTheLoop internal only
     dot_cl_internal = generate_dot_graph(
@@ -410,7 +490,7 @@ def main():
     dot_to_svg(dot_noneism, imports_dir / 'noneism_imports.svg', args.graphviz_path)
 
     # --- 3. Generate proof DAG stubs ---
-    print("\n[3/4] Generating proof DAG stubs...")
+    print("\n[3/5] Generating proof DAG stubs...")
     for theorem in KEY_THEOREMS:
         safe_name = theorem.replace('.', '_')
         dag = generate_proof_dag_stub(theorem)
@@ -431,7 +511,7 @@ def main():
         dot_to_svg(dot_content, proof_dags_dir / f'{safe_name}.svg', args.graphviz_path)
 
     # --- 4. Generate UMAP embedding data ---
-    print("\n[4/4] Generating UMAP embedding data...")
+    print("\n[4/5] Generating UMAP embedding data...")
 
     items = []
     for mod, decl_list in sorted(all_decls.items()):
@@ -495,6 +575,12 @@ def main():
     js_path = output_dir / 'closing_the_loop_proofs_data.js'
     js_path.write_text(js_content)
     print(f"  Generated: {js_path.name}")
+
+    # --- 5. Generate static PNG for README ---
+    print("\n[5/5] Generating static PNG visualization...")
+    png_path = REPO_ROOT / 'images' / 'proof_graph_visualization.png'
+    png_path.parent.mkdir(parents=True, exist_ok=True)
+    generate_static_png(items, edges, png_path)
 
     # --- Summary ---
     print("\n" + "=" * 60)

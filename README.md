@@ -97,7 +97,7 @@ We provide interactive visualizations showing the structure and dependencies of 
 
 ![Proof Dependency Graph](images/proof_graph_visualization.png)
 
-*The proof graph shows how theorems depend on each other. Each node is a declaration (definition, lemma, or theorem). Edges show logical dependencies—which results are used to prove which others. Clusters reveal the modular structure of the formalization.*
+*The proof graph shows how theorems depend on each other. Each node is a declaration (definition, lemma, or theorem). Edges show logical dependencies—which results are used to prove which others. Colors indicate module families: green (MR), blue (Cat), purple (Semantics), orange (FA), and violet shades (Noneism extension). Clusters reveal the modular structure of the formalization.*
 
 **Interactive Viewers:**
 - [**2D Viewer**](RESEARCHER_BUNDLE/artifacts/visuals/closing_the_loop_2d.html) — Pan/zoom, hover for names, click for details
@@ -217,6 +217,17 @@ becomes semantically closed when the loop `beta_b . Phi_f . f` stabilizes.
 │  Inverse-on-image guardrail (no global beta from mere mono)           │
 │  Admissible subobject encoding (your S(G) restriction)                │
 │                                                                       │
+└───────────────────────────────────┬───────────────────────────────────┘
+                                    │
+                                    v
+┌───────────────────────────────────────────────────────────────────────┐
+│  LEAN TIER 3: Noneism / Eigencomputable (optional extension)          │
+│                                                                       │
+│  Eigen.StabilizingDynamics      <-- Selector dynamics on metabolisms  │
+│  Eigen.determined_by_dynamics   <-- Unique stable selector per (M,R)  │
+│  Bridge.beta_right_inverse      <-- beta grounded via eigencomputing  │
+│  @[eigencomputable ...]         <-- Tagged definitions (auditable)    │
+│                                                                       │
 └───────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -236,6 +247,9 @@ becomes semantically closed when the loop `beta_b . Phi_f . f` stabilizes.
 | Section 3 | (F,A) systems | `FADiagram` | `FA/Diagram.lean` |
 | Eq (3.3-5) | Time scales | `PreorderTime`, `FunctorialTime` | `Semantics/*.lean` |
 | Fig 1-2 | DBN semantics | Not mechanized | Documented out-of-scope |
+| *Noneism* | Selector dynamics | `StabilizingDynamics` | `Noneism/Eigen/Core.lean` |
+| *Noneism* | Unique stable point | `determined_by_dynamics` | `Noneism/Eigen/Core.lean` |
+| *Noneism* | β right inverse | `beta_right_inverse` | `Noneism/Bridge/*.lean` |
 
 ## The Assumption Ladder
 
@@ -306,31 +320,42 @@ semantic-closure-lean/
 │   └── closing_the_loop_appendix_standalone.tex
 └── RESEARCHER_BUNDLE/           # <-- VERIFICATION BUNDLE
     ├── HeytingLean/
-    │   └── ClosingTheLoop/
-    │       ├── MR/              # Set/Type level
-    │       │   ├── Basic.lean
-    │       │   ├── InverseEvaluation.lean
-    │       │   └── ClosureOperator.lean
-    │       ├── Cat/             # Categorical mirror
-    │       │   ├── Selector.lean
-    │       │   ├── InverseEvaluation.lean
-    │       │   ├── EvalImage.lean
-    │       │   ├── Concreteness.lean
-    │       │   └── Admissible.lean
-    │       ├── FA/              # (F,A) systems
-    │       │   ├── Diagram.lean
-    │       │   └── Temporal.lean
-    │       └── Semantics/       # Computation + dynamics hooks
-    │           ├── NucleusFixedPoints.lean
-    │           ├── PreorderTime.lean
-    │           ├── FunctorialTime.lean
-    │           ├── LambdaIRBridge.lean
-    │           ├── ProcessBridge.lean
-    │           ├── Mealy.lean
-    │           └── RelationalRealizability.lean
+    │   ├── ClosingTheLoop/
+    │   │   ├── MR/              # Set/Type level
+    │   │   │   ├── Basic.lean
+    │   │   │   ├── InverseEvaluation.lean
+    │   │   │   └── ClosureOperator.lean
+    │   │   ├── Cat/             # Categorical mirror
+    │   │   │   ├── Selector.lean
+    │   │   │   ├── InverseEvaluation.lean
+    │   │   │   ├── EvalImage.lean
+    │   │   │   ├── Concreteness.lean
+    │   │   │   └── Admissible.lean
+    │   │   ├── FA/              # (F,A) systems
+    │   │   │   ├── Diagram.lean
+    │   │   │   └── Temporal.lean
+    │   │   └── Semantics/       # Computation + dynamics hooks
+    │   │       ├── NucleusFixedPoints.lean
+    │   │       ├── PreorderTime.lean
+    │   │       ├── FunctorialTime.lean
+    │   │       ├── LambdaIRBridge.lean
+    │   │       ├── ProcessBridge.lean
+    │   │       ├── Mealy.lean
+    │   │       └── RelationalRealizability.lean
+    │   └── Noneism/             # Eigencomputable extension
+    │       ├── Eigen/           # Core stabilizing dynamics
+    │       │   └── Core.lean
+    │       ├── Bridge/          # Connection to ClosingTheLoop
+    │       │   └── SelectorDynamics.lean
+    │       └── Core.lean        # Main entry point
     ├── scripts/
-    │   └── verify_closing_the_loop.sh
+    │   ├── verify_closing_the_loop.sh
+    │   ├── verify_noneism.sh
+    │   └── regenerate_visuals.py
     ├── reports/
+    ├── docs/
+    │   ├── 11_Eigencomputable_Framework.md
+    │   └── 12_Categorical_Foundations.md
     ├── artifacts/
     │   └── visuals/             # Interactive proof visualizations
     │       ├── index.html       # Visualization hub
@@ -358,6 +383,54 @@ semantic-closure-lean/
 | Lambda IR -> C pipeline | Complete | `LambdaIR/`, `MiniC/`, `C/*` |
 | Relational realizability | Complete | `Semantics/RelationalRealizability.lean` |
 | DBN/probabilistic semantics | Out of scope | Documented in `06_Paper_Math_Outline.md` |
+| **Noneism extension** | Complete | `Noneism/*` |
+| Eigencomputable dynamics | Complete | `Noneism/Eigen/*` |
+| Bridge to ClosingTheLoop | Complete | `Noneism/Bridge/*` |
+
+---
+
+## Noneism Extension: Eigencomputable Crossings
+
+*This section documents an optional extension that refines how nonconstructive choices are interpreted. It does not modify the core ClosingTheLoop formalization.*
+
+### Motivation
+
+The core formalization uses `Classical.choice` to construct beta_b (equation 2.4). While mathematically sound, this leaves the beta construction as an oracle—correct in principle but opaque in practice.
+
+The Noneism extension provides an alternative: **eigencomputable** beta, where the inverse is grounded in stabilizing dynamics rather than pure choice.
+
+### The Eigencomputable Hierarchy
+
+```
+COMPUTABLE ───────────────────────────────────────────────────── ARBITRARY
+     │                           │                                  │
+     v                           v                                  v
+  Decidable               Eigencomputable                   Classical.choice
+  termination             (stable fixed point)              (no witness)
+```
+
+An **eigencomputable** function is one whose output can be characterized as a stable fixed point of some dynamics—even if we cannot compute it directly, we know *what* it is via its stability property.
+
+### Key Results
+
+| Theorem | Statement | Significance |
+|---------|-----------|--------------|
+| `determined_by_dynamics` | Stable points are unique per metabolism | The dynamics determine the selector |
+| `beta_right_inverse` | β is a right inverse (eq 2.4) | Grounded constructively via eigencomputing |
+| `beta_stable` | β outputs are dynamically stable | Bridge to the dynamics track |
+
+### Usage
+
+```bash
+cd RESEARCHER_BUNDLE
+./scripts/verify_noneism.sh
+```
+
+For detailed documentation:
+- `RESEARCHER_BUNDLE/docs/11_Eigencomputable_Framework.md`
+- `RESEARCHER_BUNDLE/docs/12_Categorical_Foundations.md`
+
+---
 
 ## The Bigger Picture
 
