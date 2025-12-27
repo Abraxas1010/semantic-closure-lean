@@ -1,0 +1,6 @@
+digraph G {
+  rankdir=TB;
+  graph [bgcolor="transparent"];
+  node [shape=box, style="rounded,filled", fillcolor="#0f1721", color="#43a047", fontcolor="#e6eef7"];
+  "selectorDynamics_stable_iff" [label="selectorDynamics_stable_iff"];
+}

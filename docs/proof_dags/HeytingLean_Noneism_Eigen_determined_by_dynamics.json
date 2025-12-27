@@ -1,0 +1,18 @@
+{
+  "id": "HeytingLean.Noneism.Eigen.determined_by_dynamics",
+  "name": "HeytingLean.Noneism.Eigen.determined_by_dynamics",
+  "kind": "theorem",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "determined_by_dynamics",
+      "kind": "root",
+      "depth": 0
+    }
+  ],
+  "edges": [],
+  "meta": {
+    "generated": "2025-12-26T23:42:20.255097+00:00",
+    "note": "Stub DAG - regenerate with Lean tooling for full proof structure"
+  }
+}

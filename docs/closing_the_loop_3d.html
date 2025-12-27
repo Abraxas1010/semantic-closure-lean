@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ClosingTheLoop — 3D Map</title>
+    <style>
+      :root { color-scheme: dark; }
+      body { margin: 0; overflow: hidden; background:#0b0f14; color:#e6eef7; font: 13px/1.35 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+      #ui { position: fixed; top: 12px; left: 12px; right: 12px; display:flex; gap: 10px; align-items: center; z-index: 10; }
+      .panel { background: rgba(15,23,33,0.92); border: 1px solid #1c2a3a; border-radius: 10px; padding: 10px 12px; backdrop-filter: blur(6px); }
+      .muted { color:#b8c7d9; }
+      #tip { position: fixed; pointer-events:none; z-index: 20; padding: 6px 8px; border-radius: 8px; background: rgba(0,0,0,0.75); border:1px solid rgba(255,255,255,0.10); display:none; max-width: 56vw; }
+      #details { position: fixed; right: 12px; bottom: 12px; width: min(520px, calc(100vw - 24px)); max-height: 45vh; overflow:auto; white-space: pre-wrap; }
+      #details h3 { margin: 0 0 8px; font-size: 14px; }
+      a { color:#8ab4f8; text-decoration:none; }
+      a:hover{ text-decoration:underline; }
+      code { background:#0b1320; border:1px solid #24364a; border-radius: 6px; padding:1px 6px; }
+    </style>
+  </head>
+  <body>
+    <div id="ui" class="panel">
+      <a href="./index.html">← index</a>
+      <span style="margin-left:10px" class="muted">Drag: rotate · Wheel: zoom · Shift+drag/right-drag: pan · Hover/click: details</span>
+    </div>
+    <div id="tip"></div>
+    <div id="details" class="panel" style="display:none"></div>
+
+    <script src="./vendor/three.min.js"></script>
+    <script src="./closing_the_loop_proofs_data.js"></script>
+    <script>
+      ;(() => {
+        const data = window.CLOSING_THE_LOOP_PROOFS || { items: [], edges: [] }
+        const items = data.items || []
+        const edges = data.edges || []
+
+        const tip = document.getElementById('tip')
+        const details = document.getElementById('details')
+
+        const colorForFamily = (fam) => {
+          const map = {
+            MR:0x43a047, Cat:0x1e88e5, Semantics:0x8e24aa, FA:0xfb8c00,
+            Tests:0x607d8b, BundleDemo:0x3949ab, Main:0x546e7a,
+            // Noneism extension families
+            Eigen:0xce93d8, Bridge:0xab47bc, Noneism:0x9c27b0
+          }
+          return map[fam] || 0x90a4ae
+        }
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true })
+        renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1))
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        document.body.appendChild(renderer.domElement)
+
+        const scene = new THREE.Scene()
+        scene.background = new THREE.Color(0x0b0f14)
+
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 200)
+
+        const light = new THREE.DirectionalLight(0xffffff, 0.9)
+        light.position.set(2, 3, 4)
+        scene.add(light)
+        scene.add(new THREE.AmbientLight(0xffffff, 0.35))
+
+        const group = new THREE.Group()
+        scene.add(group)
+
+        // normalize pos3 to a centered cube
+        const pts = items.map(it => it.pos3 || {x:Math.random(), y:Math.random(), z:Math.random()})
+        let minx=1e9,maxx=-1e9,miny=1e9,maxy=-1e9,minz=1e9,maxz=-1e9
+        for (const p of pts){ minx=Math.min(minx,p.x); maxx=Math.max(maxx,p.x); miny=Math.min(miny,p.y); maxy=Math.max(maxy,p.y); minz=Math.min(minz,p.z); maxz=Math.max(maxz,p.z) }
+        const cx=(minx+maxx)/2, cy=(miny+maxy)/2, cz=(minz+maxz)/2
+        const s = 2 / Math.max(1e-6, (maxx-minx), (maxy-miny), (maxz-minz))
+        const xyz = pts.map(p => ({ x:(p.x-cx)*s, y:(p.y-cy)*s, z:(p.z-cz)*s }))
+
+        const geom = new THREE.SphereGeometry(0.018, 14, 14)
+        const meshes = []
+        for (let i=0;i<items.length;i++){
+          const it = items[i]
+          const m = new THREE.MeshPhongMaterial({ color: colorForFamily(it.family || ''), shininess: 30 })
+          const mesh = new THREE.Mesh(geom, m)
+          mesh.position.set(xyz[i].x, xyz[i].y, xyz[i].z)
+          mesh.userData = { idx: i }
+          group.add(mesh)
+          meshes.push(mesh)
+        }
+
+        // edges as one LineSegments
+        const seg = new Float32Array(edges.length * 2 * 3)
+        let k = 0
+        for (const [i,j] of edges){
+          const a = xyz[i], b = xyz[j]
+          if (!a || !b) continue
+          seg[k++] = a.x; seg[k++] = a.y; seg[k++] = a.z
+          seg[k++] = b.x; seg[k++] = b.y; seg[k++] = b.z
+        }
+        const edgeGeom = new THREE.BufferGeometry()
+        edgeGeom.setAttribute('position', new THREE.BufferAttribute(seg, 3))
+        const edgeMat = new THREE.LineBasicMaterial({ color: 0xb0bec5, transparent: true, opacity: 0.35 })
+        const edgeLines = new THREE.LineSegments(edgeGeom, edgeMat)
+        scene.add(edgeLines)
+
+        // camera controls (orbit + optional pan)
+        const state = { dragging: false, panning: false, x0:0, y0:0, theta: 0.6, phi: 1.0, r: 3.2, tx:0, ty:0, tz:0 }
+        const clamp = (x, a, b) => Math.max(a, Math.min(b, x))
+        const updateCamera = () => {
+          state.phi = clamp(state.phi, 0.05, Math.PI - 0.05)
+          const sinPhi = Math.sin(state.phi)
+          const px = state.tx + state.r * sinPhi * Math.cos(state.theta)
+          const py = state.ty + state.r * Math.cos(state.phi)
+          const pz = state.tz + state.r * sinPhi * Math.sin(state.theta)
+          camera.position.set(px, py, pz)
+          camera.lookAt(state.tx, state.ty, state.tz)
+        }
+        updateCamera()
+
+        const onDown = (ev) => {
+          state.dragging = true
+          state.panning = ev.shiftKey || ev.button === 2
+          state.x0 = ev.clientX
+          state.y0 = ev.clientY
+        }
+        const onUp = () => { state.dragging = false; state.panning = false }
+        const onMove = (ev) => {
+          if (!state.dragging) return
+          const dx = ev.clientX - state.x0
+          const dy = ev.clientY - state.y0
+          state.x0 = ev.clientX
+          state.y0 = ev.clientY
+          if (state.panning) {
+            const panScale = 0.0025 * state.r
+            const dir = new THREE.Vector3()
+            camera.getWorldDirection(dir)
+            const right = new THREE.Vector3().crossVectors(dir, camera.up).normalize()
+            const up = new THREE.Vector3().copy(camera.up).normalize()
+            state.tx -= right.x * dx * panScale
+            state.ty -= right.y * dx * panScale
+            state.tz -= right.z * dx * panScale
+            state.tx += up.x * dy * panScale
+            state.ty += up.y * dy * panScale
+            state.tz += up.z * dy * panScale
+          } else {
+            state.theta -= dx * 0.006
+            state.phi -= dy * 0.006
+          }
+          updateCamera()
+        }
+        const onWheel = (ev) => {
+          ev.preventDefault()
+          const factor = ev.deltaY > 0 ? 1.08 : 0.93
+          state.r = clamp(state.r * factor, 0.5, 40)
+          updateCamera()
+        }
+
+        renderer.domElement.addEventListener('contextmenu', (e) => e.preventDefault())
+        renderer.domElement.addEventListener('mousedown', onDown)
+        window.addEventListener('mouseup', onUp)
+        window.addEventListener('mousemove', onMove)
+        renderer.domElement.addEventListener('wheel', onWheel, { passive:false })
+
+        // hover/click picking
+        const raycaster = new THREE.Raycaster()
+        const mouse = new THREE.Vector2()
+        let hover = null
+        let selected = null
+        const showTip = (sx, sy, it) => {
+          tip.style.display = 'block'
+          tip.style.left = (sx + 12) + 'px'
+          tip.style.top = (sy + 12) + 'px'
+          tip.textContent = it.name
+        }
+        const hideTip = () => { tip.style.display='none' }
+        const escapeHtml = (s) => String(s).replace(/[&<>\"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]||c))
+        const showDetails = (it) => {
+          const loc = it.path ? `${it.path}:${it.line||1}` : ''
+          details.style.display = 'block'
+          details.innerHTML =
+            `<h3>${escapeHtml(it.name||'')}</h3>` +
+            `<div class="muted">${escapeHtml(it.kind||'')} · <code>${escapeHtml(it.family||'')}</code></div>` +
+            (loc ? `<div style="margin-top:6px"><code>${escapeHtml(loc)}</code></div>` : '') +
+            (it.snippet ? `<div style="margin-top:10px" class="muted">${escapeHtml(it.snippet)}</div>` : '')
+        }
+        const pick = (ev) => {
+          const rect = renderer.domElement.getBoundingClientRect()
+          mouse.x = ((ev.clientX - rect.left) / rect.width) * 2 - 1
+          mouse.y = -((ev.clientY - rect.top) / rect.height) * 2 + 1
+          raycaster.setFromCamera(mouse, camera)
+          const hits = raycaster.intersectObjects(meshes, false)
+          if (!hits.length) return null
+          const idx = hits[0].object.userData?.idx
+          return (typeof idx === 'number') ? idx : null
+        }
+        renderer.domElement.addEventListener('mousemove', (ev) => {
+          const idx = pick(ev)
+          hover = idx
+          if (hover !== null) showTip(ev.clientX, ev.clientY, items[hover])
+          else hideTip()
+        })
+        renderer.domElement.addEventListener('click', (ev) => {
+          const idx = pick(ev)
+          selected = idx
+          for (let i=0;i<meshes.length;i++){
+            const it = items[i]
+            meshes[i].material.color.setHex(colorForFamily(it.family||''))
+          }
+          if (selected !== null){
+            meshes[selected].material.color.setHex(0xffffff)
+            showDetails(items[selected])
+          } else {
+            details.style.display='none'
+          }
+        })
+
+        const animate = () => {
+          renderer.render(scene, camera)
+          requestAnimationFrame(animate)
+        }
+        animate()
+
+        window.addEventListener('resize', () => {
+          renderer.setSize(window.innerWidth, window.innerHeight)
+          camera.aspect = window.innerWidth / window.innerHeight
+          camera.updateProjectionMatrix()
+        })
+      })()
+    </script>
+  </body>
+</html>
+

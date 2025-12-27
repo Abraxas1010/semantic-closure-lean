@@ -100,9 +100,9 @@ We provide interactive visualizations showing the structure and dependencies of 
 *3D proof graph showing how theorems depend on each other. Each node is a declaration (definition, lemma, or theorem). Edges show logical dependencies. Colors indicate module families: green (MR), blue (Cat), purple (Semantics), orange (FA), and violet shades (Noneism extension). The spatial clustering reveals the modular structure of the formalization. See interactive viewers below for full exploration.*
 
 **Interactive Viewers:**
-- [**2D Viewer**](RESEARCHER_BUNDLE/artifacts/visuals/closing_the_loop_2d.html) — Pan/zoom, hover for names, click for details
-- [**3D Viewer**](RESEARCHER_BUNDLE/artifacts/visuals/closing_the_loop_3d.html) — Drag to rotate, wheel to zoom, explore the proof space
-- [**Visualization Index**](RESEARCHER_BUNDLE/artifacts/visuals/index.html) — Full listing of all available visualizations
+- [**2D Viewer**](https://abraxas1010.github.io/semantic-closure-lean/closing_the_loop_2d.html) — Pan/zoom, hover for names, click for details
+- [**3D Viewer**](https://abraxas1010.github.io/semantic-closure-lean/closing_the_loop_3d.html) — Drag to rotate, wheel to zoom, explore the proof space
+- [**Visualization Index**](https://abraxas1010.github.io/semantic-closure-lean/index.html) — Full listing of all available visualizations
 
 ### Module Structure
 

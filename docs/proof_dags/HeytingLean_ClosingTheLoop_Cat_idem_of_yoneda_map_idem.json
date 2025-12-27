@@ -1,0 +1,18 @@
+{
+  "id": "HeytingLean.ClosingTheLoop.Cat.idem_of_yoneda_map_idem",
+  "name": "HeytingLean.ClosingTheLoop.Cat.idem_of_yoneda_map_idem",
+  "kind": "theorem",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "idem_of_yoneda_map_idem",
+      "kind": "root",
+      "depth": 0
+    }
+  ],
+  "edges": [],
+  "meta": {
+    "generated": "2025-12-26T23:42:20.021753+00:00",
+    "note": "Stub DAG - regenerate with Lean tooling for full proof structure"
+  }
+}

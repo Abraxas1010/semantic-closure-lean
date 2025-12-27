@@ -1,0 +1,18 @@
+{
+  "id": "HeytingLean.ClosingTheLoop.Cat.map_close_eq",
+  "name": "HeytingLean.ClosingTheLoop.Cat.map_close_eq",
+  "kind": "theorem",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "map_close_eq",
+      "kind": "root",
+      "depth": 0
+    }
+  ],
+  "edges": [],
+  "meta": {
+    "generated": "2025-12-26T23:42:20.079561+00:00",
+    "note": "Stub DAG - regenerate with Lean tooling for full proof structure"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.futureKernel.idem",
+  "name": "HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.futureKernel.idem",
+  "kind": "theorem",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "idem",
+      "kind": "root",
+      "depth": 0
+    }
+  ],
+  "edges": [],
+  "meta": {
+    "generated": "2025-12-26T23:42:20.140421+00:00",
+    "note": "Stub DAG - regenerate with Lean tooling for full proof structure"
+  }
+}
