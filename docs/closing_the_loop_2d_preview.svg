@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img" aria-label="UMAP preview">
+<rect x="0" y="0" width="1500" height="900" fill="#0b0f14"/>
+<text x="50" y="32" fill="#ffffff" font-size="20" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">UMAP 2D — ClosingTheLoop + Noneism proof/declaration map</text>
+<text x="50" y="48" fill="#b8c7d9" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">Points: declarations • Colors: module family • Edges: similarity links (source-text features)</text>
+<rect x="50" y="50" width="1090" height="800" fill="#0f1721" stroke="#1c2a3a" stroke-width="1"/>
+<line x1="751.05" y1="230.86" x2="622.45" y2="830.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="751.05" y1="230.86" x2="525.82" y2="521.85" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="622.45" y1="830.14" x2="525.82" y2="521.85" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="622.45" y1="830.14" x2="1097.01" y2="486.65" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="525.82" y1="521.85" x2="1097.01" y2="486.65" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="525.82" y1="521.85" x2="1058.13" y2="114.19" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1097.01" y1="486.65" x2="1058.13" y2="114.19" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1097.01" y1="486.65" x2="933.01" y2="387.64" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1058.13" y1="114.19" x2="933.01" y2="387.64" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1058.13" y1="114.19" x2="953.20" y2="427.85" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="933.01" y1="387.64" x2="953.20" y2="427.85" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="797.00" y1="823.50" x2="1082.70" y2="673.95" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="797.00" y1="823.50" x2="522.34" y2="373.42" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1082.70" y1="673.95" x2="522.34" y2="373.42" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1082.70" y1="673.95" x2="515.10" y2="116.29" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="522.34" y1="373.42" x2="515.10" y2="116.29" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="522.34" y1="373.42" x2="183.31" y2="658.35" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="515.10" y1="116.29" x2="183.31" y2="658.35" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="515.10" y1="116.29" x2="359.10" y2="641.80" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="183.31" y1="658.35" x2="359.10" y2="641.80" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1044.93" y1="742.94" x2="1133.32" y2="68.13" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1079.76" y1="751.08" x2="710.42" y2="688.01" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1079.76" y1="751.08" x2="412.50" y2="673.32" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="710.42" y1="688.01" x2="412.50" y2="673.32" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="710.42" y1="688.01" x2="967.72" y2="227.27" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="412.50" y1="673.32" x2="967.72" y2="227.27" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="412.50" y1="673.32" x2="506.36" y2="577.87" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="967.72" y1="227.27" x2="506.36" y2="577.87" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="967.72" y1="227.27" x2="518.19" y2="607.00" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="506.36" y1="577.87" x2="518.19" y2="607.00" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="801.86" y1="205.48" x2="140.01" y2="729.05" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="801.86" y1="205.48" x2="885.25" y2="408.34" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="140.01" y1="729.05" x2="885.25" y2="408.34" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="140.01" y1="729.05" x2="414.22" y2="787.29" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="885.25" y1="408.34" x2="414.22" y2="787.29" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="643.61" y1="306.59" x2="708.54" y2="750.61" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="643.61" y1="306.59" x2="521.48" y2="540.32" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="708.54" y1="750.61" x2="521.48" y2="540.32" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="708.54" y1="750.61" x2="1132.15" y2="847.18" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="521.48" y1="540.32" x2="1132.15" y2="847.18" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="521.48" y1="540.32" x2="768.87" y2="607.01" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1132.15" y1="847.18" x2="768.87" y2="607.01" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1132.15" y1="847.18" x2="286.94" y2="164.91" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="768.87" y1="607.01" x2="286.94" y2="164.91" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="768.87" y1="607.01" x2="278.61" y2="218.40" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="286.94" y1="164.91" x2="278.61" y2="218.40" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="286.94" y1="164.91" x2="830.11" y2="711.97" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="278.61" y1="218.40" x2="830.11" y2="711.97" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="278.61" y1="218.40" x2="927.10" y2="63.08" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="830.11" y1="711.97" x2="927.10" y2="63.08" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="830.11" y1="711.97" x2="195.90" y2="139.08" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="927.10" y1="63.08" x2="195.90" y2="139.08" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="927.10" y1="63.08" x2="300.51" y2="253.25" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="195.90" y1="139.08" x2="300.51" y2="253.25" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="195.90" y1="139.08" x2="897.11" y2="743.88" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="300.51" y1="253.25" x2="897.11" y2="743.88" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="300.51" y1="253.25" x2="860.20" y2="71.13" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="897.11" y1="743.88" x2="860.20" y2="71.13" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="688.77" y1="778.75" x2="918.57" y2="78.50" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="688.77" y1="778.75" x2="1129.38" y2="741.87" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="918.57" y1="78.50" x2="1129.38" y2="741.87" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="322.96" y1="194.61" x2="1130.79" y2="464.11" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="322.96" y1="194.61" x2="746.18" y2="196.88" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1130.79" y1="464.11" x2="746.18" y2="196.88" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="204.37" y1="553.92" x2="1071.00" y2="385.21" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="204.37" y1="553.92" x2="832.13" y2="833.72" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1071.00" y1="385.21" x2="832.13" y2="833.72" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1020.12" y1="374.55" x2="363.45" y2="818.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1020.12" y1="374.55" x2="520.81" y2="640.70" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="363.45" y1="818.68" x2="520.81" y2="640.70" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="194.35" y1="311.04" x2="525.55" y2="763.59" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="194.35" y1="311.04" x2="1058.36" y2="181.34" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="525.55" y1="763.59" x2="1058.36" y2="181.34" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="525.55" y1="763.59" x2="942.80" y2="224.63" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1058.36" y1="181.34" x2="942.80" y2="224.63" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1058.36" y1="181.34" x2="779.16" y2="382.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="942.80" y1="224.63" x2="779.16" y2="382.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="942.80" y1="224.63" x2="1078.38" y2="482.93" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="779.16" y1="382.68" x2="1078.38" y2="482.93" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="933.55" y1="590.25" x2="316.21" y2="833.49" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="933.55" y1="590.25" x2="934.50" y2="72.28" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="316.21" y1="833.49" x2="934.50" y2="72.28" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="316.21" y1="833.49" x2="122.45" y2="365.99" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="934.50" y1="72.28" x2="122.45" y2="365.99" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="934.50" y1="72.28" x2="207.97" y2="512.39" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="122.45" y1="365.99" x2="207.97" y2="512.39" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="122.45" y1="365.99" x2="493.09" y2="554.94" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="207.97" y1="512.39" x2="493.09" y2="554.94" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="207.97" y1="512.39" x2="516.58" y2="242.54" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="493.09" y1="554.94" x2="516.58" y2="242.54" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="493.09" y1="554.94" x2="848.95" y2="95.47" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="516.58" y1="242.54" x2="848.95" y2="95.47" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="516.58" y1="242.54" x2="1059.16" y2="59.22" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="848.95" y1="95.47" x2="1059.16" y2="59.22" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="848.95" y1="95.47" x2="465.52" y2="571.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1059.16" y1="59.22" x2="465.52" y2="571.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1059.16" y1="59.22" x2="567.58" y2="422.19" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="465.52" y1="571.52" x2="567.58" y2="422.19" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="397.61" y1="385.63" x2="767.56" y2="83.55" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="397.61" y1="385.63" x2="467.97" y2="221.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="767.56" y1="83.55" x2="467.97" y2="221.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="767.56" y1="83.55" x2="730.04" y2="434.33" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="467.97" y1="221.52" x2="730.04" y2="434.33" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="467.97" y1="221.52" x2="695.71" y2="217.63" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="730.04" y1="434.33" x2="695.71" y2="217.63" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="730.04" y1="434.33" x2="983.42" y2="537.38" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="695.71" y1="217.63" x2="983.42" y2="537.38" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="695.71" y1="217.63" x2="831.31" y2="203.51" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="983.42" y1="537.38" x2="831.31" y2="203.51" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="983.42" y1="537.38" x2="372.48" y2="144.70" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="831.31" y1="203.51" x2="372.48" y2="144.70" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="831.31" y1="203.51" x2="809.86" y2="588.02" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="372.48" y1="144.70" x2="809.86" y2="588.02" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="372.48" y1="144.70" x2="734.57" y2="237.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="809.86" y1="588.02" x2="734.57" y2="237.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="809.86" y1="588.02" x2="981.20" y2="588.08" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="734.57" y1="237.52" x2="981.20" y2="588.08" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="734.57" y1="237.52" x2="860.00" y2="174.39" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="981.20" y1="588.08" x2="860.00" y2="174.39" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="981.20" y1="588.08" x2="742.41" y2="583.55" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="860.00" y1="174.39" x2="742.41" y2="583.55" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="860.00" y1="174.39" x2="1076.23" y2="598.70" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="742.41" y1="583.55" x2="1076.23" y2="598.70" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="742.41" y1="583.55" x2="227.37" y2="155.38" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1076.23" y1="598.70" x2="227.37" y2="155.38" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1076.23" y1="598.70" x2="1090.78" y2="421.96" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="227.37" y1="155.38" x2="1090.78" y2="421.96" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="227.37" y1="155.38" x2="1115.19" y2="391.23" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1090.78" y1="421.96" x2="1115.19" y2="391.23" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1090.78" y1="421.96" x2="664.38" y2="638.03" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1115.19" y1="391.23" x2="664.38" y2="638.03" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="140.12" y1="240.99" x2="766.46" y2="394.84" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1031.04" y1="781.48" x2="189.47" y2="451.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1031.04" y1="781.48" x2="402.65" y2="58.56" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="189.47" y1="451.75" x2="402.65" y2="58.56" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="958.06" y1="396.60" x2="414.81" y2="199.22" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="958.06" y1="396.60" x2="1112.30" y2="404.40" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="414.81" y1="199.22" x2="1112.30" y2="404.40" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="414.81" y1="199.22" x2="649.89" y2="277.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1112.30" y1="404.40" x2="649.89" y2="277.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1112.30" y1="404.40" x2="352.07" y2="710.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="649.89" y1="277.14" x2="352.07" y2="710.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="649.89" y1="277.14" x2="369.37" y2="773.69" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="352.07" y1="710.68" x2="369.37" y2="773.69" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="352.07" y1="710.68" x2="872.26" y2="211.94" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="369.37" y1="773.69" x2="872.26" y2="211.94" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="369.37" y1="773.69" x2="644.87" y2="672.10" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="872.26" y1="211.94" x2="644.87" y2="672.10" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="872.26" y1="211.94" x2="614.14" y2="406.64" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="644.87" y1="672.10" x2="614.14" y2="406.64" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="698.75" y1="66.60" x2="281.07" y2="198.51" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="698.75" y1="66.60" x2="644.80" y2="326.66" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="281.07" y1="198.51" x2="644.80" y2="326.66" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="281.07" y1="198.51" x2="1106.87" y2="281.84" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="644.80" y1="326.66" x2="1106.87" y2="281.84" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="644.80" y1="326.66" x2="495.07" y2="106.09" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1106.87" y1="281.84" x2="495.07" y2="106.09" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1106.87" y1="281.84" x2="433.41" y2="345.22" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="495.07" y1="106.09" x2="433.41" y2="345.22" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="495.07" y1="106.09" x2="924.86" y2="490.48" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="433.41" y1="345.22" x2="924.86" y2="490.48" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="433.41" y1="345.22" x2="1105.91" y2="555.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="924.86" y1="490.48" x2="1105.91" y2="555.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="924.86" y1="490.48" x2="316.13" y2="79.65" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1105.91" y1="555.68" x2="316.13" y2="79.65" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="826.99" y1="250.78" x2="994.31" y2="645.06" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="826.99" y1="250.78" x2="341.31" y2="237.53" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="994.31" y1="645.06" x2="341.31" y2="237.53" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="624.81" y1="236.64" x2="863.82" y2="511.73" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="624.81" y1="236.64" x2="73.23" y2="58.36" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="863.82" y1="511.73" x2="73.23" y2="58.36" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="863.82" y1="511.73" x2="879.73" y2="641.01" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="73.23" y1="58.36" x2="879.73" y2="641.01" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="73.23" y1="58.36" x2="203.33" y2="386.69" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="879.73" y1="641.01" x2="203.33" y2="386.69" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="879.73" y1="641.01" x2="307.68" y2="543.45" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="203.33" y1="386.69" x2="307.68" y2="543.45" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="203.33" y1="386.69" x2="981.29" y2="339.11" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="307.68" y1="543.45" x2="981.29" y2="339.11" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="307.68" y1="543.45" x2="410.14" y2="186.13" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="981.29" y1="339.11" x2="410.14" y2="186.13" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="981.29" y1="339.11" x2="820.07" y2="602.44" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="410.14" y1="186.13" x2="820.07" y2="602.44" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="410.14" y1="186.13" x2="89.71" y2="198.98" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="820.07" y1="602.44" x2="89.71" y2="198.98" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="820.07" y1="602.44" x2="257.57" y2="690.71" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="89.71" y1="198.98" x2="257.57" y2="690.71" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="89.71" y1="198.98" x2="1051.04" y2="466.93" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="257.57" y1="690.71" x2="1051.04" y2="466.93" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="56.86" y1="61.02" x2="882.02" y2="315.72" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="56.86" y1="61.02" x2="1002.21" y2="517.79" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="882.02" y1="315.72" x2="1002.21" y2="517.79" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="882.02" y1="315.72" x2="295.44" y2="262.86" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1002.21" y1="517.79" x2="295.44" y2="262.86" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1002.21" y1="517.79" x2="741.39" y2="69.16" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="295.44" y1="262.86" x2="741.39" y2="69.16" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="252.53" y1="124.80" x2="392.54" y2="574.56" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="354.40" y1="293.94" x2="1020.88" y2="436.98" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="354.40" y1="293.94" x2="879.69" y2="793.43" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1020.88" y1="436.98" x2="879.69" y2="793.43" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1020.88" y1="436.98" x2="741.79" y2="634.99" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="879.69" y1="793.43" x2="741.79" y2="634.99" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="879.69" y1="793.43" x2="540.90" y2="688.11" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="741.79" y1="634.99" x2="540.90" y2="688.11" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="741.79" y1="634.99" x2="929.03" y2="362.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="540.90" y1="688.11" x2="929.03" y2="362.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="540.90" y1="688.11" x2="801.39" y2="449.16" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="929.03" y1="362.75" x2="801.39" y2="449.16" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="929.03" y1="362.75" x2="61.34" y2="591.81" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="801.39" y1="449.16" x2="61.34" y2="591.81" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="801.39" y1="449.16" x2="171.62" y2="401.85" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="61.34" y1="591.81" x2="171.62" y2="401.85" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="61.34" y1="591.81" x2="976.87" y2="63.24" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="171.62" y1="401.85" x2="976.87" y2="63.24" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="171.62" y1="401.85" x2="342.17" y2="832.94" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="976.87" y1="63.24" x2="342.17" y2="832.94" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="760.43" y1="770.15" x2="200.41" y2="330.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="185.68" y1="136.23" x2="915.31" y2="575.42" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="185.68" y1="136.23" x2="1102.56" y2="393.72" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="915.31" y1="575.42" x2="1102.56" y2="393.72" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="915.31" y1="575.42" x2="337.48" y2="391.81" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1102.56" y1="393.72" x2="337.48" y2="391.81" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1102.56" y1="393.72" x2="112.40" y2="596.47" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="337.48" y1="391.81" x2="112.40" y2="596.47" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="337.48" y1="391.81" x2="878.37" y2="331.67" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="112.40" y1="596.47" x2="878.37" y2="331.67" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="112.40" y1="596.47" x2="645.19" y2="477.22" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="878.37" y1="331.67" x2="645.19" y2="477.22" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="878.37" y1="331.67" x2="348.91" y2="770.45" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="645.19" y1="477.22" x2="348.91" y2="770.45" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="645.19" y1="477.22" x2="285.90" y2="524.08" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="348.91" y1="770.45" x2="285.90" y2="524.08" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="348.91" y1="770.45" x2="555.00" y2="798.18" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="285.90" y1="524.08" x2="555.00" y2="798.18" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="285.90" y1="524.08" x2="675.86" y2="789.88" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="555.00" y1="798.18" x2="675.86" y2="789.88" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="555.00" y1="798.18" x2="534.28" y2="337.19" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="675.86" y1="789.88" x2="534.28" y2="337.19" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="675.86" y1="789.88" x2="235.90" y2="451.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="534.28" y1="337.19" x2="235.90" y2="451.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="444.73" y1="528.17" x2="120.79" y2="323.30" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="444.73" y1="528.17" x2="304.81" y2="393.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="120.79" y1="323.30" x2="304.81" y2="393.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="120.79" y1="323.30" x2="78.58" y2="679.72" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="304.81" y1="393.52" x2="78.58" y2="679.72" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="304.81" y1="393.52" x2="876.56" y2="262.40" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="78.58" y1="679.72" x2="876.56" y2="262.40" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="78.58" y1="679.72" x2="80.46" y2="433.10" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="876.56" y1="262.40" x2="80.46" y2="433.10" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="264.20" y1="189.86" x2="799.53" y2="775.05" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="264.20" y1="189.86" x2="318.61" y2="397.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="799.53" y1="775.05" x2="318.61" y2="397.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="799.53" y1="775.05" x2="53.95" y2="438.42" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="318.61" y1="397.14" x2="53.95" y2="438.42" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="318.61" y1="397.14" x2="1114.60" y2="245.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="53.95" y1="438.42" x2="1114.60" y2="245.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="53.95" y1="438.42" x2="185.55" y2="335.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1114.60" y1="245.14" x2="185.55" y2="335.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="840.99" y1="585.23" x2="291.30" y2="696.96" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="840.99" y1="585.23" x2="202.72" y2="549.44" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="291.30" y1="696.96" x2="202.72" y2="549.44" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="291.30" y1="696.96" x2="481.52" y2="599.47" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="202.72" y1="549.44" x2="481.52" y2="599.47" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="55.91" y1="763.91" x2="825.13" y2="420.38" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="55.91" y1="763.91" x2="715.00" y2="597.31" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="825.13" y1="420.38" x2="715.00" y2="597.31" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="825.13" y1="420.38" x2="610.90" y2="801.29" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="715.00" y1="597.31" x2="610.90" y2="801.29" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="715.00" y1="597.31" x2="621.20" y2="474.09" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="610.90" y1="801.29" x2="621.20" y2="474.09" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="610.90" y1="801.29" x2="974.22" y2="671.34" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="621.20" y1="474.09" x2="974.22" y2="671.34" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="569.85" y1="80.09" x2="834.87" y2="94.96" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="569.85" y1="80.09" x2="1039.82" y2="286.99" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="834.87" y1="94.96" x2="1039.82" y2="286.99" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="834.87" y1="94.96" x2="92.32" y2="138.83" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1039.82" y1="286.99" x2="92.32" y2="138.83" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1039.82" y1="286.99" x2="999.70" y2="529.27" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="92.32" y1="138.83" x2="999.70" y2="529.27" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="92.32" y1="138.83" x2="837.28" y2="229.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="999.70" y1="529.27" x2="837.28" y2="229.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="570.33" y1="761.21" x2="225.69" y2="786.23" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="570.33" y1="761.21" x2="800.77" y2="669.57" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="225.69" y1="786.23" x2="800.77" y2="669.57" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="225.69" y1="786.23" x2="635.36" y2="268.20" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="800.77" y1="669.57" x2="635.36" y2="268.20" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.16" y1="68.19" x2="534.37" y2="552.34" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.16" y1="68.19" x2="1061.19" y2="480.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="534.37" y1="552.34" x2="1061.19" y2="480.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="133.25" y1="766.52" x2="495.23" y2="560.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="227.94" y1="246.83" x2="779.27" y2="482.38" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="227.94" y1="246.83" x2="621.67" y2="51.92" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="779.27" y1="482.38" x2="621.67" y2="51.92" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="779.27" y1="482.38" x2="173.48" y2="539.25" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="621.67" y1="51.92" x2="173.48" y2="539.25" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="621.67" y1="51.92" x2="972.05" y2="198.97" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="173.48" y1="539.25" x2="972.05" y2="198.97" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="57.15" y1="533.93" x2="650.43" y2="527.89" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="57.15" y1="533.93" x2="862.26" y2="403.04" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="650.43" y1="527.89" x2="862.26" y2="403.04" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="59.24" y1="117.46" x2="903.57" y2="569.68" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="90.99" y1="307.55" x2="236.78" y2="413.84" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="90.99" y1="307.55" x2="973.56" y2="742.78" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="236.78" y1="413.84" x2="973.56" y2="742.78" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="236.78" y1="413.84" x2="268.32" y2="730.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="973.56" y1="742.78" x2="268.32" y2="730.52" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="973.56" y1="742.78" x2="787.42" y2="427.90" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="268.32" y1="730.52" x2="787.42" y2="427.90" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="268.32" y1="730.52" x2="587.35" y2="265.32" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="787.42" y1="427.90" x2="587.35" y2="265.32" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="333.63" y1="465.48" x2="791.05" y2="825.43" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="333.63" y1="465.48" x2="787.89" y2="620.29" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="791.05" y1="825.43" x2="787.89" y2="620.29" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="791.05" y1="825.43" x2="1026.42" y2="210.60" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="787.89" y1="620.29" x2="1026.42" y2="210.60" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="787.89" y1="620.29" x2="212.82" y2="254.98" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1026.42" y1="210.60" x2="212.82" y2="254.98" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="916.94" y1="772.47" x2="892.52" y2="468.14" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="916.94" y1="772.47" x2="873.33" y2="413.53" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="892.52" y1="468.14" x2="873.33" y2="413.53" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="892.52" y1="468.14" x2="321.24" y2="65.46" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="873.33" y1="413.53" x2="321.24" y2="65.46" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="50.83" y1="785.88" x2="624.29" y2="435.61" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="571.77" y1="543.91" x2="1004.13" y2="531.17" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1031.04" y1="781.48" x2="252.53" y2="124.80" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1031.04" y1="781.48" x2="140.12" y2="240.99" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1031.04" y1="781.48" x2="1044.93" y2="742.94" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="760.43" y1="770.15" x2="698.75" y2="66.60" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="624.81" y1="236.64" x2="933.55" y2="590.25" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="185.68" y1="136.23" x2="826.99" y2="250.78" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="185.68" y1="136.23" x2="698.75" y2="66.60" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="185.68" y1="136.23" x2="624.81" y2="236.64" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="185.68" y1="136.23" x2="760.43" y2="770.15" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="958.06" y1="396.60" x2="698.75" y2="66.60" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="643.61" y1="306.59" x2="688.77" y2="778.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1079.76" y1="751.08" x2="1044.93" y2="742.94" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="801.86" y1="205.48" x2="688.77" y2="778.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="322.96" y1="194.61" x2="688.77" y2="778.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1044.93" y1="742.94" x2="643.61" y2="306.59" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="797.00" y1="823.50" x2="688.77" y2="778.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="609.72" y1="577.40" x2="688.77" y2="778.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="444.73" y1="528.17" x2="933.55" y2="590.25" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="264.20" y1="189.86" x2="140.12" y2="240.99" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="397.61" y1="385.63" x2="194.35" y2="311.04" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="140.12" y1="240.99" x2="933.55" y2="590.25" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="933.55" y1="590.25" x2="397.61" y2="385.63" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="50.83" y1="785.88" x2="73.80" y2="58.54" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="50.83" y1="785.88" x2="1057.15" y2="222.75" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="50.83" y1="785.88" x2="571.77" y2="543.91" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="73.80" y1="58.54" x2="359.00" y2="615.48" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1057.15" y1="222.75" x2="57.15" y2="533.93" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="916.94" y1="772.47" x2="333.63" y2="465.48" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="333.63" y1="465.48" x2="90.99" y2="307.55" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="227.94" y1="246.83" x2="359.00" y2="615.48" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="1118.88" y1="620.01" x2="554.85" y2="648.95" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="57.15" y1="533.93" x2="333.63" y2="465.48" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.16" y1="68.19" x2="569.85" y2="80.09" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="55.91" y1="763.91" x2="570.33" y2="761.21" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="55.91" y1="763.91" x2="59.24" y2="117.46" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="55.91" y1="763.91" x2="90.99" y2="307.55" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="610.92" y1="255.53" x2="59.24" y2="117.46" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="610.92" y1="255.53" x2="840.99" y2="585.23" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="570.33" y1="761.21" x2="569.85" y2="80.09" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="840.99" y1="585.23" x2="55.91" y2="763.91" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="889.17" y1="820.01" x2="57.15" y2="533.93" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="383.62" y1="534.51" x2="227.94" y2="246.83" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="197.26" y1="466.50" x2="227.94" y2="246.83" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="802.61" y1="517.67" x2="90.99" y2="307.55" stroke="#3b4b5d" stroke-opacity="0.18" stroke-width="1"/>
+<circle cx="751.05" cy="230.86" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.BundleDemoMain.varIndex</title>
+</circle>
+<circle cx="622.45" cy="830.14" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.BundleDemoMain.termToString</title>
+</circle>
+<circle cx="525.82" cy="521.85" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.BundleDemoMain.add1Term</title>
+</circle>
+<circle cx="1097.01" cy="486.65" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.BundleDemoMain.writeFileSafely</title>
+</circle>
+<circle cx="1058.13" cy="114.19" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.BundleDemoMain.driverC</title>
+</circle>
+<circle cx="933.01" cy="387.64" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.BundleDemoMain.main</title>
+</circle>
+<circle cx="953.20" cy="427.85" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.BundleDemoMain.main</title>
+</circle>
+<circle cx="797.00" cy="823.50" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Admissible.Hom</title>
+</circle>
+<circle cx="1082.70" cy="673.95" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Admissible.Obj</title>
+</circle>
+<circle cx="522.34" cy="373.42" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Admissible.SelectorObj</title>
+</circle>
+<circle cx="515.10" cy="116.29" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Admissible.SelectorSub</title>
+</circle>
+<circle cx="183.31" cy="658.35" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Admissible.evalAt</title>
+</circle>
+<circle cx="359.10" cy="641.80" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Admissible.evalAtSub</title>
+</circle>
+<circle cx="1044.93" cy="742.94" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.ClosureOperator.close</title>
+</circle>
+<circle cx="1133.32" cy="68.13" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.ClosureOperator.idem</title>
+</circle>
+<circle cx="1079.76" cy="751.08" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Concreteness.idem_of_map_idem</title>
+</circle>
+<circle cx="710.42" cy="688.01" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Concreteness.idem_of_yoneda_map_idem</title>
+</circle>
+<circle cx="412.50" cy="673.32" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Concreteness.pointUnder</title>
+</circle>
+<circle cx="967.72" cy="227.27" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Concreteness.PreservesSelectorEval</title>
+</circle>
+<circle cx="506.36" cy="577.87" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Concreteness.map_close_eq</title>
+</circle>
+<circle cx="518.19" cy="607.00" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Concreteness.map_close_eq&#39;</title>
+</circle>
+<circle cx="801.86" cy="205.48" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.EvalImage.Obj</title>
+</circle>
+<circle cx="140.01" cy="729.05" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.EvalImage.betaOnImage</title>
+</circle>
+<circle cx="885.25" cy="408.34" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.EvalImage.betaOnImage_evalAt</title>
+</circle>
+<circle cx="414.22" cy="787.29" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.EvalImage.factorThruImage_eq_inv</title>
+</circle>
+<circle cx="643.61" cy="306.59" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.InjectiveEvalAt</title>
+</circle>
+<circle cx="708.54" cy="750.61" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.InverseEvaluationAt</title>
+</circle>
+<circle cx="521.48" cy="540.32" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.RightInverseAt</title>
+</circle>
+<circle cx="1132.15" cy="847.18" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.of_isIso_evalAt</title>
+</circle>
+<circle cx="768.87" cy="607.01" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.of_splitEpi_evalAt</title>
+</circle>
+<circle cx="286.94" cy="164.91" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.evalAt_splitEpi</title>
+</circle>
+<circle cx="278.61" cy="218.40" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.beta_splitMono</title>
+</circle>
+<circle cx="830.11" cy="711.97" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.evalAt_epi</title>
+</circle>
+<circle cx="927.10" cy="63.08" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.beta_mono</title>
+</circle>
+<circle cx="195.90" cy="139.08" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.evalAt_splitEpi</title>
+</circle>
+<circle cx="300.51" cy="253.25" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.beta_splitMono</title>
+</circle>
+<circle cx="897.11" cy="743.88" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.evalAt_epi</title>
+</circle>
+<circle cx="860.20" cy="71.13" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.InverseEvaluation.beta_mono</title>
+</circle>
+<circle cx="688.77" cy="778.75" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Selector.SelectorObj</title>
+</circle>
+<circle cx="918.57" cy="78.50" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Selector.evalAt</title>
+</circle>
+<circle cx="1129.38" cy="741.87" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.Selector.evalAt_def</title>
+</circle>
+<circle cx="609.72" cy="577.40" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.YonedaView.curryEquiv</title>
+</circle>
+<circle cx="322.96" cy="194.61" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.YonedaViewNat.homTensorLeft</title>
+</circle>
+<circle cx="1130.79" cy="464.11" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.YonedaViewNat.homSelectorObj</title>
+</circle>
+<circle cx="746.18" cy="196.88" r="4" fill="hsl(303 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Cat.YonedaViewNat.curryNatIso</title>
+</circle>
+<circle cx="204.37" cy="553.92" r="4" fill="hsl(216 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.FA.Diagram.Node</title>
+</circle>
+<circle cx="1071.00" cy="385.21" r="4" fill="hsl(216 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.FA.Diagram.Edge</title>
+</circle>
+<circle cx="832.13" cy="833.72" r="4" fill="hsl(216 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.FA.Diagram.Diagram</title>
+</circle>
+<circle cx="1020.12" cy="374.55" r="4" fill="hsl(216 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.FA.Temporal.TemporalNode</title>
+</circle>
+<circle cx="363.45" cy="818.68" r="4" fill="hsl(216 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.FA.Temporal.TemporalEdge</title>
+</circle>
+<circle cx="520.81" cy="640.70" r="4" fill="hsl(216 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.FA.Temporal.TemporalDiagram</title>
+</circle>
+<circle cx="194.35" cy="311.04" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.Basic.MRSystem</title>
+</circle>
+<circle cx="525.55" cy="763.59" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.Basic.AdmissibleMap</title>
+</circle>
+<circle cx="1058.36" cy="181.34" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.Basic.Selector</title>
+</circle>
+<circle cx="942.80" cy="224.63" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.Basic.evalAt</title>
+</circle>
+<circle cx="779.16" cy="382.68" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.Basic.evalAt_apply</title>
+</circle>
+<circle cx="1078.38" cy="482.93" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.Basic.EvalAtInjective</title>
+</circle>
+<circle cx="933.55" cy="590.25" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.closeSelector</title>
+</circle>
+<circle cx="316.21" cy="833.49" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.evalAt_close</title>
+</circle>
+<circle cx="934.50" cy="72.28" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.close_apply_at</title>
+</circle>
+<circle cx="122.45" cy="365.99" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.idem</title>
+</circle>
+<circle cx="207.97" cy="512.39" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.of_evalAt_surjective</title>
+</circle>
+<circle cx="493.09" cy="554.94" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.of_evalAt_surjective_idem</title>
+</circle>
+<circle cx="516.58" cy="242.54" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.of_evalAt_surjective_eq_id</title>
+</circle>
+<circle cx="848.95" cy="95.47" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.IsClosed</title>
+</circle>
+<circle cx="1059.16" cy="59.22" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.iff_eq</title>
+</circle>
+<circle cx="465.52" cy="571.52" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.exists_eq_beta_iff</title>
+</circle>
+<circle cx="567.58" cy="422.19" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.ClosureOperator.close_isClosed</title>
+</circle>
+<circle cx="397.61" cy="385.63" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.InjectiveEvalAt</title>
+</circle>
+<circle cx="767.56" cy="83.55" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.eq_of_eval_eq</title>
+</circle>
+<circle cx="467.97" cy="221.52" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.InverseEvaluation</title>
+</circle>
+<circle cx="730.04" cy="434.33" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.RightInverseAt</title>
+</circle>
+<circle cx="695.71" cy="217.63" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.evalAt_beta</title>
+</circle>
+<circle cx="983.42" cy="537.38" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_injective</title>
+</circle>
+<circle cx="831.31" cy="203.51" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.evalAt_surjective</title>
+</circle>
+<circle cx="372.48" cy="144.70" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.of_evalAt_surjective</title>
+</circle>
+<circle cx="809.86" cy="588.02" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_leftInverse_of_injective</title>
+</circle>
+<circle cx="734.57" cy="237.52" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.evalAt_beta</title>
+</circle>
+<circle cx="981.20" cy="588.08" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.beta_injective</title>
+</circle>
+<circle cx="860.00" cy="174.39" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.evalAt_surjective</title>
+</circle>
+<circle cx="742.41" cy="583.55" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.EvalImage</title>
+</circle>
+<circle cx="1076.23" cy="598.70" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.betaOnImage</title>
+</circle>
+<circle cx="227.37" cy="155.38" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.evalAt_betaOnImage</title>
+</circle>
+<circle cx="1090.78" cy="421.96" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.ofSelector</title>
+</circle>
+<circle cx="1115.19" cy="391.23" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.betaOnImage_ofSelector</title>
+</circle>
+<circle cx="664.38" cy="638.03" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.InverseEvaluation.toRange</title>
+</circle>
+<circle cx="140.12" cy="240.99" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.PaperMapping.paper_uniqueness</title>
+</circle>
+<circle cx="766.46" cy="394.84" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.MR.PaperMapping.rightInverse_implies_surjective</title>
+</circle>
+<circle cx="1031.04" cy="781.48" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Main.selector_eq_of_eval_eq</title>
+</circle>
+<circle cx="189.47" cy="451.75" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Main.closeSelector_idem</title>
+</circle>
+<circle cx="402.65" cy="58.56" r="4" fill="hsl(285 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Main.close_idem</title>
+</circle>
+<circle cx="958.06" cy="396.60" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.futureKernel</title>
+</circle>
+<circle cx="414.81" cy="199.22" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.monotone</title>
+</circle>
+<circle cx="1112.30" cy="404.40" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.contractive</title>
+</circle>
+<circle cx="649.89" cy="277.14" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.idem</title>
+</circle>
+<circle cx="352.07" cy="710.68" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.meet</title>
+</circle>
+<circle cx="369.37" cy="773.69" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.futureKernelKernel</title>
+</circle>
+<circle cx="872.26" cy="211.94" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.unreachableFrom</title>
+</circle>
+<circle cx="644.87" cy="672.10" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.reachabilityNucleus</title>
+</circle>
+<circle cx="614.14" cy="406.64" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.FunctorialTime.reachabilityNucleus_apply</title>
+</circle>
+<circle cx="698.75" cy="66.60" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.KernelLaws.Kernel</title>
+</circle>
+<circle cx="281.07" cy="198.51" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.KernelLaws.toFun_eq_coe</title>
+</circle>
+<circle cx="644.80" cy="326.66" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.KernelLaws.monotone</title>
+</circle>
+<circle cx="1106.87" cy="281.84" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.KernelLaws.map_inf</title>
+</circle>
+<circle cx="495.07" cy="106.09" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.KernelLaws.idempotent</title>
+</circle>
+<circle cx="433.41" cy="345.22" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.KernelLaws.apply_le</title>
+</circle>
+<circle cx="924.86" cy="490.48" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.KernelLaws.IsFixed</title>
+</circle>
+<circle cx="1105.91" cy="555.68" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.KernelLaws.isFixed_iff</title>
+</circle>
+<circle cx="316.13" cy="79.65" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.KernelLaws.isFixed_apply</title>
+</circle>
+<circle cx="826.99" cy="250.78" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge.eval_beta</title>
+</circle>
+<circle cx="994.31" cy="645.06" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge.eval_lam_eq_curry</title>
+</circle>
+<circle cx="341.31" cy="237.53" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge.eval_lam_eq_uncurry</title>
+</circle>
+<circle cx="624.81" cy="236.64" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.Mealy</title>
+</circle>
+<circle cx="863.82" cy="511.73" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.stepState</title>
+</circle>
+<circle cx="73.23" cy="58.36" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.stepOut</title>
+</circle>
+<circle cx="879.73" cy="641.01" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.MealyF</title>
+</circle>
+<circle cx="203.33" cy="386.69" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.Coalgebra</title>
+</circle>
+<circle cx="307.68" cy="543.45" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.ofMealy</title>
+</circle>
+<circle cx="981.29" cy="339.11" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.toMealy</title>
+</circle>
+<circle cx="410.14" cy="186.13" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.closeMachine</title>
+</circle>
+<circle cx="820.07" cy="602.44" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.closeMachine_step_fst</title>
+</circle>
+<circle cx="89.71" cy="198.98" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.closeMachine_step_snd</title>
+</circle>
+<circle cx="257.57" cy="690.71" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.closeMachine_state_closed</title>
+</circle>
+<circle cx="1051.04" cy="466.93" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.Mealy.closeMachine_step_idem</title>
+</circle>
+<circle cx="56.86" cy="61.02" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.NucleusBridge.MeetRetraction</title>
+</circle>
+<circle cx="882.02" cy="315.72" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.NucleusBridge.retractionNucleus</title>
+</circle>
+<circle cx="1002.21" cy="517.79" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.NucleusBridge.retractionNucleus_apply</title>
+</circle>
+<circle cx="295.44" cy="262.86" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.NucleusBridge.retractionNucleus_idem</title>
+</circle>
+<circle cx="741.39" cy="69.16" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.NucleusBridge.addClosureNucleus</title>
+</circle>
+<circle cx="252.53" cy="124.80" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.NucleusFixedPoints.nucleusOfClosure</title>
+</circle>
+<circle cx="392.54" cy="574.56" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.NucleusFixedPoints.mem_</title>
+</circle>
+<circle cx="354.40" cy="293.94" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.futureKernel</title>
+</circle>
+<circle cx="1020.88" cy="436.98" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.monotone</title>
+</circle>
+<circle cx="879.69" cy="793.43" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.contractive</title>
+</circle>
+<circle cx="741.79" cy="634.99" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.map_homOfLE_trans_apply</title>
+</circle>
+<circle cx="540.90" cy="688.11" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.idem</title>
+</circle>
+<circle cx="929.03" cy="362.75" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.meet</title>
+</circle>
+<circle cx="801.39" cy="449.16" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.unreachableFrom</title>
+</circle>
+<circle cx="61.34" cy="591.81" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.reachabilityNucleus</title>
+</circle>
+<circle cx="171.62" cy="401.85" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.reachabilityNucleus_apply</title>
+</circle>
+<circle cx="976.87" cy="63.24" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.unreachableFromBot</title>
+</circle>
+<circle cx="342.17" cy="832.94" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.PreorderTime.reachabilityNucleusBot</title>
+</circle>
+<circle cx="760.43" cy="770.15" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.ProcessBridge.KprocKernel</title>
+</circle>
+<circle cx="200.41" cy="330.75" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.ProcessBridge.wellTyped_fixedPoint</title>
+</circle>
+<circle cx="185.68" cy="136.23" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.ReachSystem</title>
+</circle>
+<circle cx="915.31" cy="575.42" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.K</title>
+</circle>
+<circle cx="1102.56" cy="393.72" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.K_contract</title>
+</circle>
+<circle cx="337.48" cy="391.81" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.K_monotone</title>
+</circle>
+<circle cx="112.40" cy="596.47" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.K_idem</title>
+</circle>
+<circle cx="878.37" cy="331.67" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.K_meet</title>
+</circle>
+<circle cx="645.19" cy="477.22" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.kernel</title>
+</circle>
+<circle cx="348.91" cy="770.45" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.IsInvariant</title>
+</circle>
+<circle cx="285.90" cy="524.08" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.K_eq_of_invariant</title>
+</circle>
+<circle cx="555.00" cy="798.18" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.Simulation</title>
+</circle>
+<circle cx="675.86" cy="789.88" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.Realizable</title>
+</circle>
+<circle cx="534.28" cy="337.19" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.realizable_invariant_of_simulation</title>
+</circle>
+<circle cx="235.90" cy="451.68" r="4" fill="hsl(270 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Semantics.RelationalRealizability.processSystem</title>
+</circle>
+<circle cx="444.73" cy="528.17" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.ClosureIdempotent.toyH</title>
+</circle>
+<circle cx="120.79" cy="323.30" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.ClosureIdempotent.toySystem</title>
+</circle>
+<circle cx="304.81" cy="393.52" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.ClosureIdempotent.mapTrue</title>
+</circle>
+<circle cx="78.58" cy="679.72" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.ClosureIdempotent.mapFalse</title>
+</circle>
+<circle cx="876.56" cy="262.40" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.ClosureIdempotent.toySelector</title>
+</circle>
+<circle cx="80.46" cy="433.10" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.ClosureIdempotent.toyRI</title>
+</circle>
+<circle cx="264.20" cy="189.86" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.Test_AssumptionMismatch.selConstTrue</title>
+</circle>
+<circle cx="799.53" cy="775.05" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.Test_AssumptionMismatch.sysInjNotSurj</title>
+</circle>
+<circle cx="318.61" cy="397.14" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.Test_AssumptionMismatch.mapTrue</title>
+</circle>
+<circle cx="53.95" cy="438.42" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.Test_AssumptionMismatch.mapFalse</title>
+</circle>
+<circle cx="1114.60" cy="245.14" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.Test_AssumptionMismatch.mapFalse_ne_mapTrue</title>
+</circle>
+<circle cx="185.55" cy="335.14" r="4" fill="hsl(178 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.ClosingTheLoop.Tests.Test_AssumptionMismatch.evalAt_not_surjective</title>
+</circle>
+<circle cx="840.99" cy="585.23" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaConstruction.betaRaw</title>
+</circle>
+<circle cx="291.30" cy="696.96" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaConstruction.betaRaw_right_inverse</title>
+</circle>
+<circle cx="202.72" cy="549.44" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaConstruction.beta_eq_const</title>
+</circle>
+<circle cx="481.52" cy="599.47" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaConstruction.beta_eq_betaRaw_of_stable</title>
+</circle>
+<circle cx="55.91" cy="763.91" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaEigen.SelectorAt</title>
+</circle>
+<circle cx="825.13" cy="420.38" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaEigen.selectorDynamicsAt_unique_fixed</title>
+</circle>
+<circle cx="715.00" cy="597.31" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaEigen.betaEigenAt</title>
+</circle>
+<circle cx="610.90" cy="801.29" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaEigen.beta</title>
+</circle>
+<circle cx="621.20" cy="474.09" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaEigen.beta_right_inverse</title>
+</circle>
+<circle cx="974.22" cy="671.34" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.BetaEigen.beta_stable</title>
+</circle>
+<circle cx="569.85" cy="80.09" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.EvaluationMap.Metabolism</title>
+</circle>
+<circle cx="834.87" cy="94.96" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.EvaluationMap.Selector</title>
+</circle>
+<circle cx="1039.82" cy="286.99" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.EvaluationMap.evalAt</title>
+</circle>
+<circle cx="92.32" cy="138.83" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.EvaluationMap.InjectiveEvalAt</title>
+</circle>
+<circle cx="999.70" cy="529.27" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.EvaluationMap.SurjectiveEvalAt</title>
+</circle>
+<circle cx="837.28" cy="229.14" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.EvaluationMap.BijectiveEvalAt</title>
+</circle>
+<circle cx="875.34" cy="247.37" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.MRClosure.closeSelector_idem</title>
+</circle>
+<circle cx="610.92" cy="255.53" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.NoncomputableAudit.eigencomputableDecls</title>
+</circle>
+<circle cx="570.33" cy="761.21" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.SelectorDynamics.selectorDynamics</title>
+</circle>
+<circle cx="225.69" cy="786.23" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.SelectorDynamics.selectorDynamics_stable_iff</title>
+</circle>
+<circle cx="800.77" cy="669.57" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.SelectorDynamics.selectorDynamics_unique_stable</title>
+</circle>
+<circle cx="635.36" cy="268.20" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.SelectorDynamics.selectorDynamicsAt</title>
+</circle>
+<circle cx="152.16" cy="68.19" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.SemanticClosureLink.toTypeMetabolism</title>
+</circle>
+<circle cx="534.37" cy="552.34" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.SemanticClosureLink.toTypeSelector</title>
+</circle>
+<circle cx="1061.19" cy="480.52" r="4" fill="hsl(80 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Bridge.SemanticClosureLink.evalAt_toTypeSelector</title>
+</circle>
+<circle cx="907.23" cy="234.36" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.Coalgebra.Coalgebra</title>
+</circle>
+<circle cx="133.25" cy="766.52" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.FixedPoint.initialAlgebra_str_isIso</title>
+</circle>
+<circle cx="495.23" cy="560.52" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.FixedPoint.terminalCoalgebra_str_isIso</title>
+</circle>
+<circle cx="436.40" cy="515.04" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.Lawvere.fixedPoint_of_surjective_eval</title>
+</circle>
+<circle cx="422.37" cy="211.54" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.Monad.IsIdempotentMonad</title>
+</circle>
+<circle cx="359.00" cy="615.48" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.Presheaf.Presheaf</title>
+</circle>
+<circle cx="227.94" cy="246.83" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.Yoneda.potentialize</title>
+</circle>
+<circle cx="779.27" cy="482.38" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.Yoneda.potentializeFullyFaithful</title>
+</circle>
+<circle cx="621.67" cy="51.92" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.Yoneda.actualize</title>
+</circle>
+<circle cx="173.48" cy="539.25" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.Yoneda.actualizeRepresentation</title>
+</circle>
+<circle cx="972.05" cy="198.97" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Cat.Yoneda.actualizeIso</title>
+</circle>
+<circle cx="554.85" cy="648.95" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Core.FixedPoints.mem_</title>
+</circle>
+<circle cx="1118.88" cy="620.01" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Core.HeytingCore.HeytingCore</title>
+</circle>
+<circle cx="57.15" cy="533.93" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Core.Nucleus.nucleusDynamics</title>
+</circle>
+<circle cx="650.43" cy="527.89" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Core.Nucleus.IsStable</title>
+</circle>
+<circle cx="862.26" cy="403.04" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Core.Nucleus.stable_apply</title>
+</circle>
+<circle cx="197.26" cy="466.50" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Crossing.Adjunction.actualizeIsoYoneda</title>
+</circle>
+<circle cx="383.62" cy="534.51" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Crossing.Irreversibility.representable_uniqueUpToIso</title>
+</circle>
+<circle cx="802.61" cy="517.67" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Crossing.OntologicalBoundary.cross</title>
+</circle>
+<circle cx="889.17" cy="820.01" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Crossing.Persistence.stable_apply</title>
+</circle>
+<circle cx="59.24" cy="117.46" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Attribute.eigencomputableGetParam</title>
+</circle>
+<circle cx="903.57" cy="569.68" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Attribute.eigencomputableDynamicsName</title>
+</circle>
+<circle cx="90.99" cy="307.55" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Basic.IsEigenform</title>
+</circle>
+<circle cx="236.78" cy="413.84" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Basic.Eigen</title>
+</circle>
+<circle cx="973.56" cy="742.78" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Basic.determined_by_dynamics</title>
+</circle>
+<circle cx="268.32" cy="730.52" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Basic.val_unique_of_eq_dynamics</title>
+</circle>
+<circle cx="787.42" cy="427.90" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Basic.ofExistsUniqueFixedPoint</title>
+</circle>
+<circle cx="587.35" cy="265.32" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Basic.cross</title>
+</circle>
+<circle cx="333.63" cy="465.48" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Dynamics.Dynamics</title>
+</circle>
+<circle cx="791.05" cy="825.43" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Dynamics.iterate</title>
+</circle>
+<circle cx="787.89" cy="620.29" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Dynamics.IsStable</title>
+</circle>
+<circle cx="1026.42" cy="210.60" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Dynamics.HasUniqueStable</title>
+</circle>
+<circle cx="212.82" cy="254.98" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Dynamics.stablePoint</title>
+</circle>
+<circle cx="916.94" cy="772.47" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Grounded.HasEigenstructure</title>
+</circle>
+<circle cx="892.52" cy="468.14" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Grounded.eigenvalue</title>
+</circle>
+<circle cx="873.33" cy="413.53" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Grounded.eigenvalue_stable</title>
+</circle>
+<circle cx="321.24" cy="65.46" r="4" fill="hsl(295 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Eigen.Grounded.eigenvalue_unique</title>
+</circle>
+<circle cx="967.75" cy="525.28" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Tests.Compliance.sampleF</title>
+</circle>
+<circle cx="50.83" cy="785.88" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Zeros.Hierarchy.ZeroHierarchy</title>
+</circle>
+<circle cx="624.29" cy="435.61" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Zeros.Hierarchy.mk</title>
+</circle>
+<circle cx="73.80" cy="58.54" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Zeros.Maximal.MaximalZero</title>
+</circle>
+<circle cx="571.77" cy="543.91" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Zeros.Minimal.MinimalZero</title>
+</circle>
+<circle cx="1004.13" cy="531.17" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Zeros.Minimal.minimalZero_noElim</title>
+</circle>
+<circle cx="1057.15" cy="222.75" r="4" fill="hsl(318 70% 58%)" stroke="#0b0f14" stroke-width="1">
+  <title>HeytingLean.Noneism.Zeros.Recursive.RecursiveZero</title>
+</circle>
+<text x="1170" y="50" fill="#ffffff" font-size="16" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">Legend</text>
+<rect x="1170" y="64" width="10" height="10" fill="hsl(270 70% 58%)" stroke="hsl(270 70% 32%)" stroke-width="1"/>
+<text x="1186" y="73" fill="#e6eef7" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">Semantics <tspan fill="#b8c7d9">(66)</tspan></text>
+<rect x="1170" y="80" width="10" height="10" fill="hsl(303 70% 58%)" stroke="hsl(303 70% 32%)" stroke-width="1"/>
+<text x="1186" y="89" fill="#e6eef7" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">Cat <tspan fill="#b8c7d9">(38)</tspan></text>
+<rect x="1170" y="96" width="10" height="10" fill="hsl(318 70% 58%)" stroke="hsl(318 70% 32%)" stroke-width="1"/>
+<text x="1186" y="105" fill="#e6eef7" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">MR <tspan fill="#b8c7d9">(37)</tspan></text>
+<rect x="1170" y="112" width="10" height="10" fill="hsl(318 70% 58%)" stroke="hsl(318 70% 32%)" stroke-width="1"/>
+<text x="1186" y="121" fill="#e6eef7" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">Noneism <tspan fill="#b8c7d9">(27)</tspan></text>
+<rect x="1170" y="128" width="10" height="10" fill="hsl(80 70% 58%)" stroke="hsl(80 70% 32%)" stroke-width="1"/>
+<text x="1186" y="137" fill="#e6eef7" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">Bridge <tspan fill="#b8c7d9">(25)</tspan></text>
+<rect x="1170" y="144" width="10" height="10" fill="hsl(295 70% 58%)" stroke="hsl(295 70% 32%)" stroke-width="1"/>
+<text x="1186" y="153" fill="#e6eef7" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">Eigen <tspan fill="#b8c7d9">(17)</tspan></text>
+<rect x="1170" y="160" width="10" height="10" fill="hsl(178 70% 58%)" stroke="hsl(178 70% 32%)" stroke-width="1"/>
+<text x="1186" y="169" fill="#e6eef7" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">Tests <tspan fill="#b8c7d9">(12)</tspan></text>
+<rect x="1170" y="176" width="10" height="10" fill="hsl(285 70% 58%)" stroke="hsl(285 70% 32%)" stroke-width="1"/>
+<text x="1186" y="185" fill="#e6eef7" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">Other <tspan fill="#b8c7d9">(10)</tspan></text>
+<rect x="1170" y="192" width="10" height="10" fill="hsl(216 70% 58%)" stroke="hsl(216 70% 32%)" stroke-width="1"/>
+<text x="1186" y="201" fill="#e6eef7" font-size="12" font-family="ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial">FA <tspan fill="#b8c7d9">(6)</tspan></text>
+
+</svg>

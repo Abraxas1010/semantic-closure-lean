@@ -35,13 +35,39 @@
         <div class="card">
           <h2>2D Viewer</h2>
           <p class="muted">Pan/zoom, hover for names, click for details. Now includes Noneism declarations.</p>
+          <p>
+            <a href="./closing_the_loop_2d.html"
+              ><img
+                src="./closing_the_loop_2d_preview.svg"
+                alt="2D UMAP preview"
+                style="width: 100%; max-width: 520px; border: 1px solid #1c2a3a; border-radius: 10px"
+            /></a>
+          </p>
           <p><a href="./closing_the_loop_2d.html">Open <code>closing_the_loop_2d.html</code></a></p>
         </div>
         <div class="card">
           <h2>3D Viewer</h2>
           <p class="muted">Drag to rotate, wheel to zoom, hover/click nodes. Now includes Noneism declarations.</p>
+          <div style="margin: 0.5rem 0 0.75rem">
+            <iframe
+              src="./closing_the_loop_3d.html?embed=1"
+              title="3D UMAP interactive preview"
+              style="width: 100%; height: 320px; border: 1px solid #1c2a3a; border-radius: 10px"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <p class="muted">If WebGL is unavailable: <a href="./closing_the_loop_3d_preview.svg">static preview</a>.</p>
           <p><a href="./closing_the_loop_3d.html">Open <code>closing_the_loop_3d.html</code></a></p>
         </div>
+      </div>
+
+      <div class="card">
+        <h2>UMAP Interpretation (Limitations)</h2>
+        <ul class="muted">
+          <li>UMAP is a non-linear projection of high-dimensional feature vectors (here: Lean source text features) into 2D/3D.</li>
+          <li>Only local neighborhoods are intended to be meaningful; global distances and cluster geometry are not proof-theoretic invariants.</li>
+          <li>Treat these maps as navigational aids; the formal guarantee is the Lean kernel check.</li>
+        </ul>
       </div>
 
       <!-- Module Import Graphs -->

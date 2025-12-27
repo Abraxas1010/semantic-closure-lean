@@ -95,9 +95,32 @@ Docs:
 
 We provide interactive visualizations showing the structure and dependencies of all proofs:
 
-![Proof Dependency Graph (3D)](images/proof_graph_visualization.png)
+<table>
+<tr>
+<td align="center" width="50%">
+<strong>2D Proof Map</strong><br/>
+<em>Pan, zoom, search declarations</em><br/>
+<a href="https://abraxas1010.github.io/semantic-closure-lean/closing_the_loop_2d.html">
+  <img src="docs/closing_the_loop_2d_preview.svg" alt="2D UMAP preview" width="100%"/>
+</a><br/>
+<a href="https://abraxas1010.github.io/semantic-closure-lean/closing_the_loop_2d.html">closing_the_loop_2d.html</a> (GitHub Pages)
+</td>
+<td align="center" width="50%">
+<strong>3D Proof Map</strong><br/>
+<em>Rotate, zoom, explore clusters</em><br/>
+<a href="https://abraxas1010.github.io/semantic-closure-lean/closing_the_loop_3d.html">
+  <img src="docs/closing_the_loop_3d_preview_animated.svg" alt="3D UMAP animated preview" width="100%"/>
+</a><br/>
+<a href="https://abraxas1010.github.io/semantic-closure-lean/closing_the_loop_3d.html">closing_the_loop_3d.html</a> (GitHub Pages)
+</td>
+</tr>
+</table>
 
-*3D proof graph showing how theorems depend on each other. Each node is a declaration (definition, lemma, or theorem). Edges show logical dependencies. Colors indicate module families: green (MR), blue (Cat), purple (Semantics), orange (FA), and violet shades (Noneism extension). The spatial clustering reveals the modular structure of the formalization. See interactive viewers below for full exploration.*
+**UMAP note (interpretation + limitations):**
+- UMAP is a non-linear projection of high-dimensional feature vectors into 2D/3D; here the features are derived from Lean source text statistics and structural signals.
+- Only *local neighborhoods* are intended to be meaningful; global distances/cluster geometry are not proof-theoretic invariants.
+- Treat these maps as navigational aids; the formal guarantee is always the Lean kernel check.
+- GitHub README pages block embedded iframes/WebGL; the README shows lightweight SVG previews, while the full interactive 3D viewer is on GitHub Pages.
 
 **Interactive Viewers:**
 - [**2D Viewer**](https://abraxas1010.github.io/semantic-closure-lean/closing_the_loop_2d.html) — Pan/zoom, hover for names, click for details

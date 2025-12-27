@@ -30,12 +30,23 @@
     <script src="./closing_the_loop_proofs_data.js"></script>
     <script>
       ;(() => {
+        const params = new URLSearchParams(window.location.search)
+        const EMBED = params.get('embed') === '1'
+        if (EMBED) {
+          const ui = document.getElementById('ui')
+          if (ui) ui.style.display = 'none'
+        }
+
         const data = window.CLOSING_THE_LOOP_PROOFS || { items: [], edges: [] }
         const items = data.items || []
         const edges = data.edges || []
 
         const tip = document.getElementById('tip')
         const details = document.getElementById('details')
+        if (EMBED) {
+          if (tip) tip.style.display = 'none'
+          if (details) details.style.display = 'none'
+        }
 
         const colorForFamily = (fam) => {
           const map = {
@@ -158,60 +169,66 @@
         window.addEventListener('mousemove', onMove)
         renderer.domElement.addEventListener('wheel', onWheel, { passive:false })
 
-        // hover/click picking
-        const raycaster = new THREE.Raycaster()
-        const mouse = new THREE.Vector2()
-        let hover = null
-        let selected = null
-        const showTip = (sx, sy, it) => {
-          tip.style.display = 'block'
-          tip.style.left = (sx + 12) + 'px'
-          tip.style.top = (sy + 12) + 'px'
-          tip.textContent = it.name
-        }
-        const hideTip = () => { tip.style.display='none' }
-        const escapeHtml = (s) => String(s).replace(/[&<>\"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]||c))
-        const showDetails = (it) => {
-          const loc = it.path ? `${it.path}:${it.line||1}` : ''
-          details.style.display = 'block'
-          details.innerHTML =
-            `<h3>${escapeHtml(it.name||'')}</h3>` +
-            `<div class="muted">${escapeHtml(it.kind||'')} · <code>${escapeHtml(it.family||'')}</code></div>` +
-            (loc ? `<div style="margin-top:6px"><code>${escapeHtml(loc)}</code></div>` : '') +
-            (it.snippet ? `<div style="margin-top:10px" class="muted">${escapeHtml(it.snippet)}</div>` : '')
-        }
-        const pick = (ev) => {
-          const rect = renderer.domElement.getBoundingClientRect()
-          mouse.x = ((ev.clientX - rect.left) / rect.width) * 2 - 1
-          mouse.y = -((ev.clientY - rect.top) / rect.height) * 2 + 1
-          raycaster.setFromCamera(mouse, camera)
-          const hits = raycaster.intersectObjects(meshes, false)
-          if (!hits.length) return null
-          const idx = hits[0].object.userData?.idx
-          return (typeof idx === 'number') ? idx : null
-        }
-        renderer.domElement.addEventListener('mousemove', (ev) => {
-          const idx = pick(ev)
-          hover = idx
-          if (hover !== null) showTip(ev.clientX, ev.clientY, items[hover])
-          else hideTip()
-        })
-        renderer.domElement.addEventListener('click', (ev) => {
-          const idx = pick(ev)
-          selected = idx
-          for (let i=0;i<meshes.length;i++){
-            const it = items[i]
-            meshes[i].material.color.setHex(colorForFamily(it.family||''))
+        // hover/click picking (disabled in embed mode to keep the preview lightweight)
+        if (!EMBED) {
+          const raycaster = new THREE.Raycaster()
+          const mouse = new THREE.Vector2()
+          let hover = null
+          let selected = null
+          const showTip = (sx, sy, it) => {
+            tip.style.display = 'block'
+            tip.style.left = (sx + 12) + 'px'
+            tip.style.top = (sy + 12) + 'px'
+            tip.textContent = it.name
           }
-          if (selected !== null){
-            meshes[selected].material.color.setHex(0xffffff)
-            showDetails(items[selected])
-          } else {
-            details.style.display='none'
+          const hideTip = () => { tip.style.display='none' }
+          const escapeHtml = (s) => String(s).replace(/[&<>\"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]||c))
+          const showDetails = (it) => {
+            const loc = it.path ? `${it.path}:${it.line||1}` : ''
+            details.style.display = 'block'
+            details.innerHTML =
+              `<h3>${escapeHtml(it.name||'')}</h3>` +
+              `<div class="muted">${escapeHtml(it.kind||'')} · <code>${escapeHtml(it.family||'')}</code></div>` +
+              (loc ? `<div style="margin-top:6px"><code>${escapeHtml(loc)}</code></div>` : '') +
+              (it.snippet ? `<div style="margin-top:10px" class="muted">${escapeHtml(it.snippet)}</div>` : '')
           }
-        })
+          const pick = (ev) => {
+            const rect = renderer.domElement.getBoundingClientRect()
+            mouse.x = ((ev.clientX - rect.left) / rect.width) * 2 - 1
+            mouse.y = -((ev.clientY - rect.top) / rect.height) * 2 + 1
+            raycaster.setFromCamera(mouse, camera)
+            const hits = raycaster.intersectObjects(meshes, false)
+            if (!hits.length) return null
+            const idx = hits[0].object.userData?.idx
+            return (typeof idx === 'number') ? idx : null
+          }
+          renderer.domElement.addEventListener('mousemove', (ev) => {
+            const idx = pick(ev)
+            hover = idx
+            if (hover !== null) showTip(ev.clientX, ev.clientY, items[hover])
+            else hideTip()
+          })
+          renderer.domElement.addEventListener('click', (ev) => {
+            const idx = pick(ev)
+            selected = idx
+            for (let i=0;i<meshes.length;i++){
+              const it = items[i]
+              meshes[i].material.color.setHex(colorForFamily(it.family||''))
+            }
+            if (selected !== null){
+              meshes[selected].material.color.setHex(0xffffff)
+              showDetails(items[selected])
+            } else {
+              details.style.display='none'
+            }
+          })
+        }
 
         const animate = () => {
+          if (EMBED && !state.dragging) {
+            state.theta += 0.0015
+            updateCamera()
+          }
           renderer.render(scene, camera)
           requestAnimationFrame(animate)
         }
@@ -226,4 +243,3 @@
     </script>
   </body>
 </html>
-
