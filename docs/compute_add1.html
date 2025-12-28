@@ -39,8 +39,8 @@
           <label>Input (signed 64-bit):
             <input id="x" type="text" value="41" />
           </label>
-          <button id="run" disabled>Run <code>add1</code></button>
-          <div class="muted">Output: <code id="out">…</code></div>
+          <button id="run" disabled>Loading WASM…</button>
+          <div class="muted">Output: <code id="out">loading…</code></div>
         </div>
         <p class="muted" style="margin:10px 0 0">
           Note: WASM <code>i64</code> values are exposed to JS as <code>BigInt</code>.
@@ -109,16 +109,43 @@ Exports:
         const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0))
         WebAssembly.instantiate(bytes.buffer, {}).then(({ instance }) => {
           const add1 = instance.exports.add1
-          if (typeof add1 !== 'function') {
-            outEl.textContent = 'export add1 not found'
+          const add1_i32 = instance.exports.add1_i32
+
+          let mode = null
+          if (typeof add1 === 'function') {
+            try {
+              // Test-call to detect browsers without WebAssembly BigInt/i64 integration.
+              add1(0n)
+              mode = 'i64'
+            } catch (_) {}
+          }
+          if (!mode && typeof add1_i32 === 'function') {
+            mode = 'i32'
+          }
+          if (!mode) {
+            outEl.textContent = 'missing exports: add1 / add1_i32'
             return
           }
+
           runBtn.disabled = false
+          runBtn.textContent = 'Run add1'
           const run = () => {
             try {
-              const x = BigInt(xEl.value.trim() || '0')
-              const y = add1(x)
-              outEl.textContent = String(y)
+              const raw = (xEl.value || '').trim()
+              if (mode === 'i64') {
+                const x = BigInt(raw || '0')
+                const y = add1(x)
+                outEl.textContent = String(y) + '  (wasm:i64)'
+              } else {
+                const x = Number(raw || '0')
+                if (!Number.isFinite(x) || !Number.isInteger(x)) {
+                  outEl.textContent = 'input must be a finite integer (i32 mode)'
+                  return
+                }
+                // wasm32 i32 arguments/results are Numbers.
+                const y = add1_i32(x | 0)
+                outEl.textContent = String(y | 0) + '  (wasm:i32)'
+              }
             } catch (e) {
               outEl.textContent = String(e)
             }
@@ -128,9 +155,9 @@ Exports:
           run()
         }).catch((e) => {
           outEl.textContent = 'WASM instantiate failed: ' + String(e)
+          runBtn.textContent = 'WASM failed'
         })
       })()
     </script>
   </body>
 </html>
-

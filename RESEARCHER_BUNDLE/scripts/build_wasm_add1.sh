@@ -65,6 +65,7 @@ echo "[build_wasm_add1] compiling $SRC_C → wasm (freestanding)"
   -nostdlib \
   -Wl,--no-entry \
   -Wl,--export=add1 \
+  -Wl,--export=add1_i32 \
   -o "$OUT_WASM" \
   "$SRC_C"
 
@@ -86,3 +87,9 @@ EOF
 
 echo "[build_wasm_add1] wrote $OUT_JS"
 
+# Keep GitHub Pages docs/ in sync if this repo has it.
+REPO_ROOT="$(cd "$ROOT_DIR/.." && pwd)"
+if [[ -d "$REPO_ROOT/docs/wasm" ]]; then
+  cp -f "$OUT_JS" "$REPO_ROOT/docs/wasm/add1_wasm_b64.js"
+  echo "[build_wasm_add1] wrote $REPO_ROOT/docs/wasm/add1_wasm_b64.js"
+fi
