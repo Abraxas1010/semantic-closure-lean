@@ -43,6 +43,13 @@
 Open:
 
 - `artifacts/visuals/index.html`
+- `artifacts/visuals/compute_add1.html` (in-browser WASM demo; proof-linked)
+
+Optional rebuild of the embedded WASM payload:
+
+```bash
+./scripts/build_wasm_add1.sh
+```
 
 Researcher-facing writeup:
 

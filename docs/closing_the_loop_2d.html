@@ -39,11 +39,14 @@
     <canvas id="c"></canvas>
 
     <script src="./closing_the_loop_proofs_data.js"></script>
+    <script src="./closing_the_loop_artifacts_data.js"></script>
     <script>
       ;(() => {
         const data = window.CLOSING_THE_LOOP_PROOFS || { items: [], edges: [] }
         const items = data.items || []
         const edges = data.edges || []
+        const artifactsByDecl =
+          (window.CLOSING_THE_LOOP_ARTIFACTS && window.CLOSING_THE_LOOP_ARTIFACTS.byDecl) || {}
         const canvas = document.getElementById('c')
         const ctx = canvas.getContext('2d')
         const tip = document.getElementById('tip')
@@ -142,12 +145,26 @@
 
         const showDetails = (it) => {
           const loc = it.path ? `${it.path}:${it.line||1}` : ''
+          const artifacts = artifactsByDecl[it.name] || null
+          const artifactsHtml =
+            (artifacts && Array.isArray(artifacts.links) && artifacts.links.length)
+              ? (
+                `<div style="margin-top:10px">` +
+                `<div class="muted">Artifacts</div>` +
+                `<ul style="margin:6px 0 0; padding-left:18px">` +
+                artifacts.links.map(x =>
+                  `<li><a href="${escapeHtml(x.href||'#')}">${escapeHtml(x.label||x.href||'link')}</a></li>`
+                ).join('') +
+                `</ul></div>`
+              )
+              : ''
           details.style.display = 'block'
           details.innerHTML =
             `<h3>${escapeHtml(it.name||'')}</h3>` +
             `<div class="muted">${escapeHtml(it.kind||'')} · <code>${escapeHtml(it.family||'')}</code></div>` +
             (loc ? `<div style="margin-top:6px"><code>${escapeHtml(loc)}</code></div>` : '') +
-            (it.snippet ? `<div style="margin-top:10px" class="muted">${escapeHtml(it.snippet)}</div>` : '')
+            (it.snippet ? `<div style="margin-top:10px" class="muted">${escapeHtml(it.snippet)}</div>` : '') +
+            artifactsHtml
         }
 
         const escapeHtml = (s) => String(s).replace(/[&<>\"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]||c))

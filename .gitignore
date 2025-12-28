@@ -17,3 +17,6 @@
 # Generated Noneism verifier outputs
 RESEARCHER_BUNDLE/reports/NONEISM_*
 RESEARCHER_BUNDLE/reports/BUILD_TRANSCRIPT_NONEISM_STRICT.txt
+
+# Local helper tool downloads (e.g. zig for WASM demo rebuild)
+RESEARCHER_BUNDLE/.tools/

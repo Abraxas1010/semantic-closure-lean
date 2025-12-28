@@ -126,6 +126,11 @@ We provide interactive visualizations showing the structure and dependencies of 
 - [**2D Viewer**](https://abraxas1010.github.io/semantic-closure-lean/closing_the_loop_2d.html) — Pan/zoom, hover for names, click for details
 - [**3D Viewer**](https://abraxas1010.github.io/semantic-closure-lean/closing_the_loop_3d.html) — Drag to rotate, wheel to zoom, explore the proof space
 - [**Visualization Index**](https://abraxas1010.github.io/semantic-closure-lean/index.html) — Full listing of all available visualizations
+- [**Computation Demo (WASM)**](https://abraxas1010.github.io/semantic-closure-lean/compute_add1.html) — Runs an extracted C artifact in-browser (no backend), explicitly linked to a Lean theorem node
+
+**Proof → Artifact mapping (clickable in the viewers):**
+- In the 2D/3D viewers, selecting a node can show an **Artifacts** panel with links to proof DAGs and extracted artifacts.
+- Example: click `HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge.eval_beta` to open the WASM demo and the corresponding `LambdaIR`/`MiniC`/`C` files.
 
 ### Module Structure
 

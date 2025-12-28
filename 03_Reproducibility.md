@@ -31,6 +31,7 @@ the `β` construction and its `@[eigencomputable ...]` tag.
 The bundle also ships offline visuals (no build step required):
 
 - `RESEARCHER_BUNDLE/artifacts/visuals/index.html`
+- `RESEARCHER_BUNDLE/artifacts/visuals/compute_add1.html` (in-browser WASM demo; proof-linked)
 
 ## Prerequisites
 

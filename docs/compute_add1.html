@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Semantic Closure — WASM Demo (add1)</title>
+    <style>
+      :root { color-scheme: dark; }
+      body { margin: 0; font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#0b0f14; color:#e6eef7; }
+      a { color:#8ab4f8; text-decoration:none; }
+      a:hover { text-decoration:underline; }
+      code { background:#0b1320; border:1px solid #1c2a3a; border-radius: 6px; padding:2px 6px; }
+      .wrap { max-width: 980px; margin: 0 auto; padding: 26px 18px; }
+      .row { display:flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+      .card { background:#0f1721; border:1px solid #1c2a3a; border-radius:12px; padding: 14px 16px; }
+      .muted { color:#b8c7d9; }
+      input[type="text"]{ width: 220px; background:#0b1320; color:#e6eef7; border:1px solid #24364a; border-radius: 8px; padding: 7px 10px; outline:none; }
+      button { background:#132033; color:#e6eef7; border:1px solid #24364a; border-radius: 8px; padding: 7px 10px; cursor:pointer; }
+      button:hover { background:#182a42; }
+      pre { margin: 0; overflow:auto; white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="row" style="justify-content:space-between">
+        <h1 style="margin:0">Semantic Closure — WASM Demo (<code>add1</code>)</h1>
+        <a href="./index.html">← index</a>
+      </div>
+
+      <p class="muted">
+        This page runs a tiny, proof-traceable C artifact fully in the browser (no backend).
+        The WebAssembly module is compiled from <code>RESEARCHER_BUNDLE/artifacts/compiler/c/add1_wasm.c</code>, derived from the
+        Lean→LambdaIR→MiniC→C extraction demo (<code>closing_the_loop_bundle_demo</code>).
+      </p>
+
+      <div class="card">
+        <h2 style="margin:0 0 10px">Run</h2>
+        <div class="row">
+          <label>Input (signed 64-bit):
+            <input id="x" type="text" value="41" />
+          </label>
+          <button id="run" disabled>Run <code>add1</code></button>
+          <div class="muted">Output: <code id="out">…</code></div>
+        </div>
+        <p class="muted" style="margin:10px 0 0">
+          Note: WASM <code>i64</code> values are exposed to JS as <code>BigInt</code>.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h2 style="margin:0 0 10px">Proof Mapping</h2>
+        <p class="muted" style="margin:0 0 10px">
+          The demo’s semantics-level justification lives in the ClosingTheLoop “λ-calculus bridge”:
+        </p>
+        <ul style="margin:0 0 8px; padding-left: 18px">
+          <li>
+            <a href="https://github.com/Abraxas1010/semantic-closure-lean/blob/main/RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Semantics/LambdaIRBridge.lean">
+              <code>HeytingLean.ClosingTheLoop.Semantics.LambdaIRBridge</code>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Abraxas1010/semantic-closure-lean/blob/main/RESEARCHER_BUNDLE/HeytingLean/ClosingTheLoop/Semantics/LambdaIRBridge.lean">
+              <code>LambdaIRBridge.eval_beta</code>
+            </a>
+            (β-law for evaluation)
+          </li>
+        </ul>
+        <pre class="muted" style="font-size:12px; border:1px solid #1c2a3a; border-radius:10px; padding:10px 12px; background:#0b1320">
+theorem eval_beta … :
+  eval ((lam body) · arg) ρ =
+    eval body (extendEnv ρ (eval arg ρ)) := by
+  rfl
+        </pre>
+        <p class="muted" style="margin:10px 0 0">Extraction artifacts (same function across stages):</p>
+        <ul style="margin:6px 0 0; padding-left: 18px">
+          <li><a href="./compiler/ir/add1.lambdair.txt"><code>add1.lambdair.txt</code></a></li>
+          <li><a href="./compiler/ir/add1.minic.txt"><code>add1.minic.txt</code></a></li>
+          <li><a href="./compiler/c/add1.c"><code>add1.c</code></a> (native demo with <code>main</code>)</li>
+          <li><a href="./compiler/c/add1_wasm.c"><code>add1_wasm.c</code></a> (WASM-export-only)</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h2 style="margin:0 0 10px">WASM Payload</h2>
+        <p class="muted" style="margin:0 0 10px">
+          For offline viewing, the WASM bytes are embedded as base64 in:
+          <a href="./wasm/add1_wasm_b64.js"><code>wasm/add1_wasm_b64.js</code></a>.
+        </p>
+        <pre class="muted" style="font-size:12px">
+Exports:
+  - add1(i64) → i64
+        </pre>
+      </div>
+    </div>
+
+    <script src="./wasm/add1_wasm_b64.js"></script>
+    <script>
+      ;(() => {
+        const runBtn = document.getElementById('run')
+        const outEl = document.getElementById('out')
+        const xEl = document.getElementById('x')
+
+        const b64 = (window.CLOSING_THE_LOOP_WASM && window.CLOSING_THE_LOOP_WASM.add1_b64) || null
+        if (!b64) {
+          outEl.textContent = 'missing wasm payload'
+          return
+        }
+
+        const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0))
+        WebAssembly.instantiate(bytes.buffer, {}).then(({ instance }) => {
+          const add1 = instance.exports.add1
+          if (typeof add1 !== 'function') {
+            outEl.textContent = 'export add1 not found'
+            return
+          }
+          runBtn.disabled = false
+          const run = () => {
+            try {
+              const x = BigInt(xEl.value.trim() || '0')
+              const y = add1(x)
+              outEl.textContent = String(y)
+            } catch (e) {
+              outEl.textContent = String(e)
+            }
+          }
+          runBtn.addEventListener('click', run)
+          xEl.addEventListener('keydown', (ev) => { if (ev.key === 'Enter') run() })
+          run()
+        }).catch((e) => {
+          outEl.textContent = 'WASM instantiate failed: ' + String(e)
+        })
+      })()
+    </script>
+  </body>
+</html>
+
