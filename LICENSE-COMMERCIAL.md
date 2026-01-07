@@ -25,10 +25,10 @@ Subject to a signed Commercial License Agreement and payment of applicable fees,
 
 | Tier | Use Case | Contact |
 |------|----------|---------|
-| Individual | Solo developer | licensing@equationcapital.io |
-| Team | Small team | licensing@equationcapital.io |
-| Enterprise | Large organization | licensing@equationcapital.io |
-| OEM | Embedded/hardware | licensing@equationcapital.io |
+| Individual | Solo developer | rgoodman@apoth3osis.io |
+| Team | Small team | rgoodman@apoth3osis.io |
+| Enterprise | Large organization | rgoodman@apoth3osis.io |
+| OEM | Embedded/hardware | rgoodman@apoth3osis.io |
 
 Academic and non-profit discounts available.
 
@@ -36,8 +36,8 @@ Academic and non-profit discounts available.
 
 ## Contact
 
-**Equation Capital LLC**  
-Email: licensing@equationcapital.io
+**Equation Capital LLC**
+Email: rgoodman@apoth3osis.io
 
 ---
 

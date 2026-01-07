@@ -35,14 +35,14 @@ See [LICENSE-COMMERCIAL.md](LICENSE-COMMERCIAL.md) for details.
 - Priority support options
 - Indemnification options
 
-**Contact:** licensing@equationcapital.io
+**Contact:** rgoodman@apoth3osis.io
 
 ---
 
 ## Legal Entity
 
-**Equation Capital LLC**  
-Michigan Domestic Limited Liability Company  
-Entity ID: 802934838  
-Status: Active  
+**Equation Capital LLC**
+Michigan Domestic Limited Liability Company
+Entity ID: 802934838
+Status: Active
 Registered: October 27, 2022

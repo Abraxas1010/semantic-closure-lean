@@ -24,9 +24,9 @@ You represent that:
 
 ### Contact
 
-cla@equationcapital.io
+rgoodman@apoth3osis.io
 
 ---
 
-**Equation Capital LLC**  
+**Equation Capital LLC**
 Michigan LLC, Entity ID: 802934838
