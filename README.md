@@ -526,3 +526,8 @@ The goal is to make the mathematics of semantic closure as solid as the mathemat
 ---
 
 *Lean toolchain: leanprover/lean4:v4.24.0 | Mathlib: v4.24.0*
+
+## License
+
+This project is provided under the Apoth3osis License Stack v1.
+See `LICENSE.md` and the files under `licenses/`.
