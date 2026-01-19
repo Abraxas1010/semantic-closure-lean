@@ -1,48 +1,38 @@
-# Equation Capital LLC — Software Licensing
+Apoth3osis License Stack v1
 
-**Copyright (c) 2022-2026 Equation Capital LLC. All rights reserved.**
+This project is provided under a tri-license designed to maximize public-good use while reserving commercial certification value.
 
-This software is available under a **dual licensing model**.
+Licensor: Equation Capital LLC DBA Apoth3osis (rgoodman@apoth3osis.io)
 
----
+You may choose ONE of the following licenses:
 
-## Option 1: Open Source License (AGPL-3.0)
+1) Apoth3osis Public Good License 1.0 (CPGL)
+   - Free for public-good use when you publish (a) your derivative software under an OSI‑approved license and (b) your associated research/results open access.
+   - No right to use the “Apoth3osis‑Certified” mark.
 
-For **open source projects**, **academic research**, **personal use**, and **evaluation**, this software is available under the **GNU Affero General Public License v3.0** (AGPL-3.0).
+2) Apoth3osis Small Business License 1.0 (CSBL)
+   - Free for organizations with prior‑tax‑year gross revenue under USD 1,000,000 (2025 dollars) and fewer than 100 workers.
+   - Thresholds indexed annually to CPI‑U (Series CUUR0000SA0).
+   - No right to use the “Apoth3osis‑Certified” mark.
 
-See [LICENSE-AGPL-3.0.md](LICENSE-AGPL-3.0.md) for details.
+3) Apoth3osis Enterprise Commercial License 1.0 (CECL)
+   - Required for all other uses. Minimum fee USD 25,000/month (indexed to CPI‑U) plus usage‑based fees per audit.
+   - Includes rights to use the “Apoth3osis‑Certified” mark, attestation bundle, SLAs, and support.
 
-### Requirements under AGPL-3.0:
+Trademarks & Services
+- “Apoth3osis‑Certified” is a trademark. Use requires an active CECL and compliance with the Apoth3osis‑Certified Trademark License.
+- Certification attestations and related services are governed by the Apoth3osis Attestation Service Terms.
 
-- Release derivative works under AGPL-3.0
-- Provide source code to network users (SaaS copyleft)
-- Include copyright notices and license information
-- Document modifications
+See the full texts under `licenses/`:
+- Apoth3osis-Public-Good-License-1.0.md
+- Apoth3osis-Small-Business-License-1.0.md (derived from PolyForm Small Business concepts; attribution included)
+- Apoth3osis-Enterprise-Commercial-License-1.0.md
+- Apoth3osis-Certified-Trademark-License-1.0.md
+- Apoth3osis-Attestation-Service-Terms-1.0.md
+- Apoth3osis-Audit-Procedure-1.0.md
 
----
+Jurisdiction & Dispute Resolution
+- For CECL and trademark/service terms: arbitration in Oakland County, Michigan (AAA Commercial Rules), governed by Michigan law, with equitable relief and prevailing‑party fees.
 
-## Option 2: Commercial License
+If you have questions about which license applies, contact rgoodman@apoth3osis.io.
 
-For **proprietary use**, **commercial products**, or **SaaS** where AGPL-3.0 is not suitable, a **Commercial License** is available.
-
-See [LICENSE-COMMERCIAL.md](LICENSE-COMMERCIAL.md) for details.
-
-### Commercial License Benefits:
-
-- Use in proprietary products without open-sourcing
-- No copyleft obligations
-- No network disclosure requirements
-- Priority support options
-- Indemnification options
-
-**Contact:** rgoodman@apoth3osis.io
-
----
-
-## Legal Entity
-
-**Equation Capital LLC**
-Michigan Domestic Limited Liability Company
-Entity ID: 802934838
-Status: Active
-Registered: October 27, 2022
